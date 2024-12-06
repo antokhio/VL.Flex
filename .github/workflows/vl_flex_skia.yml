@@ -1,4 +1,4 @@
-name: Push VL.Flex Nuget
+name: Push VL.Flex.Skia Nuget
 
 on:
   push:
@@ -19,25 +19,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup MSBuild.exe
-        uses: microsoft/setup-msbuild@v1
       
       - name: Setup Nuget.exe
         uses: nuget/setup-nuget@v1
 
-      - name: Build VL.Flex
-        run: |
-          msbuild .\VL.Flex\src\VL.Flex.csproj -t:build -restore /property:Configuration=Release /property:Platform=x64
-
       - name: Publish VL Nuget
-        uses: vvvv/PublishVLNuget@1.0.29
-        with:
-          nuspec: .nuget\VL.Flex.nuspec
-          nuget-key: ${{ secrets.NUGET_KEY }}
-      
-      - name: Publish VL Nuget
-        uses: vvvv/PublishVLNuget@1.0.29
+        uses: vvvv/PublishVLNuget@1.0.43
         with:
           nuspec: .nuget\VL.Flex.Skia.nuspec
           nuget-key: ${{ secrets.NUGET_KEY }}
