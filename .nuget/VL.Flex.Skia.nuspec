@@ -15,9 +15,8 @@
     <copyright>Copyright © 2024 antokhio</copyright>
     <tags>VL, vvvv, yoga, flex, skia</tags>
     <dependencies>
-      <dependency id="VL.Flex" version="{{ VERSION }}" />
     </dependencies>
-  </metadata>
+  </metadata> 
    <files>
      <file src="..\VL.Flex.Skia\*.vl" target=""/>
     <!-- <file src="..\help\*.vl" target="help"/> -->
