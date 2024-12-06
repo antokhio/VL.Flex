@@ -19,7 +19,7 @@
     </dependencies>
   </metadata>
    <files>
-     <file src="..\VL.Flex.Skia\*.vl" target=""/>
+     <file src="..\..\VL.Flex.Skia\*.vl" target=""/>
     <!-- <file src="..\help\*.vl" target="help"/> -->
     <file src="..\README.md" />
     <file src="..\LICENSE" />
