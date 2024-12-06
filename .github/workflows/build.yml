@@ -28,7 +28,7 @@ jobs:
 
       - name: Build VL.Flex
         run: |
-          msbuild .\VL.Flex\src\VL.Flex.csproj /property:Configuration=Release /property:Platform=x64
+          msbuild .\VL.Flex\src\VL.Flex.csproj -t:build -restore /property:Configuration=Release /property:Platform=x64
 
       - name: Publish VL Nuget
         uses: vvvv/PublishVLNuget@1.0.29
