@@ -1,16 +1,9 @@
 name: Push VL.Flex.Skia Nuget
 
 on:
-  # push:
-  #   branches:
-  #     - master
-  #   paths-ignore:
-  #     - .editorconfig
-  #     - .gitattributes
-  #     - .github/**
-  #     - .gitignore
-  #     - LICENSE
-  #     - README.md
+  push:
+    tags:
+      - '*.*.*'
   workflow_dispatch:
 
 jobs:
