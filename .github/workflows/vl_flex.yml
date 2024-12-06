@@ -1,6 +1,9 @@
 name: Push VL.Flex Nuget
 
 on:
+  push:
+    tags:
+      - '*.*.*'
   # push:
   #   branches:
   #     - master
@@ -25,6 +28,12 @@ jobs:
       
       - name: Setup Nuget.exe
         uses: nuget/setup-nuget@v1
+
+      - name: Patch Version from tag
+        run: |
+          cd .nuget
+          .\patch-version.cmd "VL.Flex.nuspec" "${{ github.ref_name }}"
+          cd ..
 
       - name: Build VL.Flex
         run: |

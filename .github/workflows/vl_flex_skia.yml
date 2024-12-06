@@ -23,6 +23,12 @@ jobs:
       - name: Setup Nuget.exe
         uses: nuget/setup-nuget@v1
 
+      - name: Patch Version from tag
+        run: |
+          cd \.nuget
+          .\patch-version.cmd "VL.Flex.Skia.nuspec" "${{ github.ref_name }}"
+          cd ..
+
       - name: Publish VL Nuget
         uses: vvvv/PublishVLNuget@1.0.43
         with:
