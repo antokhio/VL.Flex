@@ -16,7 +16,6 @@
     <tags>VL, vvvv, yoga, flex</tags>
     <dependencies>
       <dependency id="antokhio.YogaSharp" version="1.1.2" />
-      <group targetFramework="net8.0" />
     </dependencies>
   </metadata>
    <files>
