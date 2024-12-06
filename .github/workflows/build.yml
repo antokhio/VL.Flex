@@ -35,3 +35,9 @@ jobs:
         with:
           nuspec: .nuget\VL.Flex.nuspec
           nuget-key: ${{ secrets.NUGET_KEY }}
+      
+      - name: Publish VL Nuget
+        uses: vvvv/PublishVLNuget@1.0.29
+        with:
+          nuspec: .nuget\VL.Flex.Skia.nuspec
+          nuget-key: ${{ secrets.NUGET_KEY }}

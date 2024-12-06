@@ -196,7 +196,6 @@
               <Pin Id="J4zQOWEJVd4QU8aqWmks8W" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="G6yqqCFFqJPPCarj6ZG6L7" Name="Children" Kind="InputPin" />
               <Pin Id="Rsn1uscUeuGMtirLN1CUE2" Name="Style" Kind="InputPin" />
-              <Pin Id="LzsoK0WL7uxMW9Cxsijp4u" Name="SetValue" Kind="ApplyPin" />
               <Pin Id="SqVQ9X2PanjMXtJQVx5FuR" Name="Node" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="GT00Pdoc0DDQW1ohomLpRh" Bounds="982,316" />
@@ -1207,6 +1206,6 @@
       </Patch>
     </Node>
   </Patch>
-  <DocumentDependency Id="JjlIhxeDCeaP9wd5c7AdSG" Location="../VL.Flex/VL.Flex.vl" />
   <NugetDependency Id="MDFnKYyokDbOXpDvajlIQo" Location="VL.Skia" Version="2024.6.7-0235-g5172ef47fd" />
+  <NugetDependency Id="EGsvIxYx8lLPANdUEJrlDO" Location="VL.Flex" Version="0.0.1-alpha0" />
 </Document>

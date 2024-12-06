@@ -65,9 +65,9 @@
                 <Patch Id="SAsXPzIaLvlNgT5AZQ9FjY" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="R5yBNpUMJbfLGm3RfHM8kS" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="725,231,52,26" Id="Vde9sqDlanoMkJwi63CN81">
-                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Yoga.vl">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="SetStyle" />
                   </p:NodeReference>
                   <Pin Id="TTEIk2B44gWPeL72qnuqRo" Name="Input" Kind="StateInputPin" />
@@ -80,9 +80,9 @@
             <ControlPoint Id="IxdCPh1aG19MjIXJwXRXjp" Bounds="774,153" />
             <Pad Id="I4vYpXSC1EMOgK2kdbO5x7" SlotId="MmbH9n3wAWcOogGaaTjeq2" Bounds="735,372" />
             <Node Bounds="733,427,53,26" Id="P76oBhhiHxpMTcxc2u4oCV">
-              <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
+              <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="Dispose" />
               </p:NodeReference>
               <Pin Id="DOJGL00pefdMslV3vwrE5W" Name="Input" Kind="StateInputPin" />
@@ -121,12 +121,10 @@
           <Link Id="PaEoFjK6yssMJMkArWVnGU" Ids="I4vYpXSC1EMOgK2kdbO5x7,DOJGL00pefdMslV3vwrE5W" />
           <Patch Id="K2SdNsrIo9sNXz4MudbV1U" Name="Dispose" ParticipatingElements="PaEoFjK6yssMJMkArWVnGU" />
           <Patch Id="DhnciPZJb1eORZ703lz1Pg" Name="GetValue" />
-          <Patch Id="AmNEZuhN224O1x5ELPkeaH" Name="SetValue" />
           <ProcessDefinition Id="QbdLrClMeoyPCzt8OVtuwP">
             <Fragment Id="V0uxRB0Qba2O9TYucb5z7H" Patch="SQDeMqFqI7ePebcz6lQr4T" Enabled="true" />
             <Fragment Id="NnEY5A7aIlPN2wpQamVIQA" Patch="Cmgz4btdJEoP5Lr6koVWqI" Enabled="true" />
             <Fragment Id="RuuzC9D3WdSNAPvUCkjVqe" Patch="OtNlu7ldFqBMZBtd5Ct5iz" Enabled="true" />
-            <Fragment Id="Cbv0o3MKgRdLrhioF6gJKN" Patch="AmNEZuhN224O1x5ELPkeaH" Enabled="true" />
             <Fragment Id="SNyAJXScrtVM8lWFWWyLmL" Patch="DhnciPZJb1eORZ703lz1Pg" />
             <Fragment Id="TvSVgoVyqzLLQwdrnh7B2P" Patch="O4Gfe6sYF3nOc9kihDcfmB" Enabled="true" />
           </ProcessDefinition>
@@ -549,7 +547,7 @@
     ************************ Breakpoint ************************
 
 -->
-      <Node Name="Breakpoint" Bounds="571,161" Id="KYd7pe8Tn78MM1ekp5RMI4" Summary="Returns style based on condition">
+      <Node Name="Breakpoint" Bounds="589,162" Id="KYd7pe8Tn78MM1ekp5RMI4" Summary="Returns style based on condition">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -645,7 +643,7 @@
           <ProcessDefinition Id="Cs3eVWE7xv0OOs7bIQXoWf" IsHidden="true" />
         </Patch>
       </Node>
-      <Canvas Id="OO8l0o7Oz0eNyeY4D2IJCQ" Name="Enums" Position="741,158">
+      <Canvas Id="OO8l0o7Oz0eNyeY4D2IJCQ" Name="Enums" Position="759,159">
         <!--
 
     ************************ YGDimension ************************
