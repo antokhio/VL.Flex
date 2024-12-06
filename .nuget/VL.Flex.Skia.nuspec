@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.Flex.Skia</id>
-    <version>0.0.1-alpha5</version>
+    <version>0.0.1-alpha6</version>
     <title>VL.Flex.Skia</title>
     <authors>antokhio</authors>
     <owners>antokhio</owners>
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2024 antokhio</copyright>
     <tags>VL, vvvv, yoga, flex, skia</tags>
     <dependencies>
-      <dependency id="VL.Flex" version="0.0.1-alpha5" />
+      <dependency id="VL.Flex" version="0.0.1-alpha6" />
     </dependencies>
   </metadata>
    <files>

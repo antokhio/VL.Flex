@@ -1,16 +1,16 @@
-name: Push VL.Flex Nuget
+name: Push Nuget
 
 on:
-  # push:
-  #   branches:
-  #     - master
-  #   paths-ignore:
-  #     - .editorconfig
-  #     - .gitattributes
-  #     - .github/**
-  #     - .gitignore
-  #     - LICENSE
-  #     - README.md
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - .editorconfig
+      - .gitattributes
+      - .github/**
+      - .gitignore
+      - LICENSE
+      - README.md
   workflow_dispatch:
 
 jobs:
@@ -34,4 +34,10 @@ jobs:
         uses: vvvv/PublishVLNuget@1.0.43
         with:
           nuspec: .nuget\VL.Flex.nuspec
+          nuget-key: ${{ secrets.NUGET_KEY }}
+
+      - name: Publish VL Nuget
+        uses: vvvv/PublishVLNuget@1.0.43
+        with:
+          nuspec: .nuget\VL.Flex.Skia.nuspec
           nuget-key: ${{ secrets.NUGET_KEY }}
