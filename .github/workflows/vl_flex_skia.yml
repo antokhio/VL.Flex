@@ -18,7 +18,7 @@ jobs:
 
       - name: Patch Version from tag
         run: |
-          cd \.nuget
+          cd .nuget
           .\patch-version.cmd "VL.Flex.Skia.nuspec" "${{ github.ref_name }}"
           cd ..
 
