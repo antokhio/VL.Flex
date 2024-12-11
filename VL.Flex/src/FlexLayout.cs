@@ -1,4 +1,6 @@
-﻿namespace VL.Flex
+﻿using YogaSharp;
+
+namespace VL.Flex
 {
     public record struct FlexLayout
     {
@@ -16,4 +18,17 @@
         }
     }
 
+    public record struct FlexLayoutArgs
+    {
+        public float? OwnerWidth { get; }
+        public float? OwnerHeight { get; }
+        public YGDirection? OwnerDirection { get; }
+
+        public FlexLayoutArgs(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection)
+        {
+            OwnerWidth = ownerWidth;
+            OwnerHeight = ownerHeight;
+            OwnerDirection = ownerDirection;
+        }
+    }
 }

@@ -20,9 +20,9 @@ namespace VL.Flex
         // Calculated Layout
         protected FlexLayout _layout;
         public abstract FlexLayout Layout { get; set; }
-        public abstract void ApplyLayout(FlexLayout? ownerLayout);
+        public abstract void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout);
 
-        public abstract event Action<FlexBase>? OnLayoutChanged;
+        public abstract event Action<FlexLayoutArgs>? OnLayoutChanged;
         public abstract bool IsDirty { get; }
         public abstract bool HasNewLayout { internal get; set; }
         public abstract void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection);
@@ -107,23 +107,21 @@ namespace VL.Flex
         public override FlexLayout Layout
         {
             get => _layout;
-            set
-            {
-                _layout = value;
-                OnLayoutChanged?.Invoke(this);
-            }
+            set => _layout = value;
         }
 
-        public override event Action<FlexBase>? OnLayoutChanged;
-        public override void ApplyLayout(FlexLayout? ownerLayout = null)
+        public override event Action<FlexLayoutArgs>? OnLayoutChanged;
+        public override void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout = null)
         {
             if (HasNewLayout)
             {
                 Layout = new FlexLayout(this, ownerLayout);
                 Children?.ForEach(c =>
                 {
-                    c?.ApplyLayout(Layout);
+                    c?.ApplyLayout(args, Layout);
                 });
+
+                OnLayoutChanged?.Invoke(args);
             }
 
             HasNewLayout = false;
@@ -136,7 +134,7 @@ namespace VL.Flex
                 _handle->CalculateLayout(ownerWidth ?? float.NaN, ownerHeight ?? float.NaN, ownerDirection ?? YGDirection.LTR);
             }
 
-            ApplyLayout();
+            ApplyLayout(new FlexLayoutArgs(ownerWidth, ownerHeight, ownerDirection));
         }
 
         public override void SetOwner(FlexNode node) => _owner = node;

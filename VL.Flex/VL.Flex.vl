@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="BG6GC1xy3QtPNV8rwrVm4B" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0244-g37c2551aa2" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2024.6.7-0244-g37c2551aa2" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="BG6GC1xy3QtPNV8rwrVm4B" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0284-gd211c8b87b" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2024.6.7-0284-gd211c8b87b" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -78,18 +78,32 @@
               <ControlPoint Id="R7fBwvXBLZCNQGWWsRSh8H" Bounds="774,207" Alignment="Top" />
             </Node>
             <ControlPoint Id="IxdCPh1aG19MjIXJwXRXjp" Bounds="774,153" />
-            <Pad Id="I4vYpXSC1EMOgK2kdbO5x7" SlotId="MmbH9n3wAWcOogGaaTjeq2" Bounds="735,372" />
-            <Node Bounds="733,427,53,26" Id="P76oBhhiHxpMTcxc2u4oCV">
-              <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
-                <Choice Kind="OperationCallFlag" Name="Dispose" />
-              </p:NodeReference>
-              <Pin Id="DOJGL00pefdMslV3vwrE5W" Name="Input" Kind="StateInputPin" />
-              <Pin Id="TAwbN7mbWxqQCr1bGSyK09" Name="Output" Kind="StateOutputPin" />
-            </Node>
             <Pad Id="IKHztHHxoswMh73lc1oUSv" SlotId="MmbH9n3wAWcOogGaaTjeq2" Bounds="244,395" />
             <ControlPoint Id="CVeP3jRoMSNPQrmCVNnn7c" Bounds="244,453" />
+            <Node Bounds="688,353,111,129" Id="HnGJw8sizPlO0fEysmsg7f">
+              <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Control" />
+                <Choice Kind="ProcessAppFlag" Name="Comment" />
+              </p:NodeReference>
+              <Patch Id="EmhJBaHbkjrP7p5rrfKN6t" ManuallySortedPins="true">
+                <Patch Id="P7V08gGbqIuOqWYZyHd1H0" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="Ceehw38kcv8MfpxKGvvULC" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="NJM2C3L1MOJMewKTatpXwb" Name="Dispose" ParticipatingElements="PaEoFjK6yssMJMkArWVnGU" ManuallySortedPins="true" />
+                <Slot Id="UKfZ1WJHjBtNMWyPC7UXXy" Name="Node" />
+                <Pad Id="I4vYpXSC1EMOgK2kdbO5x7" SlotId="UKfZ1WJHjBtNMWyPC7UXXy" Bounds="736,381" />
+                <Node Bounds="734,436,53,26" Id="P76oBhhiHxpMTcxc2u4oCV">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="Dispose" />
+                  </p:NodeReference>
+                  <Pin Id="DOJGL00pefdMslV3vwrE5W" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="TAwbN7mbWxqQCr1bGSyK09" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+              <Pin Id="CJvqD1Im7QHNifyyuK0LYX" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            </Node>
           </Canvas>
           <Patch Id="SQDeMqFqI7ePebcz6lQr4T" Name="Create" ParticipatingElements="LBMjhd2km20O1H7mNHbuTh" />
           <Slot Id="MmbH9n3wAWcOogGaaTjeq2" Name="Node" />
@@ -118,8 +132,7 @@
           <Link Id="JfwY9X2iaVZOOEXT20oWmk" Ids="IxdCPh1aG19MjIXJwXRXjp,R7fBwvXBLZCNQGWWsRSh8H" />
           <Link Id="RhiHVMuua2YLKlfjTapGDw" Ids="QXNB9DVHz5wNgV8ceuHtZm,IxdCPh1aG19MjIXJwXRXjp" IsHidden="true" />
           <Link Id="Pbo8frxfKbiNsy50HH2o0J" Ids="R7fBwvXBLZCNQGWWsRSh8H,Hebl0axQ0XTNNeh9GHaqCq" />
-          <Link Id="PaEoFjK6yssMJMkArWVnGU" Ids="I4vYpXSC1EMOgK2kdbO5x7,DOJGL00pefdMslV3vwrE5W" />
-          <Patch Id="K2SdNsrIo9sNXz4MudbV1U" Name="Dispose" ParticipatingElements="PaEoFjK6yssMJMkArWVnGU" />
+          <Patch Id="K2SdNsrIo9sNXz4MudbV1U" Name="Dispose" />
           <Patch Id="DhnciPZJb1eORZ703lz1Pg" Name="GetValue" />
           <ProcessDefinition Id="QbdLrClMeoyPCzt8OVtuwP">
             <Fragment Id="V0uxRB0Qba2O9TYucb5z7H" Patch="SQDeMqFqI7ePebcz6lQr4T" Enabled="true" />
@@ -140,6 +153,7 @@
           <Link Id="Go028lwFRkPL5yX7lc8hpb" Ids="LTM92PbUyV5NKqlC7FoMmr,UmRXIJnDTFJLFRBrJrQPm8" />
           <Link Id="Qif8RpUMZchMa8CbPBrAaf" Ids="UmRXIJnDTFJLFRBrJrQPm8,JORdAWVOxUEL185pnHdJA4" />
           <Link Id="VGT4TRGoRiLNvZSF3NZ1vX" Ids="IAXrzggXsxsMoSiJ5eSArb,HpXeBcotASaMjNVSjWcE3v" />
+          <Link Id="PaEoFjK6yssMJMkArWVnGU" Ids="I4vYpXSC1EMOgK2kdbO5x7,DOJGL00pefdMslV3vwrE5W" />
         </Patch>
       </Node>
       <!--
@@ -1059,6 +1073,24 @@
           <ProcessDefinition Id="JXaimsj2vEXOQYVck6TXvf" IsHidden="true" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ FlexLayoutArgs ************************
+
+-->
+      <Node Name="FlexLayoutArgs" Bounds="188,452" Id="QIIkaX6qr4VLiHQBgskKAZ">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
+          <Choice Kind="TypeFlag" Name="FlexLayoutArgs" />
+        </p:TypeAnnotation>
+        <Patch Id="GvwuR4txMOvQTTbZ81jPM0">
+          <Canvas Id="FWbmcV7nUuAPT17ozyFJzy" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="KBDFgV208LMMFuOex5DyEc" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
@@ -1081,6 +1113,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="NPC6Ov7t3vaOvAThlINOHL" Location="antokhio.YogaSharp" Version="1.0.4-alpha-0.0.3" />
+  <NugetDependency Id="NPC6Ov7t3vaOvAThlINOHL" Location="antokhio.YogaSharp" Version="1.1.2" />
   <PlatformDependency Id="QrvK5sLb70yMGuwHQp7l1m" Location="./lib/x64/Debug/net8.0/VL.Flex.dll" />
 </Document>
