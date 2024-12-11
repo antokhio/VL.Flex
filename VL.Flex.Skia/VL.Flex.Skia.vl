@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="AVrkyKPnT52OgvpjV5KCJO" Authors="antokhio" Credits="berkut0" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0235-g5172ef47fd" Version="0.128">
-  <NugetDependency Id="Ghf7WlVWGNOMK3SroLNU5X" Location="VL.CoreLib" Version="2024.6.7-0235-g5172ef47fd" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="AVrkyKPnT52OgvpjV5KCJO" Authors="antokhio" Credits="berkut0" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0284-gd211c8b87b" Version="0.128">
+  <NugetDependency Id="Ghf7WlVWGNOMK3SroLNU5X" Location="VL.CoreLib" Version="2024.6.7-0284-gd211c8b87b" />
   <Patch Id="NEzKnzyyMp5OY0zIKEnrkF">
     <Canvas Id="BReR11hkySTMBVAvkB36GZ" DefaultCategory="VL.Flex.Skia" CanvasType="FullCategory">
       <!--
@@ -45,7 +45,7 @@
     ************************ FlexRegionBase (Internal) ************************
 
 -->
-      <Node Name="FlexRegionBase (Internal)" Bounds="357,109" Id="Uk6PbIOK9KdQCYK7UIGNn0" Summary="Base Region">
+      <Node Name="FlexRegionBase (Internal)" Bounds="226,233" Id="Uk6PbIOK9KdQCYK7UIGNn0" Summary="Base Region">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -431,7 +431,7 @@
     ************************ FlexRegion (Spectral) ************************
 
 -->
-      <Node Name="FlexRegion (Spectral)" Bounds="237,328" Id="KeDkkU0sIsjOByMZ3j0dyE">
+      <Node Name="FlexRegion (Spectral)" Bounds="226,328" Id="KeDkkU0sIsjOByMZ3j0dyE">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -467,7 +467,7 @@
     ************************ FlexRegion ************************
 
 -->
-      <Node Name="FlexRegion" Bounds="237,373" Id="C4Eu3NHQPpONOPZDVXgTM4">
+      <Node Name="FlexRegion" Bounds="226,373" Id="C4Eu3NHQPpONOPZDVXgTM4">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -520,7 +520,7 @@
     ************************ FlexRenderer ************************
 
 -->
-      <Node Name="FlexRenderer" Bounds="227,515" Id="LE45bkqkvRxMcO10FiiRmo">
+      <Node Name="FlexRenderer" Bounds="226,599" Id="LE45bkqkvRxMcO10FiiRmo">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -732,7 +732,7 @@
           <Link Id="HX7WN35ARpfMsxbKUn09eT" Ids="BMJRXQFqWwLMm3lEXYHYxy,NxSr9jWakHbMKdl4xq7iQY" />
         </Patch>
       </Node>
-      <Pad Id="NPXuL0kBJ0WPcWqBKZnohc" Bounds="399,34,51,19" ShowValueBox="true" isIOBox="true" Value="Base">
+      <Pad Id="NPXuL0kBJ0WPcWqBKZnohc" Bounds="257,173,51,19" ShowValueBox="true" isIOBox="true" Value="Base">
         <p:TypeAnnotation>
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
@@ -746,7 +746,7 @@
     ************************ FlexRectangleBase (Internal) ************************
 
 -->
-      <Node Name="FlexRectangleBase (Internal)" Bounds="627,109" Id="NvSf4dM3LRYNDRr6fs3iLl" Summary="Base Rectangle">
+      <Node Name="FlexRectangleBase (Internal)" Bounds="496,233" Id="NvSf4dM3LRYNDRr6fs3iLl" Summary="Base Rectangle">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -861,7 +861,7 @@
     ************************ FlexRegionLayer ************************
 
 -->
-      <Node Name="FlexRegionLayer" Bounds="406,167" Id="INtSboMk61qNQoS1t80TP0" Summary="Collects layers from Region">
+      <Node Name="FlexRegionLayer" Bounds="226,427" Id="INtSboMk61qNQoS1t80TP0" Summary="Collects layers from Region">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -921,7 +921,7 @@
     ************************ FlexRegionLayout ************************
 
 -->
-      <Node Name="FlexRegionLayout" Bounds="408,207" Id="EyaaFT2Z8ULNUwrRHKlupB" Summary="Provides Layout for Region">
+      <Node Name="FlexRegionLayout" Bounds="226,467" Id="EyaaFT2Z8ULNUwrRHKlupB" Summary="Provides Layout for Region">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -1081,7 +1081,7 @@
           <Link Id="BDnh3MfzScmMejnZVZS6fC" Ids="Ltilz4kfSONPCeULNPhcX5,SzYZE8Sxil1MT9MtKHRexB" />
         </Patch>
       </Node>
-      <Pad Id="RnpU76GKWBhNrfsugCeHEo" Bounds="265,275,51,19" ShowValueBox="true" isIOBox="true" Value="Region">
+      <Pad Id="RnpU76GKWBhNrfsugCeHEo" Bounds="257,275,51,19" ShowValueBox="true" isIOBox="true" Value="Region">
         <p:TypeAnnotation>
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
@@ -1090,7 +1090,7 @@
           <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
         </p:ValueBoxSettings>
       </Pad>
-      <Pad Id="Pavay7wXkaJP1pCGNDNmpE" Bounds="660,276,51,19" ShowValueBox="true" isIOBox="true" Value="Nodes">
+      <Pad Id="Pavay7wXkaJP1pCGNDNmpE" Bounds="539,275,51,19" ShowValueBox="true" isIOBox="true" Value="Nodes">
         <p:TypeAnnotation>
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
@@ -1104,7 +1104,7 @@
     ************************ FlexRectangle (Spectral) ************************
 
 -->
-      <Node Name="FlexRectangle (Spectral)" Bounds="646,329" Id="BGEXWWgjfTHMWCv5MrEro6">
+      <Node Name="FlexRectangle (Spectral)" Bounds="525,328" Id="BGEXWWgjfTHMWCv5MrEro6">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -1138,7 +1138,7 @@
     ************************ FlexRectangle ************************
 
 -->
-      <Node Name="FlexRectangle" Bounds="650,378" Id="M2FrhbRwzvlLLyFt4RiKV4">
+      <Node Name="FlexRectangle" Bounds="529,377" Id="M2FrhbRwzvlLLyFt4RiKV4">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -1184,6 +1184,15 @@
           <Link Id="S3gdmXQPJKJMfWQPOeiRvK" Ids="S4ZKXsoT9NBMrp3GLSZSuQ,JawTUk6b7rxOz3QXmqotaj" IsHidden="true" />
         </Patch>
       </Node>
+      <Pad Id="R3A38ynGwMZLTKYmGa6mYY" Bounds="257,539,74,19" ShowValueBox="true" isIOBox="true" Value="Renderers">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">9</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
     </Canvas>
     <!--
 
@@ -1206,6 +1215,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MDFnKYyokDbOXpDvajlIQo" Location="VL.Skia" Version="2024.6.7-0235-g5172ef47fd" />
-  <NugetDependency Id="EGsvIxYx8lLPANdUEJrlDO" Location="VL.Flex" Version="0.0.1-alpha0" />
+  <NugetDependency Id="MDFnKYyokDbOXpDvajlIQo" Location="VL.Skia" Version="2024.6.7-0284-gd211c8b87b" />
+  <NugetDependency Id="EGsvIxYx8lLPANdUEJrlDO" Location="VL.Flex" Version="0.0.4" />
 </Document>

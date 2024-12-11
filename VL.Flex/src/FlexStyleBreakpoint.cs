@@ -2,9 +2,10 @@
 {
     public class FlexStyleBreakpoint : IFlexStyle, IDisposable
     {
-        public Func<FlexBase?, IFlexStyle>? Breakpoint { internal get; set; }
+        public Func<FlexLayoutArgs, IFlexStyle>? Breakpoint { internal get; set; }
 
         private FlexBase? _node = null;
+
         public void ApplyStyle(FlexBase node)
         {
             if (_node != node)
@@ -21,21 +22,16 @@
                     _node.OnLayoutChanged += OnLayoutChanged;
                 }
             }
-
-            var root = node.GetRoot();
-
-            var style = Breakpoint?.Invoke(node);
-            style?.ApplyStyle(node);
         }
 
-        private void OnLayoutChanged(FlexBase node)
+        private void OnLayoutChanged(FlexLayoutArgs args)
         {
-            var root = node.GetRoot();
+            var style = Breakpoint?.Invoke(args);
 
-            var style = Breakpoint?.Invoke(root);
-            style?.ApplyStyle(node);
-
-
+            if (_node != null)
+            {
+                style?.ApplyStyle(_node);
+            }
         }
 
         public void Dispose()
