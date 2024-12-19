@@ -1,5 +1,7 @@
-﻿using VL.Lib.Collections;
+﻿using VL.Flex.Internals;
+using VL.Lib.Collections;
 using YogaSharp;
+using static VL.Flex.Internals.Delegates;
 
 namespace VL.Flex
 {
@@ -27,13 +29,41 @@ namespace VL.Flex
         public abstract bool HasNewLayout { internal get; set; }
         public abstract void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection);
 
-        // Dispose
-        public abstract void Dispose();
 
         // Owner, so we can traverse to Root from breakpoint (subject to change)
         protected FlexBase? _owner = null;
         public abstract void SetOwner(FlexNode node);
         public abstract FlexBase GetRoot();
+
+
+        /* Measure Func
+        *  Since we can pass measure function as static only, 
+        *  we need to create node repository.
+        */
+        protected FlexBase()
+        {
+            Store.GetRegistry().AddNode(this);
+        }
+
+        // MeasureFunc pointer
+        protected nint _measureFuncPtr;
+
+        // MeasureFunc prop
+        protected MeasureFunc? _measureFunc;
+        public abstract MeasureFunc? MeasureFunc { internal get; set; }
+
+
+
+        public abstract bool HasMeasureFunc();
+
+        // Node Context
+        // Basically anything we want to pass to measure func.
+        protected object? _nodeContext;
+        public abstract object? NodeContext { internal get; set; }
+
+        // Dispose
+        public abstract void Dispose();
+
     }
 
     public class FlexNode : FlexBase
@@ -86,7 +116,7 @@ namespace VL.Flex
                 {
                     unsafe
                     {
-                        _handle->CopyStyle(FlexInternalsLocator.GetInternals().BulkNode);
+                        _handle->CopyStyle(Store.GetInternals().BulkNode);
                     }
 
                     value?.ApplyStyle(this);
@@ -139,14 +169,57 @@ namespace VL.Flex
 
         public override void SetOwner(FlexNode node) => _owner = node;
         public override FlexBase GetRoot() => _owner == null ? this : _owner.GetRoot();
+
+        public override MeasureFunc? MeasureFunc
+        {
+            internal get => _measureFunc;
+            set
+            {
+                if (_measureFunc != value)
+                {
+                    if (value != null)
+                    {
+                        unsafe
+                        {
+                            _measureFuncPtr = (nint)(delegate* unmanaged[Cdecl]<YGNode*, float, YGMeasureMode, float, YGMeasureMode, YGSize>)&MeasureFuncAdapter;
+                            Handle->SetMeasureFunc(_measureFuncPtr);
+                        }
+                    }
+                    else
+                    {
+                        unsafe
+                        {
+                            _measureFuncPtr = 0;
+                            Handle->SetMeasureFunc(_measureFuncPtr);
+                        }
+                    }
+                    _measureFunc = value;
+                }
+            }
+        }
+
+        public override bool HasMeasureFunc()
+        {
+            unsafe
+            {
+                return _handle->HasMeasureFunc();
+            }
+        }
+
+        public override object? NodeContext
+        {
+            internal get => _nodeContext;
+            set => _nodeContext = value;
+        }
+
         public override void Dispose()
         {
             unsafe
             {
                 if (_handle != null)
                 {
-                    _handle->RemoveAllChildren();
-                    _handle->Dispose();
+                    Store.GetRegistry().RemoveNode(_handle);
+                    _handle->FinalizeNode();
                 }
 
                 GC.SuppressFinalize(this);

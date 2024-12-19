@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using VL.Flex.Internals;
 using YogaSharp;
 
 namespace VL.Flex
@@ -88,7 +89,7 @@ namespace VL.Flex
                         minHeight = handle->GetMinHeight(),
                         maxWidth = handle->GetMaxWidth(),
                         maxHeight = handle->GetMaxHeight(),
-                    }, FlexInternalsLocator.GetInternals().SerializerOptions);
+                    }, Store.GetInternals().SerializerOptions);
                 }
 
                 return null;
@@ -112,7 +113,7 @@ namespace VL.Flex
                                 useWebDefaults = config->GetUseWebDefaults(),
                                 pointScaleFactor = config->GetPointScaleFactor(),
                                 errata = config->GetErrata(),
-                            }, FlexInternalsLocator.GetInternals().SerializerOptions);
+                            }, Store.GetInternals().SerializerOptions);
                         }
                     }
                 }

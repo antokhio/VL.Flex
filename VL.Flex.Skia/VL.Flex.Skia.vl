@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="AVrkyKPnT52OgvpjV5KCJO" Authors="antokhio" Credits="berkut0" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0284-gd211c8b87b" Version="0.128">
-  <NugetDependency Id="Ghf7WlVWGNOMK3SroLNU5X" Location="VL.CoreLib" Version="2024.6.7-0284-gd211c8b87b" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="AVrkyKPnT52OgvpjV5KCJO" Authors="antokhio" Credits="berkut0" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0301-gd769b48db0" Version="0.128">
+  <NugetDependency Id="Ghf7WlVWGNOMK3SroLNU5X" Location="VL.CoreLib" Version="2024.6.7-0301-gd769b48db0" />
   <Patch Id="NEzKnzyyMp5OY0zIKEnrkF">
     <Canvas Id="BReR11hkySTMBVAvkB36GZ" DefaultCategory="VL.Flex.Skia" CanvasType="FullCategory">
       <!--
@@ -58,7 +58,7 @@
         <Patch Id="RltdIGTwkFTNkUi9qs98Wt">
           <Canvas Id="HceOChJVYXGMnZNkmUKHUU" CanvasType="Group">
             <ControlPoint Id="JRvRl4pT0HJPadTpp5JGOW" Bounds="99,556" />
-            <Node Bounds="172,659,342,87" Id="RuNtyiTwoJJMorcf9HTAAL">
+            <Node Bounds="172,659,361,87" Id="RuNtyiTwoJJMorcf9HTAAL">
               <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Send (Local)" />
@@ -197,8 +197,10 @@
               <Pin Id="G6yqqCFFqJPPCarj6ZG6L7" Name="Children" Kind="InputPin" />
               <Pin Id="Rsn1uscUeuGMtirLN1CUE2" Name="Style" Kind="InputPin" />
               <Pin Id="SqVQ9X2PanjMXtJQVx5FuR" Name="Node" Kind="OutputPin" />
+              <Pin Id="CFX1DRqkAbbMZlwAfjQUZL" Name="Context" Kind="InputPin" />
+              <Pin Id="Ebo1UI4Fu8xPMCusgA7i5w" Name="Measure Func" Kind="InputPin" />
             </Node>
-            <ControlPoint Id="GT00Pdoc0DDQW1ohomLpRh" Bounds="982,316" />
+            <ControlPoint Id="GT00Pdoc0DDQW1ohomLpRh" Bounds="918,317" />
             <Pad Id="P7ptBZp86APL4VCxK1pZjr" SlotId="N3RfSgcUCEhONovwjWnzfN" Bounds="800,718" />
             <ControlPoint Id="Ep8zo8uToWOMeD51XGeHQT" Bounds="800,770" />
             <ControlPoint Id="IBxdne6gIY4NMEbIJ02Ot4" Bounds="437,600" />
@@ -319,6 +321,10 @@
               <Pin Id="QyNbVD7DOlmPSxPv0SWhFu" Name="Instance" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="BjaKvoR4sCROZ09iG6B2W5" Bounds="264,836" />
+            <ControlPoint Id="K2osknWFGYPMVAzmwmbxAC" Bounds="1036,317" />
+            <Pad Id="LJ8euguXJWuMzyehPHe3Um" SlotId="STcl5ZJe9Q5PKjWsDzj1pZ" Bounds="1158,455" />
+            <ControlPoint Id="SAjqLERdXSgLVmTmya5Z3h" Bounds="1158,393" />
+            <Pad Id="FMfBPAcamGKLwKuxYkwV5Y" SlotId="STcl5ZJe9Q5PKjWsDzj1pZ" Bounds="1153,613" />
           </Canvas>
           <Patch Id="QMOjziphkdkMkHkjzkFFGy" Name="Create" />
           <Patch Id="HukRE5hGBxlLk68YFbzQlR" Name="Update" ManuallySortedPins="true">
@@ -350,6 +356,7 @@
                 <Choice Kind="TypeFlag" Name="IFlexSkia" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="DnNRwzHJ7hULIst1k9kBWb" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <Link Id="BNB9jlSUpCGLpH3Xily42V" Ids="A4EGMdjFTbRLC1iiSQbQQn,JRvRl4pT0HJPadTpp5JGOW" IsHidden="true" />
           <Link Id="CXKRZ01YvoNP1hyJCOhF8O" Ids="JRvRl4pT0HJPadTpp5JGOW,H9guZ17vW6PMhr1e3E3wQV" />
@@ -421,9 +428,23 @@
             <Fragment Id="DkJj6kYszDdLtHftMP4BzK" Patch="TidNFv85SyRLo1C2ttdsVc" />
             <Fragment Id="FktWkpGu4O2PciUBdlkwtP" Patch="KBYgXPAY3NnNuR6CMGJCNt" />
             <Fragment Id="KuNDkQ6TSKILtTBzQrgM47" Patch="NqKHGStj2g7LSDkvZciK7C" />
+            <Fragment Id="DdAONvyQ0zZMWj2J8XNo0l" Patch="QS1uA7tggu5NpkV1Lz5evy" />
           </ProcessDefinition>
           <Link Id="JBFDd42gf4UNBmfLoigCDj" Ids="IITMqAEADvdNx7DvS00ft6,J1CquxGHCbxPXJTNJdP3cJ" />
           <Link Id="B7lH9sV1w4PLuZ7NK2Wl9q" Ids="E1Bvx8ipjfdPr84d77SiHb,RmoYGjbl5j8NXLn9rEuQW2" />
+          <Link Id="PwQhBD7fU5OQAfYVkiNBKy" Ids="K2osknWFGYPMVAzmwmbxAC,Ebo1UI4Fu8xPMCusgA7i5w" />
+          <Link Id="Bf3N4K0zbxYPqjcMXJbgOA" Ids="DnNRwzHJ7hULIst1k9kBWb,K2osknWFGYPMVAzmwmbxAC" IsHidden="true" />
+          <Patch Id="QS1uA7tggu5NpkV1Lz5evy" Name="Context">
+            <Pin Id="CyEmsyGMcxyOijVge1H5sn" Name="Context" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Object" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Slot Id="STcl5ZJe9Q5PKjWsDzj1pZ" Name="Context" />
+          <Link Id="EQrC9yxjBR0PrHucmoycRY" Ids="SAjqLERdXSgLVmTmya5Z3h,LJ8euguXJWuMzyehPHe3Um" />
+          <Link Id="I7Gk0fJEJfWLWwRhGJB3yy" Ids="CyEmsyGMcxyOijVge1H5sn,SAjqLERdXSgLVmTmya5Z3h" IsHidden="true" />
+          <Link Id="OBGKjIxb8q0M4HyVqMclGv" Ids="FMfBPAcamGKLwKuxYkwV5Y,CFX1DRqkAbbMZlwAfjQUZL" />
         </Patch>
       </Node>
       <!--
@@ -447,6 +468,7 @@
               <Pin Id="NDsETEK3OxIOVKJBZFD6lC" Name="Children" Kind="InputPin" />
               <Pin Id="DtX1ftkg5SvLKSI9wUz3H4" Name="Style" Kind="InputPin" />
               <Pin Id="FmPC8QrF9LhM3ahPcgZQPE" Name="Output" Kind="OutputPin" />
+              <Pin Id="NKuSAQI7nhDMq7HpgHEUJV" Name="Measure Func" Kind="InputPin" />
             </Node>
           </Canvas>
           <Patch Id="GlOkp1Wg0WfP5xElalW9tk" Name="Create" />
@@ -455,6 +477,7 @@
             <Pin Id="TlsXUgWHMSOPwP415fAAOi" Name="Children" Kind="InputPin" />
             <Pin Id="ASKJyyXppoQMHRp4PuOi7D" Name="Style" Kind="InputPin" />
             <Pin Id="L0KmZyYoyFDOTvAXehzxvo" Name="Output" Kind="OutputPin" />
+            <Pin Id="C1sKh5lQpsHQXzfRoonI4M" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="MopAtI0WJmZNsLV0QJqHpt">
             <Fragment Id="V1uH2nobilHOnQPpqJfPzl" Patch="GlOkp1Wg0WfP5xElalW9tk" Enabled="true" />
@@ -483,8 +506,10 @@
               <Pin Id="D826jSsenaJPTi4JuBHlDL" Name="Children" Kind="InputPin" />
               <Pin Id="K25Cv6gIlrLNx5akgvNqjY" Name="Style" Kind="InputPin" />
               <Pin Id="ThUTN6wpk3zPbN1PASeYht" Name="Output" Kind="OutputPin" />
+              <Pin Id="PQ0vVl3iJPENIPSUUJQxpM" Name="Measure Func" Kind="InputPin" />
             </Node>
             <ControlPoint Id="DmXJY02HebWLUVjUdrksIY" Bounds="594,329" />
+            <ControlPoint Id="EsOXsMMS2BHMgsJxPT1JoJ" Bounds="663,363" />
           </Canvas>
           <Patch Id="RNCkzsnW27gPNMkA0uz7Pq" Name="Create" />
           <Patch Id="OmQmhQ3jduYLi45p1nTymN" Name="Update" ManuallySortedPins="true">
@@ -506,6 +531,7 @@
             </Pin>
             <Pin Id="FRoyhkUfkLLQQGldvB3ZmJ" Name="Style" Kind="InputPin" />
             <Pin Id="AVEYp81tm11NJ3mTEtGY6s" Name="Output" Kind="OutputPin" />
+            <Pin Id="UIDoNRIVrn0PXhiPmoJxr0" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="S9lpIepTLq3NwXgnFUOT11">
             <Fragment Id="Kkx6XpTZNY8QNe5uCUlEHe" Patch="RNCkzsnW27gPNMkA0uz7Pq" Enabled="true" />
@@ -513,6 +539,8 @@
           </ProcessDefinition>
           <Link Id="LNDk8mYZXlCOYPrbnNAcns" Ids="DmXJY02HebWLUVjUdrksIY,D826jSsenaJPTi4JuBHlDL" />
           <Link Id="NbC92SpCmJ8NjMlHijAFvy" Ids="Hxh2YMFtjy8OLKY74TbdJB,DmXJY02HebWLUVjUdrksIY" IsHidden="true" />
+          <Link Id="AbEhVkLjwsJL20MrCEXhMe" Ids="EsOXsMMS2BHMgsJxPT1JoJ,PQ0vVl3iJPENIPSUUJQxpM" />
+          <Link Id="Id5OeHpkgPXM9d7UmQj4Rq" Ids="UIDoNRIVrn0PXhiPmoJxr0,EsOXsMMS2BHMgsJxPT1JoJ" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -520,7 +548,7 @@
     ************************ FlexRenderer ************************
 
 -->
-      <Node Name="FlexRenderer" Bounds="226,599" Id="LE45bkqkvRxMcO10FiiRmo">
+      <Node Name="FlexRenderer" Bounds="228,630" Id="LE45bkqkvRxMcO10FiiRmo">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -576,7 +604,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Renderer" />
               </p:NodeReference>
-              <Pin Id="KqcjoeZRGF3MWojDt9VJYF" Name="Bounds" Kind="InputPin" DefaultValue="1111, 81, 599, 717" IsHidden="true" />
+              <Pin Id="KqcjoeZRGF3MWojDt9VJYF" Name="Bounds" Kind="InputPin" DefaultValue="-1429, 165, 882, 717" IsHidden="true" />
               <Pin Id="SDckPMleYFYMCrX3UIiHY1" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
               <Pin Id="FLkMnPNz6iHO5lgMLQgdyM" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
               <Pin Id="QTpmBSTKEJsOGpqw69bCr0" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -820,8 +848,10 @@
                   <Pin Id="Qu2XAfE8yOhOc4IQKR0quL" Name="Output" Kind="OutputPin" />
                 </Node>
               </Patch>
+              <Pin Id="E7dILz0nqRSMp7SnVxZu2N" Name="Measure Func" Kind="InputPin" />
             </Node>
             <ControlPoint Id="DySmHDzLasBNwgrPosxMky" Bounds="478,213" />
+            <ControlPoint Id="PUXS8WbQwZPMWJQD2MYh7k" Bounds="668,224" />
           </Canvas>
           <Patch Id="C8xwKWiZmnjO0QeVdfOn8S" Name="Create" />
           <Patch Id="LoZa2mDQdJyL81EOHZxE3h" Name="Update" ManuallySortedPins="true">
@@ -842,6 +872,7 @@
             </Pin>
             <Pin Id="VI50Dm5uabyLmX0ccx2Tv2" Name="Style" Kind="InputPin" />
             <Pin Id="NiT83LKh1vUPWA7d7WE6kK" Name="Output" Kind="OutputPin" />
+            <Pin Id="DM8moJKuPIHLjlhy1RRdDu" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="S52FbZDNpsPM0JNErSVWZs">
             <Fragment Id="Hz97WQE4hmTM7XcKrfEGkq" Patch="C8xwKWiZmnjO0QeVdfOn8S" Enabled="true" />
@@ -854,6 +885,8 @@
           <Link Id="SnMgiPwNEdAPI87WJ8Ym4Q" Ids="Qu2XAfE8yOhOc4IQKR0quL,DEJuqdWUophNRbsWhZ9gBP" />
           <Link Id="LrukdKGklrLOpiinA8bjnn" Ids="DySmHDzLasBNwgrPosxMky,IClFQxt1sZGLJ1CQLzjRKs" />
           <Link Id="MFWYyrfDccbMQPnfgCqr3W" Ids="IANRmY9wSsHOUHq739Sbp3,DySmHDzLasBNwgrPosxMky" IsHidden="true" />
+          <Link Id="OlTDj8n8afPOLC3vR0HhKS" Ids="PUXS8WbQwZPMWJQD2MYh7k,E7dILz0nqRSMp7SnVxZu2N" />
+          <Link Id="EOuxo1pp4FHNBolA8jtDHO" Ids="DM8moJKuPIHLjlhy1RRdDu,PUXS8WbQwZPMWJQD2MYh7k" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -861,7 +894,7 @@
     ************************ FlexRegionLayer ************************
 
 -->
-      <Node Name="FlexRegionLayer" Bounds="226,427" Id="INtSboMk61qNQoS1t80TP0" Summary="Collects layers from Region">
+      <Node Name="FlexRegionLayer" Bounds="233,532" Id="INtSboMk61qNQoS1t80TP0" Summary="Collects layers from Region">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -921,7 +954,7 @@
     ************************ FlexRegionLayout ************************
 
 -->
-      <Node Name="FlexRegionLayout" Bounds="226,467" Id="EyaaFT2Z8ULNUwrRHKlupB" Summary="Provides Layout for Region">
+      <Node Name="FlexRegionLayout" Bounds="229,451" Id="EyaaFT2Z8ULNUwrRHKlupB" Summary="Provides Layout for Region">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -1119,6 +1152,7 @@
               <Pin Id="IEOXscRsBO0PRrYL2IkXVI" Name="Children" Kind="InputPin" />
               <Pin Id="N4ffsSf25UHLKEyHz0Vrbz" Name="Style" Kind="InputPin" />
               <Pin Id="SOpQOegIQKVMmbOJkpJFU0" Name="Output" Kind="OutputPin" />
+              <Pin Id="FLvrajuLUoiQZ50GTtM8rH" Name="Measure Func" Kind="InputPin" />
             </Node>
           </Canvas>
           <Patch Id="HSxXcuJc3tZMOiz5iVsaF5" Name="Create" />
@@ -1126,6 +1160,7 @@
             <Pin Id="CV034Q8H6BdMcfBWJluQRR" Name="Children" Kind="InputPin" />
             <Pin Id="HdLhazsXGCTNErmwJvBkUt" Name="Style" Kind="InputPin" />
             <Pin Id="MxTJBV0gJPeO8lfFMYQ9IV" Name="Output" Kind="OutputPin" />
+            <Pin Id="Gn03iJ2FcgDL6HVAjafRt2" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="NruizyegET4Ot8up77xLuM">
             <Fragment Id="G2uJZNfNwHyLBODN6fiuaS" Patch="HSxXcuJc3tZMOiz5iVsaF5" Enabled="true" />
@@ -1153,6 +1188,7 @@
               <Pin Id="M1Z3rkGOCW6PCWEvXLGeiI" Name="Children" Kind="InputPin" />
               <Pin Id="MmGlFlSb6pKQKcKRA7k24y" Name="Style" Kind="InputPin" />
               <Pin Id="F5YpmgWUgpXO1HPJCbx62P" Name="Output" Kind="OutputPin" />
+              <Pin Id="C9as3BjNLHILcaYGN5GSVe" Name="Measure Func" Kind="InputPin" />
             </Node>
             <ControlPoint Id="JawTUk6b7rxOz3QXmqotaj" Bounds="587,374" />
           </Canvas>
@@ -1175,6 +1211,7 @@
             </Pin>
             <Pin Id="P8VvzImlc3GOaFJ9J9uKgZ" Name="Style" Kind="InputPin" />
             <Pin Id="R4pOnYm2UrYO3byxgzZOKg" Name="Output" Kind="OutputPin" />
+            <Pin Id="CuEExEF3EP2QRmWsy3201X" Name="Measure Func" Kind="InputPin" />
           </Patch>
           <ProcessDefinition Id="Hx65E7pIqVZNPYMuUQJfpj">
             <Fragment Id="I5Pj2sXHV2oMKCIH03Rdtp" Patch="MuxgrKBnUfWOonFXtFo5g1" Enabled="true" />
@@ -1184,7 +1221,83 @@
           <Link Id="S3gdmXQPJKJMfWQPOeiRvK" Ids="S4ZKXsoT9NBMrp3GLSZSuQ,JawTUk6b7rxOz3QXmqotaj" IsHidden="true" />
         </Patch>
       </Node>
-      <Pad Id="R3A38ynGwMZLTKYmGa6mYY" Bounds="257,539,74,19" ShowValueBox="true" isIOBox="true" Value="Renderers">
+      <Pad Id="R3A38ynGwMZLTKYmGa6mYY" Bounds="259,570,74,19" ShowValueBox="true" isIOBox="true" Value="Renderers">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">9</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <!--
+
+    ************************ FlexRegionContext ************************
+
+-->
+      <Node Name="FlexRegionContext" Bounds="405,533" Id="QmORi4RbnOOQDh9ngyXTvf">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" />
+        </p:NodeReference>
+        <Patch Id="IjGlmJRFQmSN0aGXIjZjVt">
+          <Canvas Id="VaO3g9tLrJdL9bOj2UYIxX" CanvasType="Group">
+            <Node Bounds="465,269,50,19" Id="IwtdlZuuTo1MCNqSBKeqYL">
+              <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Receive (Local)" />
+              </p:NodeReference>
+              <Pin Id="R61ZSYXLdkCO4IDjJX1WlX" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="GPu4XE04TFIMPx8wZc9m6k" Name="Name" Kind="InputPin" />
+              <Pin Id="HSfyZMlbfvrNplv3gXjzT8" Name="Output" Kind="OutputPin" />
+              <Pin Id="IIvDyIDTqIfL41fgw0N7zn" Name="Warn" Kind="InputPin" IsHidden="true" />
+            </Node>
+            <Pad Id="UGw7Ttx40bAMi1YAxEUYBO" Comment="Name" Bounds="467,235,60,15" ShowValueBox="true" isIOBox="true" Value="">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="EVIidk2mRInP29H8qLVnJA" Bounds="467,329">
+              <p:TypeAnnotation LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
+                <Choice Kind="TypeFlag" Name="FlexRegionBase" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="DqV0rp5FcYELHCGz1i0VDL" Bounds="550,335" />
+            <Node Bounds="464,391,72,26" Id="QNcK9VVQNjqQUYqC1g2UjR">
+              <p:NodeReference LastCategoryFullName="VL.Flex.Skia.FlexRegionBase" LastDependency="VL.Flex.Skia.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="FlexRegionBase" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Context" />
+              </p:NodeReference>
+              <Pin Id="Kv4Ic6FDgHeO3mxdCydEag" Name="Input" Kind="StateInputPin" />
+              <Pin Id="QEZSNEFVh3NOgmXoZQUa7r" Name="Context" Kind="InputPin" />
+              <Pin Id="CHK6upG6ggRNSmjE69vosG" Name="Output" Kind="StateOutputPin" />
+            </Node>
+          </Canvas>
+          <Patch Id="IlZtzTkE3mxPiEsIiE3B5y" Name="Create" />
+          <Patch Id="EL9pkUEAl7sOFccUEwBsep" Name="Update">
+            <Pin Id="JAUkT8pjycCLgVwSJDqGGZ" Name="Input" Kind="InputPin" />
+          </Patch>
+          <ProcessDefinition Id="R4zO5ozRP6VLOYaFpQYNsv">
+            <Fragment Id="DuO6u7SM7KLO5nlWF6RUVo" Patch="IlZtzTkE3mxPiEsIiE3B5y" Enabled="true" />
+            <Fragment Id="SAmESZKgzrYODIMyIu1cxX" Patch="EL9pkUEAl7sOFccUEwBsep" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="O3QJ5fWOHWEOBTq6MWcRuH" Ids="UGw7Ttx40bAMi1YAxEUYBO,GPu4XE04TFIMPx8wZc9m6k" />
+          <Link Id="RGVLyr1YlW3QMw1z6OGi0O" Ids="HSfyZMlbfvrNplv3gXjzT8,EVIidk2mRInP29H8qLVnJA" />
+          <Link Id="NOSfxMiqsnSLf7AlTj1NX1" Ids="JAUkT8pjycCLgVwSJDqGGZ,DqV0rp5FcYELHCGz1i0VDL" IsHidden="true" />
+          <Link Id="U4t92TnfTkuNSUoERes3UZ" Ids="EVIidk2mRInP29H8qLVnJA,Kv4Ic6FDgHeO3mxdCydEag" />
+          <Link Id="EIsn0PgMUXiLYLvOKcCYoq" Ids="DqV0rp5FcYELHCGz1i0VDL,QEZSNEFVh3NOgmXoZQUa7r" />
+        </Patch>
+      </Node>
+      <Pad Id="Py2aTPYfJ4uMZhBNMmDMKY" Bounds="241,400,99,19" ShowValueBox="true" isIOBox="true" Value="Region Inputs">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">9</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
+      <Pad Id="T8PHJSdfLDQM6VTj5JPeCM" Bounds="248,475,99,19" ShowValueBox="true" isIOBox="true" Value="Region Outputs">
         <p:TypeAnnotation>
           <Choice Kind="TypeFlag" Name="String" />
         </p:TypeAnnotation>
@@ -1215,6 +1328,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MDFnKYyokDbOXpDvajlIQo" Location="VL.Skia" Version="2024.6.7-0284-gd211c8b87b" />
+  <NugetDependency Id="MDFnKYyokDbOXpDvajlIQo" Location="VL.Skia" Version="2024.6.7-0301-gd769b48db0" />
   <NugetDependency Id="EGsvIxYx8lLPANdUEJrlDO" Location="VL.Flex" Version="0.0.4" />
 </Document>

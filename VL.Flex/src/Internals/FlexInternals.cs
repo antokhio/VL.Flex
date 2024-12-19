@@ -2,14 +2,16 @@
 using System.Text.Json.Serialization;
 using YogaSharp;
 
-namespace VL.Flex
+namespace VL.Flex.Internals
 {
-
-
-    public class FlexInternals
+    /// <summary>
+    /// Holds a bulk node, used in reset style, json formatter to avoid recreation
+    /// </summary>
+    public class FlexInternals : IDisposable
     {
         public unsafe YGNode* _bulkNode = YGNode.New();
         public unsafe YGNode* BulkNode { get => _bulkNode; }
+
         public JsonSerializerOptions SerializerOptions
         {
             get
@@ -25,18 +27,18 @@ namespace VL.Flex
                 return opts;
             }
         }
-    }
 
-    public class FlexInternalsLocator
-    {
-        private static FlexInternals _internals = new FlexInternals();
-        public static FlexInternals GetInternals()
+        public void Dispose()
         {
-            if (_internals == null)
+            unsafe
             {
-                _internals = new FlexInternals();
+                if (_bulkNode != null)
+                {
+                    _bulkNode->FinalizeNode();
+                }
             }
-            return _internals;
+
+            GC.SuppressFinalize(this);
         }
     }
 }

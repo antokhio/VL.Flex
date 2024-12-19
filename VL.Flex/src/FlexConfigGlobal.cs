@@ -63,10 +63,10 @@ namespace VL.Flex
 
         public FlexConfigGlobal()
         {
-            ConfigDefault();
+            ConfigSetDefaults();
         }
 
-        public unsafe void ConfigDefault()
+        public unsafe void ConfigSetDefaults()
         {
             _handle->SetPointScaleFactor(_pointScaleFactor);
             _handle->SetErrata(_errata);
