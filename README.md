@@ -1,6 +1,6 @@
 # VL.Flex
 
-[Facebook Yoga](https://github.com/facebook/yoga) implementation for [VL](https://visualprogramming.net/). Uses [YogaSharp](https://github.com/Haselnussbomber/YogaSharp/) by [Haselnussbomber
+[Facebook Yoga](https://github.com/facebook/yoga) implementation for [vvvv](https://vvvv.org/). Uses [YogaSharp](https://github.com/Haselnussbomber/YogaSharp/) by [Haselnussbomber
 ](https://github.com/Haselnussbomber)
 
 ### Installation
