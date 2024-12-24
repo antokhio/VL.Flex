@@ -28,7 +28,7 @@ namespace VL.Flex.Internals
         }
 
         /// <summary>
-        /// Returns the computed dimensions of the node, following the contraints of <paramref name="widthMode"/> and <paramref name="heightMode"/>:<br/>
+        /// Returns the computed dimensions of the node, following the constraints of <paramref name="widthMode"/> and <paramref name="heightMode"/>:<br/>
         /// <br/>
         /// <list type="table">
         ///   <item>
@@ -46,7 +46,7 @@ namespace VL.Flex.Internals
         /// </list>
         /// </summary>
         /// <returns>
-        /// The size of the leaf node, measured under the given contraints.
+        /// The size of the leaf node, measured under the given constraints.
         /// </returns>
         public delegate YGSize MeasureFunc(object? context, float width, YGMeasureMode widthMode, float height, YGMeasureMode heightMode);
 
@@ -74,6 +74,6 @@ namespace VL.Flex.Internals
         /// A defined offset to baseline (ascent).
         /// </summary>
         public delegate float BaselineFunc(object? context, float width, float height);
-        
+
     }
 }

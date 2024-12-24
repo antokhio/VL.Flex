@@ -1,5 +1,4 @@
-﻿using System.Runtime.Intrinsics.X86;
-using VL.Flex.Internals;
+﻿using VL.Flex.Internals;
 using VL.Lib.Collections;
 using YogaSharp;
 using static VL.Flex.Internals.Delegates;
@@ -10,99 +9,167 @@ namespace VL.Flex
     {
         protected unsafe YGNode* _handle = YGNode.New();
         /// <summary>
-        /// Node pointer.
+        /// Node Pointer.
         /// </summary>
         public abstract unsafe YGNode* Handle { get; }
 
         protected Spread<FlexBase?>? _children = null;
         /// <summary>
-        /// Node children.
+        /// Node Children.
         /// </summary>
         public abstract Spread<FlexBase?>? Children { internal get; set; }
 
         protected IFlexStyle? _style;
+
         /// <summary>
-        /// Node style.
+        /// Node Style.
         /// </summary>
         public abstract IFlexStyle? Style { internal get; set; }
 
         #region Layout
         protected FlexLayout _layout;
+
         /// <summary>
         /// Node calculated Layout
         /// </summary>
         public abstract FlexLayout Layout { get; set; }
+
         /// <summary>
         /// Applies parent layout to node layout
         /// </summary>
         public abstract void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout);
+
         /// <summary>
         /// Event fired on layout change, used in Breakpoints to conditionally change style.
         /// </summary>
         public abstract event Action<FlexLayoutArgs>? OnLayoutChanged;
+
         /// <summary>
         /// Node layout should be re-calculated. 
         /// </summary>
         public abstract bool IsDirty { get; }
+
+        /// <summary>
+        /// Marks a node with custom measure function as dirty.
+        /// </summary>
+        public abstract void MarkDirty();
+
         /// <summary>
         /// Should apply new layout. 
         /// </summary>
         public abstract bool HasNewLayout { internal get; set; }
+
         /// <summary>
         /// Calculates layout using this node as a root - upstream. 
         /// </summary>
         public abstract void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection);
         #endregion
+
         /// <summary>
         /// Used to calculate layout from current node to root, deprecated.
         /// </summary>
         #region Owner
-        protected WeakReference<FlexBase>? _owner = null;
+        protected WeakReference? _owner = null;
+
         /// <summary>
         /// Sets owner.
         /// </summary>
         public abstract void SetOwner(FlexNode node);
+
         /// <summary>
         /// Traverse to tree root. 
         /// </summary>
-        public abstract FlexBase GetRoot();
+        public abstract FlexBase? GetRoot();
         #endregion
 
-        /* Measure Func
-        *  Since we can pass measure function as static only, 
-        *  we need to create node repository.
-        */
+        /// <summary>
+        /// Since delegates are static methods, we need to store pointers somewhere
+        /// </summary>
         protected FlexBase()
         {
             Store.GetRegistry().AddNode(this);
         }
 
-        // MeasureFunc
+        #region MeasureFunc
         protected MeasureFunc? _measureFunc;
         protected nint _measureFuncPtr;
-        public abstract MeasureFunc? MeasureFunc { internal get; set; }
-        public abstract bool HasMeasureFunc();
 
-        // BaselineFunc
+        /// <inheritdoc cref="Internals.Delegates.MeasureFunc"/>
+        public abstract MeasureFunc? MeasureFunc { internal get; set; }
+
+        /// <summary>
+        /// Whether a measure function is set.
+        /// </summary>
+        public abstract bool HasMeasureFunc();
+        #endregion
+
+        #region BaselineFunc
         protected BaselineFunc? _baselineFunc;
         protected nint _baselineFuncPtr;
+
+        /// <inheritdoc cref="Internals.Delegates.BaselineFunc"/>
         public abstract BaselineFunc? BaselineFunc { internal get; set; }
         public abstract bool HasBaselineFunc();
 
-        // Node Context
-        // Basically anything we want to pass to measure func.
+        protected bool? _isReferenceBaseline;
+
+        /// <summary>
+        /// Node should be considered the reference baseline among siblings.
+        /// </summary>
+        public abstract bool? IsReferenceBaseline { internal get; set; }
+        #endregion
+
+        #region Misc Props
+        protected YGNodeType? _nodeType;
+
+        /// <summary>
+        /// Sets whether a leaf node's layout results may be truncated during layout rounding.
+        /// </summary>
+        public abstract YGNodeType? NodeType { internal get; set; }
+
+        protected bool? _alwaysFormsContainingBlock;
+
+        /// <summary>
+        /// Make it so that this node will always form a containing block for any descendant nodes.<br/>
+        /// This is useful for when a node has a property outside of of Yoga that will form a containing block.<br/>
+        /// For example, transforms or some of the others listed in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block"/>
+        /// </summary>
+        public abstract bool? AlwaysFormsContainingBlock { internal get; set; }
+        #endregion
+
+        #region NodeContext
+
+        /// <summary>
+        /// Basically anything (object), that we want to pass to measure func, baseline func.
+        /// </summary>
         protected object? _nodeContext;
         public abstract object? NodeContext { internal get; set; }
-
-        // Dispose
+        #endregion
         public abstract void Dispose();
-
     }
 
     public class FlexNode : FlexBase
     {
         public override unsafe YGNode* Handle => _handle;
-        public override unsafe bool IsDirty => _handle->IsDirty();
+        public override bool IsDirty
+        {
+            get
+            {
+                unsafe
+                {
+                    return _handle->IsDirty();
+                }
+            }
+        }
+
+        public override void MarkDirty()
+        {
+            unsafe
+            {
+                _handle->MarkDirty();
+            }
+        }
+
         public override Spread<FlexBase?>? Children
         {
             internal get => _children;
@@ -200,8 +267,8 @@ namespace VL.Flex
             ApplyLayout(new FlexLayoutArgs(ownerWidth, ownerHeight, ownerDirection));
         }
 
-        public override void SetOwner(FlexNode node) => _owner = node;
-        public override FlexBase GetRoot() => _owner == null ? this : _owner.GetRoot();
+        public override void SetOwner(FlexNode node) => _owner = new WeakReference(node, false);
+        public override FlexBase? GetRoot() => _owner == null ? this : (_owner.Target as FlexBase)?.GetRoot();
 
         public override MeasureFunc? MeasureFunc
         {
@@ -238,20 +305,23 @@ namespace VL.Flex
             }
         }
 
-        public override BaselineFunc? BaselineFunc { 
+        public override BaselineFunc? BaselineFunc
+        {
             internal get => _baselineFunc;
             set
             {
 
                 if (_baselineFunc != value)
                 {
-                    if (value != null) {
+                    if (value != null)
+                    {
                         unsafe
                         {
                             _baselineFuncPtr = (nint)(delegate* unmanaged[Cdecl]<YGNode*, float, float, float>)&BaselineFuncAdapter;
                             Handle->SetBaselineFunc(_baselineFuncPtr);
                         }
-                    } else
+                    }
+                    else
                     {
                         unsafe
                         {
@@ -268,6 +338,78 @@ namespace VL.Flex
             unsafe
             {
                 return Handle->HasBaselineFunc();
+            }
+        }
+
+        public override bool? IsReferenceBaseline
+        {
+            internal get
+            {
+                unsafe
+                {
+                    _isReferenceBaseline = Handle->IsReferenceBaseline();
+                }
+                return _isReferenceBaseline;
+            }
+            set
+            {
+                if (_isReferenceBaseline != value)
+                {
+                    unsafe
+                    {
+                        Handle->SetIsReferenceBaseline(value ?? false);
+                    }
+
+                    _isReferenceBaseline = value;
+                }
+            }
+        }
+
+        public override bool? AlwaysFormsContainingBlock
+        {
+            internal get
+            {
+                unsafe
+                {
+                    _alwaysFormsContainingBlock = Handle->GetAlwaysFormsContainingBlock();
+                }
+                return _alwaysFormsContainingBlock;
+            }
+            set
+            {
+                if (_alwaysFormsContainingBlock != value)
+                {
+                    unsafe
+                    {
+                        Handle->SetAlwaysFormsContainingBlock(value ?? false);
+                    }
+
+                    _alwaysFormsContainingBlock = value;
+                }
+            }
+        }
+
+        public override YGNodeType? NodeType
+        {
+            internal get
+            {
+                unsafe
+                {
+                    _nodeType = Handle->GetNodeType();
+                }
+                return _nodeType;
+            }
+            set
+            {
+                if (_nodeType != value)
+                {
+                    unsafe
+                    {
+                        Handle->SetNodeType(value ?? YGNodeType.Default);
+                    }
+
+                    _nodeType = value;
+                }
             }
         }
 
