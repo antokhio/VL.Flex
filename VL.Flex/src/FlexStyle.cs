@@ -14,6 +14,7 @@ namespace VL.Flex.Style
     {
         public static FlexStyleDirection SetDirection(IFlexStyle? style, YGDirection direction) => new(style, direction);
         public static FlexStyleFlexDirection SetFlexDirection(IFlexStyle? style, YGFlexDirection flexDirection) => new(style, flexDirection);
+        public static FlexStyleJustifyContent SetJustifyContent(IFlexStyle? style, YGJustify justify) => new(style, justify);
         public static FlexStyleAlignContent SetAlignContent(IFlexStyle? style, YGAlign alignContent) => new(style, alignContent);
         public static FlexStyleAlignItems SetAlignItems(IFlexStyle? style, YGAlign alignItems) => new(style, alignItems);
         public static FlexStyleAlignSelf SetAlignSelf(IFlexStyle? style, YGAlign alignSelf) => new(style, alignSelf);
@@ -30,7 +31,6 @@ namespace VL.Flex.Style
         public static FlexStyleFlexBasisMaxContent SetFlexBasisMaxContent(IFlexStyle? style) => new(style);
         public static FlexStyleFlexBasisFitContent SetFlexBasisFitContent(IFlexStyle? style) => new(style);
         public static FlexStyleFlexBasisStretch SetFlexBasisStretch(IFlexStyle? style) => new(style);
-
         public static FlexStylePosition SetPosition(IFlexStyle? style, YGEdge edge, float value) => new(style, edge, value);
         public static FlexStylePositionPercent SetPositionPercent(IFlexStyle? style, YGEdge edge, float percent) => new(style, edge, percent);
         public static FlexStyleMargin SetMargin(IFlexStyle? style, YGEdge edge, float value) => new(style, edge, value);
@@ -83,7 +83,6 @@ namespace VL.Flex.Style
             Style?.ApplyStyle(node);
         }
     }
-
     public unsafe record struct FlexStyleFlexDirection(IFlexStyle? Style, YGFlexDirection FlexDirection) : IFlexStyle
     {
         public void ApplyStyle(FlexBase node)
@@ -92,7 +91,14 @@ namespace VL.Flex.Style
             Style?.ApplyStyle(node);
         }
     }
-
+    public unsafe record struct FlexStyleJustifyContent(IFlexStyle? Style, YGJustify Justify) : IFlexStyle
+    {
+        public void ApplyStyle(FlexBase node)
+        {
+            node.Handle->SetJustifyContent(Justify);
+            Style?.ApplyStyle(node);
+        }
+    }
     public unsafe record struct FlexStyleAlignContent(IFlexStyle? Style, YGAlign AlignContent) : IFlexStyle
     {
         public void ApplyStyle(FlexBase node)

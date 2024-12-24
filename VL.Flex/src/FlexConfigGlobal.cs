@@ -3,7 +3,7 @@
 namespace VL.Flex
 {
     /// <summary>
-    /// Default (global) config that set by default to every node unless, config set for a node explicitly.
+    /// Default (global) config that used by default on every node unless, config set for a node explicitly.
     /// </summary>
     public class FlexConfigGlobal : IDisposable
     {
@@ -11,6 +11,12 @@ namespace VL.Flex
         public unsafe YGConfig* Handle { get => _handle; }
 
         private float _pointScaleFactor = 0.0f;
+
+        /// <summary>
+        /// Yoga will by default round final layout positions and dimensions to the nearest point.<br/>
+        /// `pointScaleFactor` controls the density of the grid used for layout rounding (e.g. to round to the closest display pixel).<br/>
+        /// May be set to 0.0f to avoid rounding the layout results.
+        /// </summary>
         public float PointScaleFactor
         {
             internal get => _pointScaleFactor;
@@ -28,6 +34,28 @@ namespace VL.Flex
         }
 
         private YGErrata _errata = YGErrata.None;
+
+        /// <summary>
+        /// Configures how Yoga balances W3C conformance vs compatibility with layouts created against earlier versions of Yoga.<br/>
+        /// <br/>
+        /// By default Yoga will prioritize W3C conformance. `Errata` may be set to ask Yoga to produce specific incorrect behaviors, e.g. `YGConfigSetErrata(config, <see cref="YGErrata.StretchFlexBasis"/>)`.<br/>
+        /// <br/>
+        /// YGErrata is a bitmask, and multiple errata may be set at once. Predefined constants exist for convenience:<br/>
+        /// <list type="table">
+        ///   <item>
+        ///     <term><see cref="YGErrata.None"/></term>
+        ///     <description>No errata</description>
+        ///   </item>
+        ///   <item>
+        ///     <term><see cref="YGErrata.Classic"/></term>
+        ///     <description>Match layout behaviors of Yoga 1.x</description>
+        ///   </item>
+        ///   <item>
+        ///     <term><see cref="YGErrata.All"/></term>
+        ///     <description>Match layout behaviors of Yoga 1.x, including `UseLegacyStretchBehaviour`</description>
+        ///   </item>
+        /// </list>
+        /// </summary>
         public YGErrata Errata
         {
             internal get => _errata;
@@ -45,6 +73,11 @@ namespace VL.Flex
         }
 
         private bool _useWebDefaults = false;
+
+        /// <summary>
+        /// Yoga by default creates new nodes with style defaults different from flexbox on web (e.g. <see cref="YGFlexDirection.Column"/> and <see cref="YGPositionType.Relative"/>).<br/>
+        /// `UseWebDefaults` instructs Yoga to instead use a default style consistent with the web.
+        /// </summary>
         public bool UseWebDefaults
         {
             internal get => _useWebDefaults;
