@@ -5,172 +5,25 @@ using static VL.Flex.Internals.Delegates;
 
 namespace VL.Flex
 {
-    public abstract class FlexBase : IDisposable
+    /// <summary>
+    /// Base class for handling Flex Layouts
+    /// </summary>
+    public class FlexNode : IDisposable
     {
+        #region NodePtr
         protected unsafe YGNode* _handle = YGNode.New();
         /// <summary>
-        /// Node Pointer.
+        /// Yoga Node Pointer.
         /// </summary>
-        public abstract unsafe YGNode* Handle { get; }
-
-        protected Spread<FlexBase?>? _children = null;
-        /// <summary>
-        /// Node Children.
-        /// </summary>
-        public abstract Spread<FlexBase?>? Children { internal get; set; }
-
-        protected IFlexStyle? _style;
-
-        /// <summary>
-        /// Node Style.
-        /// </summary>
-        public abstract IFlexStyle? Style { internal get; set; }
-
-        #region Layout
-        protected FlexLayout _layout;
-
-        /// <summary>
-        /// Node calculated Layout
-        /// </summary>
-        public abstract FlexLayout Layout { get; set; }
-
-        /// <summary>
-        /// Applies parent layout to node layout
-        /// </summary>
-        public abstract void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout);
-
-        /// <summary>
-        /// Event fired on layout change, used in Breakpoints to conditionally change style.
-        /// </summary>
-        public abstract event Action<FlexLayoutArgs>? OnLayoutChanged;
-
-        /// <summary>
-        /// Node layout should be re-calculated. 
-        /// </summary>
-        public abstract bool IsDirty { get; }
-
-        /// <summary>
-        /// Marks a node with custom measure function as dirty.
-        /// </summary>
-        public abstract void MarkDirty();
-
-        /// <summary>
-        /// Should apply new layout. 
-        /// </summary>
-        public abstract bool HasNewLayout { internal get; set; }
-
-        /// <summary>
-        /// Calculates layout using this node as a root - upstream. 
-        /// </summary>
-        public abstract void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection);
+        public unsafe virtual YGNode* Handle => _handle;
         #endregion
 
+        #region Children
+        protected Spread<FlexNode?>? _children = null;
         /// <summary>
-        /// Used to calculate layout from current node to root, deprecated.
+        /// FlexNode Children.
         /// </summary>
-        #region Owner
-        protected WeakReference? _owner = null;
-
-        /// <summary>
-        /// Sets owner.
-        /// </summary>
-        public abstract void SetOwner(FlexNode node);
-
-        /// <summary>
-        /// Traverse to tree root. 
-        /// </summary>
-        public abstract FlexBase? GetRoot();
-        #endregion
-
-        /// <summary>
-        /// Since delegates are static methods, we need to store pointers somewhere
-        /// </summary>
-        protected FlexBase()
-        {
-            Store.GetRegistry().AddNode(this);
-        }
-
-        #region MeasureFunc
-        protected MeasureFunc? _measureFunc;
-        protected nint _measureFuncPtr;
-
-        /// <inheritdoc cref="Internals.Delegates.MeasureFunc"/>
-        public abstract MeasureFunc? MeasureFunc { internal get; set; }
-
-        /// <summary>
-        /// Whether a measure function is set.
-        /// </summary>
-        public abstract bool HasMeasureFunc();
-        #endregion
-
-        #region BaselineFunc
-        protected BaselineFunc? _baselineFunc;
-        protected nint _baselineFuncPtr;
-
-        /// <inheritdoc cref="Internals.Delegates.BaselineFunc"/>
-        public abstract BaselineFunc? BaselineFunc { internal get; set; }
-        public abstract bool HasBaselineFunc();
-
-        protected bool? _isReferenceBaseline;
-
-        /// <summary>
-        /// Node should be considered the reference baseline among siblings.
-        /// </summary>
-        public abstract bool? IsReferenceBaseline { internal get; set; }
-        #endregion
-
-        #region Misc Props
-        protected YGNodeType? _nodeType;
-
-        /// <summary>
-        /// Sets whether a leaf node's layout results may be truncated during layout rounding.
-        /// </summary>
-        public abstract YGNodeType? NodeType { internal get; set; }
-
-        protected bool? _alwaysFormsContainingBlock;
-
-        /// <summary>
-        /// Make it so that this node will always form a containing block for any descendant nodes.<br/>
-        /// This is useful for when a node has a property outside of of Yoga that will form a containing block.<br/>
-        /// For example, transforms or some of the others listed in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block"/>
-        /// </summary>
-        public abstract bool? AlwaysFormsContainingBlock { internal get; set; }
-        #endregion
-
-        #region NodeContext
-
-        /// <summary>
-        /// Basically anything (object), that we want to pass to measure func, baseline func.
-        /// </summary>
-        protected object? _nodeContext;
-        public abstract object? NodeContext { internal get; set; }
-        #endregion
-        public abstract void Dispose();
-    }
-
-    public class FlexNode : FlexBase
-    {
-        public override unsafe YGNode* Handle => _handle;
-        public override bool IsDirty
-        {
-            get
-            {
-                unsafe
-                {
-                    return _handle->IsDirty();
-                }
-            }
-        }
-
-        public override void MarkDirty()
-        {
-            unsafe
-            {
-                _handle->MarkDirty();
-            }
-        }
-
-        public override Spread<FlexBase?>? Children
+        public virtual Spread<FlexNode?>? Children
         {
             internal get => _children;
             set
@@ -180,7 +33,7 @@ namespace VL.Flex
                     var validChildren = value?.Where(child => child != null).ToSpread();
                     var validChildrenCount = validChildren?.Count;
 
-                    if (validChildren is not null && validChildrenCount > 0)
+                    if (validChildren != null && validChildrenCount > 0)
                     {
                         unsafe
                         {
@@ -188,7 +41,6 @@ namespace VL.Flex
                             for (int i = 0; i < validChildrenCount; i++)
                             {
                                 refs[i] = validChildren[i]!.Handle;
-                                validChildren[i]!.SetOwner(this);
                             }
 
                             _handle->SetChildren(refs);
@@ -206,8 +58,15 @@ namespace VL.Flex
                 }
             }
         }
+        #endregion
 
-        public override IFlexStyle? Style
+        #region Style
+        protected IFlexStyle? _style;
+
+        /// <summary>
+        /// FlexNode Style.
+        /// </summary>
+        public virtual IFlexStyle? Style
         {
             internal get => _style;
             set
@@ -224,31 +83,36 @@ namespace VL.Flex
                 }
             }
         }
+        #endregion
 
-        public override unsafe bool HasNewLayout
-        {
-            internal get => _handle->GetHasNewLayout();
-            set
-            {
-                _handle->SetHasNewLayout(value);
-            }
-        }
+        #region Layout
+        protected FlexLayout _layout;
 
-        public override FlexLayout Layout
+        /// <summary>
+        /// Node calculated Layout
+        /// </summary>
+        public virtual FlexLayout Layout
         {
             get => _layout;
             set => _layout = value;
         }
 
-        public override event Action<FlexLayoutArgs>? OnLayoutChanged;
-        public override void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout = null)
+        /// <summary>
+        /// Event fired on layout change, used in Breakpoints to conditionally change style.
+        /// </summary>
+        public virtual event Action<FlexLayoutArgs>? OnLayoutChanged;
+
+        /// <summary>
+        /// Applies parent layout to node layout
+        /// </summary>
+        public virtual void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout = null)
         {
             if (HasNewLayout)
             {
                 Layout = new FlexLayout(this, ownerLayout);
-                Children?.ForEach(c =>
+                Children?.ForEach(child =>
                 {
-                    c?.ApplyLayout(args, Layout);
+                    child?.ApplyLayout(args, Layout);
                 });
 
                 OnLayoutChanged?.Invoke(args);
@@ -257,7 +121,47 @@ namespace VL.Flex
             HasNewLayout = false;
         }
 
-        public override void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection)
+        /// <summary>
+        /// Node layout should be re-calculated. 
+        /// </summary>
+        public virtual bool IsDirty
+        {
+            get
+            {
+                unsafe
+                {
+                    return _handle->IsDirty();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Marks a node with custom measure function as dirty.
+        /// </summary>
+        public virtual void MarkDirty()
+        {
+            unsafe
+            {
+                _handle->MarkDirty();
+            }
+        }
+
+        /// <summary>
+        /// Should apply new layout. 
+        /// </summary>
+        public virtual unsafe bool HasNewLayout
+        {
+            internal get => _handle->GetHasNewLayout();
+            set
+            {
+                _handle->SetHasNewLayout(value);
+            }
+        }
+
+        /// <summary>
+        /// Calculates layout using this node as a root - upstream. 
+        /// </summary>
+        public virtual void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection)
         {
             unsafe
             {
@@ -266,11 +170,24 @@ namespace VL.Flex
 
             ApplyLayout(new FlexLayoutArgs(ownerWidth, ownerHeight, ownerDirection));
         }
+        #endregion
 
-        public override void SetOwner(FlexNode node) => _owner = new WeakReference(node, false);
-        public override FlexBase? GetRoot() => _owner == null ? this : (_owner.Target as FlexBase)?.GetRoot();
+        #region Constructors
+        /// <summary>
+        /// Since delegates are static methods, we need to store pointers somewhere
+        /// </summary>
+        public FlexNode()
+        {
+            Store.GetRegistry().RegisterNode(this);
+        }
+        #endregion
 
-        public override MeasureFunc? MeasureFunc
+        #region MeasureFunc
+        protected MeasureFunc? _measureFunc;
+        protected nint _measureFuncPtr;
+
+        /// <inheritdoc cref="Internals.Delegates.MeasureFunc"/>
+        public virtual MeasureFunc? MeasureFunc
         {
             internal get => _measureFunc;
             set
@@ -297,15 +214,28 @@ namespace VL.Flex
                 }
             }
         }
-        public override bool HasMeasureFunc()
+
+        /// <summary>
+        /// Whether a measure function is set.
+        /// </summary>
+        public virtual bool HasMeasureFunc
         {
-            unsafe
+            get
             {
-                return _handle->HasMeasureFunc();
+                unsafe
+                {
+                    return _handle->HasMeasureFunc();
+                }
             }
         }
+        #endregion
 
-        public override BaselineFunc? BaselineFunc
+        #region BaselineFunc
+        protected BaselineFunc? _baselineFunc;
+        protected nint _baselineFuncPtr;
+
+        /// <inheritdoc cref="Internals.Delegates.BaselineFunc"/>
+        public virtual BaselineFunc? BaselineFunc
         {
             internal get => _baselineFunc;
             set
@@ -332,16 +262,26 @@ namespace VL.Flex
                 }
             }
         }
-
-        public override bool HasBaselineFunc()
+        /// <summary>
+        ///  Whether a baseline function is set.
+        /// </summary>
+        public virtual bool HasBaselineFunc
         {
-            unsafe
+            get
             {
-                return Handle->HasBaselineFunc();
+                unsafe
+                {
+                    return Handle->HasBaselineFunc();
+                }
             }
         }
 
-        public override bool? IsReferenceBaseline
+        protected bool? _isReferenceBaseline;
+
+        /// <summary>
+        /// Node should be considered the reference baseline among siblings.
+        /// </summary>
+        public virtual bool? IsReferenceBaseline
         {
             internal get
             {
@@ -364,32 +304,15 @@ namespace VL.Flex
                 }
             }
         }
+        #endregion
 
-        public override bool? AlwaysFormsContainingBlock
-        {
-            internal get
-            {
-                unsafe
-                {
-                    _alwaysFormsContainingBlock = Handle->GetAlwaysFormsContainingBlock();
-                }
-                return _alwaysFormsContainingBlock;
-            }
-            set
-            {
-                if (_alwaysFormsContainingBlock != value)
-                {
-                    unsafe
-                    {
-                        Handle->SetAlwaysFormsContainingBlock(value ?? false);
-                    }
+        #region Misc Props
+        protected YGNodeType? _nodeType;
 
-                    _alwaysFormsContainingBlock = value;
-                }
-            }
-        }
-
-        public override YGNodeType? NodeType
+        /// <summary>
+        /// Sets whether a leaf node's layout results may be truncated during layout rounding.
+        /// </summary>
+        public virtual YGNodeType? NodeType
         {
             internal get
             {
@@ -413,28 +336,70 @@ namespace VL.Flex
             }
         }
 
-        public override object? NodeContext
+        protected bool? _alwaysFormsContainingBlock;
+
+        /// <summary>
+        /// Make it so that this node will always form a containing block for any descendant nodes.<br/>
+        /// This is useful for when a node has a property outside of of Yoga that will form a containing block.<br/>
+        /// For example, transforms or some of the others listed in <see href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block"/>
+        /// </summary>
+        public virtual bool? AlwaysFormsContainingBlock
+        {
+            internal get
+            {
+                unsafe
+                {
+                    _alwaysFormsContainingBlock = Handle->GetAlwaysFormsContainingBlock();
+                }
+                return _alwaysFormsContainingBlock;
+            }
+            set
+            {
+                if (_alwaysFormsContainingBlock != value)
+                {
+                    unsafe
+                    {
+                        Handle->SetAlwaysFormsContainingBlock(value ?? false);
+                    }
+
+                    _alwaysFormsContainingBlock = value;
+                }
+            }
+        }
+        #endregion
+
+        #region NodeContext
+
+        /// <summary>
+        /// Basically anything (object), that we want to pass to measure func, baseline func.
+        /// </summary>
+        protected object? _nodeContext;
+        public virtual object? NodeContext
         {
             internal get => _nodeContext;
             set => _nodeContext = value;
         }
+        #endregion
 
-        public override void Dispose()
+        #region Dispose
+        public virtual void Dispose()
         {
             unsafe
             {
                 if (_handle != null)
                 {
+                    Store.GetRegistry().UnregisterNode(_handle);
+
                     _measureFuncPtr = 0;
                     _baselineFuncPtr = 0;
 
-                    Store.GetRegistry().RemoveNode(_handle);
                     _handle->FinalizeNode();
                 }
 
                 GC.SuppressFinalize(this);
             }
         }
+        #endregion  
     }
 }
 

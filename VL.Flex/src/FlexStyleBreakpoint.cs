@@ -4,9 +4,9 @@
     {
         public Func<FlexLayoutArgs, IFlexStyle>? Breakpoint { internal get; set; }
 
-        private FlexBase? _node = null;
+        private FlexNode? _node = null;
 
-        public void ApplyStyle(FlexBase node)
+        public void ApplyStyle(FlexNode node)
         {
             if (_node != node)
             {
