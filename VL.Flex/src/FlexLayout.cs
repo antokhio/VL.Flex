@@ -9,7 +9,7 @@ namespace VL.Flex
         public float Width { get; set; }
         public float Height { get; set; }
 
-        public unsafe FlexLayout(FlexBase node, FlexLayout? ownerLayout)
+        public unsafe FlexLayout(FlexNode node, FlexLayout? ownerLayout)
         {
             Left = node.Handle->GetComputedLeft() + ownerLayout?.Left ?? .0f;
             Top = node.Handle->GetComputedTop() + ownerLayout?.Top ?? .0f;

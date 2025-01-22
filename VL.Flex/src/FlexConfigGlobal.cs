@@ -10,7 +10,10 @@ namespace VL.Flex
         protected unsafe YGConfig* _handle = YGConfig.GetDefault();
         public unsafe YGConfig* Handle { get => _handle; }
 
-        private float _pointScaleFactor = 0.0f;
+        /// <summary>
+        /// Sets rounding to vvvv one pixel 0.01
+        /// </summary>
+        private float _pointScaleFactor = 0.01f;
 
         /// <summary>
         /// Yoga will by default round final layout positions and dimensions to the nearest point.<br/>

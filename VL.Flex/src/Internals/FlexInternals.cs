@@ -4,14 +4,18 @@ using YogaSharp;
 
 namespace VL.Flex.Internals
 {
-    /// <summary>
-    /// Holds a bulk node, used in reset style, json formatter to avoid recreation
-    /// </summary>
-    public class FlexInternals : IDisposable
+
+    internal class FlexInternals : IDisposable
     {
         public unsafe YGNode* _bulkNode = YGNode.New();
+        /// <summary>
+        /// Holds a bulk node, used in ResetStyle.
+        /// </summary>
         public unsafe YGNode* BulkNode { get => _bulkNode; }
 
+        /// <summary>
+        /// Holds a json serializer used in debug nodes
+        /// </summary>
         public JsonSerializerOptions SerializerOptions
         {
             get

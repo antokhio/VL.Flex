@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2024.6.7-0301-gd769b48db0" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2024.6.7-0301-gd769b48db0" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0012-gd100e9c4a4" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0012-gd100e9c4a4" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -8,7 +8,7 @@
     ************************ Flex ************************
 
 -->
-      <Node Name="Flex" Bounds="167,161" Id="Okc6Qg1fIPzML8yRdegj0S" Summary="Flex" Remarks="Building block of flexbox layouts" Tags="flex,flexbox,yoga">
+      <Node Name="Flex" Bounds="285,305" Id="Okc6Qg1fIPzML8yRdegj0S" Summary="Flex" Remarks="Building block of flexbox layouts" Tags="flex,flexbox,yoga">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -16,7 +16,7 @@
         <Patch Id="Sza3272VnqqOE3qrAcXu6e">
           <Canvas Id="PsHexQqChtLLvaxSn8PiLW" CanvasType="Group">
             <Pad Id="JspGiLTBTDBLTpR06xgAaB" SlotId="MmbH9n3wAWcOogGaaTjeq2" Bounds="241,330" />
-            <Node Bounds="239,144,50,26" Id="EJkxlVC9rVmQGpR6XNWoN8">
+            <Node Bounds="239,144,50,19" Id="EJkxlVC9rVmQGpR6XNWoN8">
               <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
@@ -37,10 +37,10 @@
               <Patch Id="IzMPV1E46LPMbOAVK6JTgM" ManuallySortedPins="true">
                 <Patch Id="DQGvmZ0Z555OkaVRSqWk93" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Ehdp5wXhgXQOR7mGJPCuuH" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="431,245,69,26" Id="EK2gamFTwhRM8N0zm1SsXx">
-                  <p:NodeReference LastCategoryFullName="VL.Flex.FlexBase" LastDependency="VL.Flex.dll">
+                <Node Bounds="431,245,69,19" Id="EK2gamFTwhRM8N0zm1SsXx">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="FlexBase" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="SetChildren" />
                   </p:NodeReference>
                   <Pin Id="HpXeBcotASaMjNVSjWcE3v" Name="Input" Kind="StateInputPin" />
@@ -64,10 +64,10 @@
               <Patch Id="UzIVIwyiZ3GLBX3EuC0X6E" ManuallySortedPins="true">
                 <Patch Id="SAsXPzIaLvlNgT5AZQ9FjY" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="R5yBNpUMJbfLGm3RfHM8kS" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="725,231,52,26" Id="Vde9sqDlanoMkJwi63CN81">
-                  <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
+                <Node Bounds="725,231,52,19" Id="Vde9sqDlanoMkJwi63CN81">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="SetStyle" />
                   </p:NodeReference>
                   <Pin Id="TTEIk2B44gWPeL72qnuqRo" Name="Input" Kind="StateInputPin" />
@@ -93,10 +93,9 @@
               <Patch Id="GhlCO8V2oU3LGh0KQlxwGa" ManuallySortedPins="true">
                 <Patch Id="IMC4HWrvGMJLgnHmgzuMgG" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="BODDXOlgNqePcGl1YXxCEB" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="1179,230,90,26" Id="VmNkI70Qu6jPTOuqJMzVWo">
-                  <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
+                <Node Bounds="1179,230,90,19" Id="VmNkI70Qu6jPTOuqJMzVWo">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="SetNodeContext" />
                   </p:NodeReference>
                   <Pin Id="TGJXEW7KEtzQENTF1AU0vq" Name="Input" Kind="StateInputPin" />
@@ -108,10 +107,10 @@
             </Node>
             <ControlPoint Id="JRl3Hjy7VshO7DOd6zd3sR" Bounds="1267,156" />
             <Pad Id="I4vYpXSC1EMOgK2kdbO5x7" SlotId="MmbH9n3wAWcOogGaaTjeq2" Bounds="1270,361" />
-            <Node Bounds="1268,416,53,26" Id="P76oBhhiHxpMTcxc2u4oCV">
-              <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
+            <Node Bounds="1268,416,53,19" Id="P76oBhhiHxpMTcxc2u4oCV">
+              <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="Dispose" />
               </p:NodeReference>
               <Pin Id="DOJGL00pefdMslV3vwrE5W" Name="Input" Kind="StateInputPin" />
@@ -129,10 +128,10 @@
               <Patch Id="MRJ0xqdI94vLvOjI8zN0Dx" ManuallySortedPins="true">
                 <Patch Id="GnwhgoMqKl1K9pwL8hxkGC" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="IP86jn8a9WrOjBcbsTXB7C" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="925,272,90,26" Id="L8nk6uPOfz3NBXQJK0voRl">
-                  <p:NodeReference LastCategoryFullName="Flex.FlexBase" LastDependency="VL.Flex.vl">
+                <Node Bounds="925,272,90,19" Id="L8nk6uPOfz3NBXQJK0voRl">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="FlexBase" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="SetMeasureFunc" />
                   </p:NodeReference>
                   <Pin Id="UplVzDp4VBCPNaxQuYrXSo" Name="Input" Kind="StateInputPin" />
@@ -158,16 +157,7 @@
           <Patch Id="SQDeMqFqI7ePebcz6lQr4T" Name="Create" ParticipatingElements="EJkxlVC9rVmQGpR6XNWoN8" />
           <Slot Id="MmbH9n3wAWcOogGaaTjeq2" Name="Node" />
           <Patch Id="Cmgz4btdJEoP5Lr6koVWqI" Name="SetChildren">
-            <Pin Id="ETVnaB8wyzGQSsm6MVnBz9" MergeId="732" Name="Children" Kind="InputPin" PinGroupDefaultCount="1">
-              <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
-                <Choice Kind="TypeFlag" Name="Spread" />
-                <p:TypeArguments>
-                  <TypeReference>
-                    <Choice Kind="TypeFlag" Name="FlexBase" />
-                  </TypeReference>
-                </p:TypeArguments>
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="ETVnaB8wyzGQSsm6MVnBz9" MergeId="732" Name="Children" Kind="InputPin" PinGroupDefaultCount="1" />
           </Patch>
           <Link Id="G7qxQyqz2E1QDRpL49R615" Ids="ETVnaB8wyzGQSsm6MVnBz9,LTM92PbUyV5NKqlC7FoMmr" IsHidden="true" />
           <Patch Id="OtNlu7ldFqBMZBtd5Ct5iz" Name="SetStyle">
@@ -185,11 +175,7 @@
           <Link Id="VGezRo8EK0qOoD164iwVXa" Ids="IKHztHHxoswMh73lc1oUSv,CVeP3jRoMSNPQrmCVNnn7c" />
           <Link Id="J6PkgMbiQ9bPgrqv2rcs6l" Ids="CVeP3jRoMSNPQrmCVNnn7c,UrLwH0LADNoOQSFwM8rWbK" IsHidden="true" />
           <Patch Id="O4Gfe6sYF3nOc9kihDcfmB" Name="Update">
-            <Pin Id="UrLwH0LADNoOQSFwM8rWbK" Name="Node" Kind="OutputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-                <Choice Kind="TypeFlag" Name="FlexBase" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="UrLwH0LADNoOQSFwM8rWbK" Name="Node" Kind="OutputPin" />
           </Patch>
           <Link Id="Go028lwFRkPL5yX7lc8hpb" Ids="LTM92PbUyV5NKqlC7FoMmr,UmRXIJnDTFJLFRBrJrQPm8" />
           <Link Id="Qif8RpUMZchMa8CbPBrAaf" Ids="UmRXIJnDTFJLFRBrJrQPm8,JORdAWVOxUEL185pnHdJA4" />
@@ -232,42 +218,10 @@
       </Node>
       <!--
 
-    ************************ IFlex ************************
-
--->
-      <Node Name="IFlex" Bounds="166,49" Id="Cw8pns8a0skP8vgNaiEtcj">
-        <p:NodeReference>
-          <Choice Kind="InterfaceDefinition" />
-        </p:NodeReference>
-        <Patch Id="HUWxwDXQ2JuOZitO5SdJ1c" IsGeneric="true">
-          <Canvas Id="BGCpV68huR3PlxLJ3PzAUy" CanvasType="Group">
-            <ControlPoint Id="V6CUXIvrTCuO2Kltes6Uul" Bounds="377,329" />
-            <ControlPoint Id="EbkKGbi00PuOnQHPO5qqBu" Bounds="509,331" />
-          </Canvas>
-          <ProcessDefinition Id="Ac2s2YQbZNPLEJXXr629eD" IsHidden="true">
-            <Fragment Id="KmCx3ccpb8iMVrfDIrVNx8" Patch="AXdsiax4YmeL7b4gzALkuz" />
-            <Fragment Id="BbLaUichMTDLs3z9TeTrwX" Patch="BeliB54JmzBPtKmKeQitOD" />
-          </ProcessDefinition>
-          <Patch Id="AXdsiax4YmeL7b4gzALkuz" Name="GetNode">
-            <Pin Id="LVcWCYYdifeNofeVUIIXxv" Name="Output" Kind="OutputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-                <Choice Kind="TypeFlag" Name="FlexBase" />
-              </p:TypeAnnotation>
-            </Pin>
-          </Patch>
-          <Link Id="E73kHmrX4apPNxxEnDZkwl" Ids="V6CUXIvrTCuO2Kltes6Uul,LVcWCYYdifeNofeVUIIXxv" IsHidden="true" />
-          <Patch Id="BeliB54JmzBPtKmKeQitOD" Name="GetValue">
-            <Pin Id="Q92irSOQLA1NKVxoqxFWal" Name="Output" Kind="OutputPin" />
-          </Patch>
-          <Link Id="QqNHqfjSTuWL2imOHzGV3t" Ids="EbkKGbi00PuOnQHPO5qqBu,Q92irSOQLA1NKVxoqxFWal" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
     ************************ Config (Global) ************************
 
 -->
-      <Node Name="Config (Global)" Bounds="426,161" Id="GTRcuIFErk4OdLgUBqGmeL" Summary="Configures Layout">
+      <Node Name="Config (Global)" Bounds="544,305" Id="GTRcuIFErk4OdLgUBqGmeL" Summary="Global config for all flex nodes" Remarks="The latest change would be set for all the flex nodes, but would not be reflected in other Config (Global)..">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -440,7 +394,7 @@
     ************************ Layout ************************
 
 -->
-      <Node Name="Layout" Bounds="290,161" Id="KDSejtCh3E7L1bux8zTZd8" Summary="Calculates Layout">
+      <Node Name="Layout" Bounds="408,305" Id="KDSejtCh3E7L1bux8zTZd8" Summary="Calculates Layout">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -473,7 +427,7 @@
               <Patch Id="Ho8mTTi4gY9OamO0PaMWEP" ManuallySortedPins="true">
                 <Patch Id="Rh2xdkiIrrLLcbe6gFOjUM" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="E8Xs6MAiJNIOZIUO5I84Uu" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="216,571,112,80" Id="Eh3dNDBJsBsNoJ2Vq4dRNk">
+                <Node Bounds="216,568,112,83" Id="Eh3dNDBJsBsNoJ2Vq4dRNk">
                   <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -483,10 +437,10 @@
                   <Patch Id="BQq8EFoPKsWQd3C8zF6TxG" ManuallySortedPins="true">
                     <Patch Id="QZuCDivzalXNBl3FpHT6gn" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="Dl3bE9vIoZIOYPBNyATZz5" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="228,600,88,26" Id="QP1O64l4wB8QWbT2VJcpep">
-                      <p:NodeReference LastCategoryFullName="VL.Flex.FlexBase" LastDependency="VL.Flex.dll">
+                    <Node Bounds="228,600,88,19" Id="QP1O64l4wB8QWbT2VJcpep">
+                      <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="FlexBase" NeedsToBeDirectParent="true" />
+                        <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                         <Choice Kind="OperationCallFlag" Name="CalculateLayout" />
                       </p:NodeReference>
                       <Pin Id="HH59tbe0gdkPHmCdbXY2Qm" Name="Input" Kind="StateInputPin" />
@@ -533,10 +487,10 @@
               <Patch Id="RKty67NdKdXNluoS8tP1lo" ManuallySortedPins="true">
                 <Patch Id="CGUyi9pIfXIMNyYlPAs0fq" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="OBQJhIcZ0C9MyZVHaKCXmP" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="151,362,47,26" Id="G53myjbvITyOZNHxpnnDAC">
-                  <p:NodeReference LastCategoryFullName="VL.Flex.FlexBase" LastDependency="VL.Flex.dll">
+                <Node Bounds="151,362,47,19" Id="G53myjbvITyOZNHxpnnDAC">
+                  <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="FlexBase" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="ClassType" Name="FlexNode" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="IsDirty" />
                   </p:NodeReference>
                   <Pin Id="FcQdUkrYI2kM8z2WeNgADq" Name="Input" Kind="StateInputPin" />
@@ -575,7 +529,7 @@
                 <Choice Kind="TypeFlag" Name="Optional" />
                 <p:TypeArguments>
                   <TypeReference>
-                    <Choice Kind="TypeFlag" Name="FlexBase" />
+                    <Choice Kind="TypeFlag" Name="FlexNode" />
                   </TypeReference>
                 </p:TypeArguments>
               </p:TypeAnnotation>
@@ -649,7 +603,7 @@
     ************************ Breakpoint ************************
 
 -->
-      <Node Name="Breakpoint" Bounds="589,162" Id="KYd7pe8Tn78MM1ekp5RMI4" Summary="Returns style based on condition">
+      <Node Name="Breakpoint" Bounds="707,306" Id="KYd7pe8Tn78MM1ekp5RMI4" Summary="Return FlexStyle based on layout args.">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -727,25 +681,7 @@
           </Patch>
         </Patch>
       </Node>
-      <!--
-
-    ************************ Styles ************************
-
--->
-      <Node Name="Styles" Bounds="568,327" Id="F5I9ptZJ1ANPTaUTbaofiy" Summary="Flex Styles">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex.Style" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexStyle" />
-        </p:TypeAnnotation>
-        <Patch Id="Q8PEC4myVTOQEt4n6iepOh">
-          <Canvas Id="TaNxT35lZx9MguZ9TrQghs" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="Cs3eVWE7xv0OOs7bIQXoWf" IsHidden="true" />
-        </Patch>
-      </Node>
-      <Canvas Id="OO8l0o7Oz0eNyeY4D2IJCQ" Name="Enums" Position="759,159">
+      <Canvas Id="OO8l0o7Oz0eNyeY4D2IJCQ" Name="Enums" Position="120,348">
         <!--
 
     ************************ YGDimension ************************
@@ -1073,118 +1009,10 @@
       </Canvas>
       <!--
 
-    ************************ FlexBase ************************
-
--->
-      <Node Name="FlexBase" Bounds="188,327" Id="AagbsPlQkFPMIjhm9rRLG8" Summary="Internal Abstract Class">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexBase" />
-        </p:TypeAnnotation>
-        <Patch Id="LHFZ2EZjtjpOgRO2fB92vV">
-          <Canvas Id="D3eBkyF3ER8QAZ1gQonxh9" CanvasType="Group" />
-          <ProcessDefinition Id="J10ryaBLlmBOiKDlKbA2Nt" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ FlexDebug ************************
-
--->
-      <Node Name="FlexDebug" Bounds="739,326" Id="J56dJP1KQ2aMCuYeMuZZdL" Summary="Debug Flex">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexDebug" />
-        </p:TypeAnnotation>
-        <Patch Id="CyeAzMzwYg0PN6BsK0oyZT">
-          <Canvas Id="QfLKFAX8kxLQblGa4YIpxX" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="FsXHiWUsL9yNODI1lQrgDZ" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ FlexNode ************************
-
--->
-      <Node Name="FlexNode" Bounds="186,277" Id="LubqGaDPN2MLrGLRTvo9zf">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexNode" />
-        </p:TypeAnnotation>
-        <Patch Id="SVOnK3yRehSNPOH3mrj2sZ">
-          <Canvas Id="TmwSPqPFdnTPLvQUmE4YEm" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="TZ4BI6jZ94iPPMrn7DCpWW" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ FlexLayout ************************
-
--->
-      <Node Name="FlexLayout" Bounds="188,392" Id="U7d9xbxu3KHPqOb3KyxmQm">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexLayout" />
-        </p:TypeAnnotation>
-        <Patch Id="DiVE28dTwiSPVvC73rNZZX">
-          <Canvas Id="F4q6Qay9sO5NIB4ltsqMxJ" CanvasType="Group" />
-          <ProcessDefinition Id="Tc7scdnwCQNLg1yuSqRkwS" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ FlexConfigGlobal ************************
-
--->
-      <Node Name="FlexConfigGlobal" Bounds="379,329" Id="TDjv25KFEgbMelO7GI0xbe">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexConfigGlobal" />
-        </p:TypeAnnotation>
-        <Patch Id="PX8Is2ZMb3UPu3T8miCbqG">
-          <Canvas Id="PetXGBQxbvdOionyoWYO0n" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="JXaimsj2vEXOQYVck6TXvf" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ FlexLayoutArgs ************************
-
--->
-      <Node Name="FlexLayoutArgs" Bounds="188,452" Id="QIIkaX6qr4VLiHQBgskKAZ">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
-          <Choice Kind="TypeFlag" Name="FlexLayoutArgs" />
-        </p:TypeAnnotation>
-        <Patch Id="GvwuR4txMOvQTTbZ81jPM0">
-          <Canvas Id="FWbmcV7nUuAPT17ozyFJzy" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="KBDFgV208LMMFuOex5DyEc" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
     ************************ MeasureFunction ************************
 
 -->
-      <Node Name="MeasureFunction" Bounds="425,451" Id="KYwESdPaLVEQZTsa9BKby4">
+      <Node Name="MeasureFunction" Bounds="283,387" Id="KYwESdPaLVEQZTsa9BKby4" Summary="Use this node to create MeasureFunc for FlexNode." Remarks="Use &quot;refresh&quot; pin when you change delegate internals.">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -1243,84 +1071,1877 @@
           <Link Id="U4IIXxi6tn5NcTnx20mqBn" Ids="A9tM1H01sS8NV2pFg0Ea0L,RaWJMS2oEHpOcWQ8UmiY5d" IsHidden="true" />
         </Patch>
       </Node>
-      <!--
+      <Canvas Id="GiNqow3j2ZEP4pzXjsptLB" Name="Styles" Position="119,391">
+        <!--
+
+    ************************ SetAlignContent ************************
+
+-->
+        <Node Name="SetAlignContent" Bounds="102,117,114,82" Id="Ce5s25vcLfiPi2qx98D4DP">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="RiGD8aae2e9O0wIVhpxnQi">
+            <Node Bounds="114,149,90,19" AutoConnect="true" Id="LsQWdMybAJKQUHzmzE16IL">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetAlignContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="UmI30ugQAMgPp604EmWw34" Name="Style" Kind="InputPin" />
+              <Pin Id="Iv5QpvRzZERNOCa09HehZB" Name="Align Content" Kind="InputPin" />
+              <Pin Id="Q6uGpc3e8pqMR8cjwv7iQc" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="VQTDCwdu1dMPfa3Y22sT4M" Name="Style" Kind="InputPin" />
+            <Pin Id="TMOQxmNywslMtwkrIr8pGI" Name="Align Content" Kind="InputPin" />
+            <Pin Id="S3v9b3SzQljO60ehj9ko0b" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetAlignItems ************************
+
+-->
+        <Node Name="SetAlignItems" Bounds="382,117,112,82" Id="Pbj7GejDEUFLVKtopmmJ00">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="NKsKoBJbrUlOg6utdtBo14">
+            <Node Bounds="394,149,79,19" AutoConnect="true" Id="Lg3RTlDmFbHPjCsYjqR2c4">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetAlignItems" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="VCtuJgfPCGSMWd0fiCvYjC" Name="Style" Kind="InputPin" />
+              <Pin Id="NP493go2LlOOaFi24YOeQL" Name="Align Items" Kind="InputPin" />
+              <Pin Id="IAzPxkdYBQMQIPnQU4SLAN" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Bsxg19YGMM8M8y5g3WeZGw" Name="Style" Kind="InputPin" />
+            <Pin Id="BXdd32NTUNYMKDoBWt4sKr" Name="Align Items" Kind="InputPin" />
+            <Pin Id="B6QkiwT0pGeN3wxLF6P7dL" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetAlignSelf ************************
+
+-->
+        <Node Name="SetAlignSelf" Bounds="662,117,112,82" Id="MpZUmT3Yhg5ObGW3POg9j6">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="EMMLSEh5UhyN7OnH0gKg4F">
+            <Node Bounds="674,149,70,19" AutoConnect="true" Id="T4O7mMKXRbKLjBCFNxZhuX">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetAlignSelf" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Rtneo9tjU9bLq33RPbgGbk" Name="Style" Kind="InputPin" />
+              <Pin Id="KG8RVZcgo2zNEF1y7OQ5oR" Name="Align Self" Kind="InputPin" />
+              <Pin Id="KRSBj60pxCLOiWjUQyf1HI" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="JAT0JwlnzAfO7cxZDMJEI9" Name="Style" Kind="InputPin" />
+            <Pin Id="GtQICYfmlaqMtaqE1gcpbM" Name="Align Self" Kind="InputPin" />
+            <Pin Id="InbEaFJXedXMbL6Gu2ySDz" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetAspectRatio ************************
+
+-->
+        <Node Name="SetAspectRatio" Bounds="942,117,112,82" Id="KY2byuQ5SW6QSfYwJRMJds">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="MVQlAXDu26EMRBfuZIK5JE">
+            <Node Bounds="954,149,84,19" AutoConnect="true" Id="AkGV7wQjUolMLN1Vhuo2z3">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetAspectRatio" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="KmoZuI1KTg2PAfej0yASCm" Name="Style" Kind="InputPin" />
+              <Pin Id="VqGsF9RjQrNNuu5ijvLn4w" Name="Aspect Ratio" Kind="InputPin" />
+              <Pin Id="FmV3gqArlb6QFsFauQLLmF" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="QAmQYJ6S4KHNaoQAPOiyOP" Name="Style" Kind="InputPin" />
+            <Pin Id="AUszuv97X9SOD4mxBGdl5e" Name="Aspect Ratio" Kind="InputPin" />
+            <Pin Id="NCTvLFJLv4rN56MqRd4zt8" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetBorder ************************
+
+-->
+        <Node Name="SetBorder" Bounds="1222,117,112,82" Id="FlGTuWaTrV4LjARVkOUG1a">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="F9tU52EgDB3QR9SWiyuFUu">
+            <Node Bounds="1234,149,60,19" AutoConnect="true" Id="A3IEjJPRPpOPyVOIygZ5MZ">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetBorder" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="CmTYsXS6UjMLLCMPjnCZ4l" Name="Style" Kind="InputPin" />
+              <Pin Id="BIK5Kg97lHILfStlmJuT4r" Name="Edge" Kind="InputPin" />
+              <Pin Id="OQEoQeNecXsMbTjFFtl0F7" Name="Value" Kind="InputPin" />
+              <Pin Id="JmzT48zABQ0O8RNmLcTz1B" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="JXHwRjJhMPLPQ4ZRQl8MqG" Name="Style" Kind="InputPin" />
+            <Pin Id="BCLJ5Gk4cWGNcFvJyLizim" Name="Edge" Kind="InputPin" />
+            <Pin Id="Ta9qPcpBRBBOjAeFCwncTa" Name="Value" Kind="InputPin" />
+            <Pin Id="S0weFAtnBvFO1VzUlVoXf7" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetDirection ************************
+
+-->
+        <Node Name="SetDirection" Bounds="1502,117,112,82" Id="TeglJ6QMbsZOL2pWv4iJn8">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="UkLmb8X0MMdPUVeFHF3MQs">
+            <Node Bounds="1514,149,71,19" AutoConnect="true" Id="NHjKRiA7ApwOYDDZccVjOP">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetDirection" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="G705z1qYu6LMOObalvCFAB" Name="Style" Kind="InputPin" />
+              <Pin Id="N22eOoklKGRLWOp1N7D4QQ" Name="Direction" Kind="InputPin" />
+              <Pin Id="KeHP5MWl0UpNKLVUq8cAYR" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="IDtcs3C0otcQMPkvQJpqnL" Name="Style" Kind="InputPin" />
+            <Pin Id="Dje65d3s9CmLRhks3iEryU" Name="Direction" Kind="InputPin" />
+            <Pin Id="AYtSIVJAHRbNNmh7z60vi8" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetDisplay ************************
+
+-->
+        <Node Name="SetDisplay" Bounds="1782,117,112,82" Id="DfRv6tVh7j4P6dgl7rPbkX">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="ADu1mbf76jvLuu4b2AwDIs">
+            <Node Bounds="1794,149,63,19" AutoConnect="true" Id="NWRXqwuCwXiO9IAbF8rpVm">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetDisplay" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Hs8TyITm8qyM6ZuWD0YkdJ" Name="Style" Kind="InputPin" />
+              <Pin Id="OakrFsxOvwSMCeVwnPN1AK" Name="Display" Kind="InputPin" />
+              <Pin Id="IlP57bEGes4LOs71dN2Pog" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="MFrYi54zIQHQdv0lxxe7vJ" Name="Style" Kind="InputPin" />
+            <Pin Id="EWlNIcpdnhGM8No8YqOSVe" Name="Display" Kind="InputPin" />
+            <Pin Id="PnhbpJCTj4BLlhMRLeUOdj" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlex ************************
+
+-->
+        <Node Name="SetFlex" Bounds="98,267,116,82" Id="LUnLcU0eF1OMqQdjTtMPHZ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="PWeZ4s3YRmbOoHGzKIaE1S">
+            <Node Bounds="114,299,49,19" AutoConnect="true" Id="NwPCNbxmMqlPREGAc7RkPX">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlex" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="C5xmPCEKmBCOL96AyIwrsR" Name="Style" Kind="InputPin" />
+              <Pin Id="UFKvVAOpem8M3AILRGAfhc" Name="Flex" Kind="InputPin" />
+              <Pin Id="CpzLHTgwIwhLJdj1p0P95b" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="PEXJi707nO5OdfM2c7tehI" Name="Style" Kind="InputPin" />
+            <Pin Id="P0zdwnKUkpmMjZ3qkbPEO1" Name="Flex" Kind="InputPin" />
+            <Pin Id="PGiD558TglMNulpf3grXoR" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasis ************************
+
+-->
+        <Node Name="SetFlexBasis" Bounds="382,267,112,82" Id="MHBMjVOoHFzQD90zW9a577">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="OHjN1kXPcCoNljUgcaZIdm">
+            <Node Bounds="394,299,72,19" AutoConnect="true" Id="P4eNBayLSXiP2tIldTBZ7v">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasis" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="KGYaW8N45y7LuOutbILwCx" Name="Style" Kind="InputPin" />
+              <Pin Id="JOM9I5JkxPROhhcog7OlC3" Name="Flex Basis" Kind="InputPin" />
+              <Pin Id="Rpe0TKrrq0pOnD2dklj2cE" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="CcuSQSEqrtFPbXQ94ENhFm" Name="Style" Kind="InputPin" />
+            <Pin Id="Dnj9qyWgqKQQEFJ49ISBkz" Name="Flex Basis" Kind="InputPin" />
+            <Pin Id="NLlOWvM044bOHDeYWJNnY4" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasisAuto ************************
+
+-->
+        <Node Name="SetFlexBasisAuto" Bounds="662,267,117,82" Id="FlXbTs1yZvHQQ1L4GDZlzI">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="JvbZ5CxT43bMzuyauY5jrz">
+            <Node Bounds="674,299,93,19" AutoConnect="true" Id="SmR1UkM18RlNtzHlDyiB40">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasisAuto" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="THvRfnYqrMqPdsRvUQcsWT" Name="Style" Kind="InputPin" />
+              <Pin Id="IA2SFgBr3nJL1URSi3MTqg" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="VgEaTPBxXa1LoUkDUCXLOM" Name="Style" Kind="InputPin" />
+            <Pin Id="L9npOaCiyfoLtMuTJVqG9k" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasisFitContent ************************
+
+-->
+        <Node Name="SetFlexBasisFitContent" Bounds="942,267,143,82" Id="L5NDp1UD7dSOnfKZk1Sko2">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="NpU7ak7HacgQFeh9E1NDKW">
+            <Node Bounds="954,299,119,19" AutoConnect="true" Id="Ck5j9GuicQsPs9hoxZbtl8">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasisFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="ISVJwvzmoIRObZ9mO2u14e" Name="Style" Kind="InputPin" />
+              <Pin Id="MVZkwQZANSjOoCbiNwSWyy" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="UnT7b5SR1PgQPLvS2Qss8Y" Name="Style" Kind="InputPin" />
+            <Pin Id="Jo1ZJcYHRa3Lpy6QQ8BKFe" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasisMaxContent ************************
+
+-->
+        <Node Name="SetFlexBasisMaxContent" Bounds="1222,267,150,82" Id="DkT579tf0tVP16hr1DzNwK">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="IgImsWHL0VIOAeQBrPUKMi">
+            <Node Bounds="1234,299,126,19" AutoConnect="true" Id="O1HwcLgbmH8Of7MpbZ2d8y">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasisMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="SDDwnfbDgFdMMll7kNhaf1" Name="Style" Kind="InputPin" />
+              <Pin Id="NrPe5CTfeKsO5MOfU9L8vs" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="LwNTRZxFlE7PekT9nj4bOZ" Name="Style" Kind="InputPin" />
+            <Pin Id="BugpkvIahBwN0zprCzFGm6" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasisPercent ************************
+
+-->
+        <Node Name="SetFlexBasisPercent" Bounds="1502,267,129,82" Id="PcrrPpqPCMUMCTzhiHmR2F">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="RzrtSZbtAhoPV4APQFrMHI">
+            <Node Bounds="1514,299,105,19" AutoConnect="true" Id="AYJTJhXJ70CQFo3W8kyfCq">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasisPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="BkWYAwas9QzNuQZF2wAVzQ" Name="Style" Kind="InputPin" />
+              <Pin Id="IZCf5UhLeDaMhBKFuhDr1z" Name="Flex Basis Percent" Kind="InputPin" />
+              <Pin Id="Njtfldrk049Pa9414rUPYb" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="PmqMaZXfhkzPqhnpZH8Ntz" Name="Style" Kind="InputPin" />
+            <Pin Id="PGthw8Abp3pMZbTFaqe31B" Name="Flex Basis Percent" Kind="InputPin" />
+            <Pin Id="MCIPwuE1da3MzUAgfMK3Ke" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexBasisStretch ************************
+
+-->
+        <Node Name="SetFlexBasisStretch" Bounds="1782,267,127,82" Id="CtoGUPqUIxxNlva8hSthbL">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="MEqBzP49v0AOZ9a0906kY2">
+            <Node Bounds="1794,299,103,19" AutoConnect="true" Id="RG7aE4HRmPmOgClFfuRk5R">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexBasisStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="DLm7LUsMlncLTjWeMu7FgO" Name="Style" Kind="InputPin" />
+              <Pin Id="JpLBaEQg2tDMQj8AAy7TOv" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Ltqu0psADGtMmz6ybLMLV9" Name="Style" Kind="InputPin" />
+            <Pin Id="KU6yaddMjvKQduLO5blQxK" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexDirection ************************
+
+-->
+        <Node Name="SetFlexDirection" Bounds="102,417,114,82" Id="AuXes2wsd91N3dI0A3xqlz">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="FUPGHn9Ve42QZ7UuXgfQmh">
+            <Node Bounds="114,449,90,19" AutoConnect="true" Id="V59Q1FZIZUbON1U6BLkHDk">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexDirection" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="OISBk8VeSCdPSTWVOLMA81" Name="Style" Kind="InputPin" />
+              <Pin Id="BJNeHjQsqK0QR6ABvEJ6rm" Name="Flex Direction" Kind="InputPin" />
+              <Pin Id="VCjhKGX8ZARL3imH2kQDx4" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="ROZehFJlSQfOjEIKeJw6iH" Name="Style" Kind="InputPin" />
+            <Pin Id="N1mPOaz3XfqPDTZpZGTIrg" Name="Flex Direction" Kind="InputPin" />
+            <Pin Id="PuN8Sa60H1ZPVm3gpXi5Ee" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexGrow ************************
+
+-->
+        <Node Name="SetFlexGrow" Bounds="382,417,112,82" Id="BLzgjclqr7KOfFl3nYRndj">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="HQHqGr4kmJJPhv373THE51">
+            <Node Bounds="394,449,72,19" AutoConnect="true" Id="GCeBE8QWcjLP1Nsmo1xI0n">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexGrow" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="TwhHdtsxd3oMbVCgPS1ZHH" Name="Style" Kind="InputPin" />
+              <Pin Id="R4YT21wcCbyNY1xq5lOPzd" Name="Flex Grow" Kind="InputPin" />
+              <Pin Id="UB3vXfMm2nLNM2lHuruIr6" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="NUDohetoA6oPl9X7wXcUN2" Name="Style" Kind="InputPin" />
+            <Pin Id="H3crIISIi3NPVFircalyYY" Name="Flex Grow" Kind="InputPin" />
+            <Pin Id="BC7pDXoEKJyQCtnS926nRQ" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexShrink ************************
+
+-->
+        <Node Name="SetFlexShrink" Bounds="662,417,112,82" Id="NDLXrw3I61gPFameUgTzwY">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="RWoh4UNqm6eLwKdOf594BZ">
+            <Node Bounds="674,449,77,19" AutoConnect="true" Id="D7ga9mLS7ThMJwwDHG5pNT">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexShrink" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="INVSk2Xp1phODZCCPfLQPw" Name="Style" Kind="InputPin" />
+              <Pin Id="ILgcfDmLrmDNpUdIs7X96z" Name="Flex Shrink" Kind="InputPin" />
+              <Pin Id="GDiQtojipZ6MtF6kUPtOGn" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="GEj6lBaJL4MM6JFCwzF7hf" Name="Style" Kind="InputPin" />
+            <Pin Id="CL22hI65veyLDeZ2fsaHtX" Name="Flex Shrink" Kind="InputPin" />
+            <Pin Id="MxJ4tcbccV1Lo14FZRy2jo" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetFlexWrap ************************
+
+-->
+        <Node Name="SetFlexWrap" Bounds="942,417,112,82" Id="MIJogjXpZx5QUE23nTonlV">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="LbLn3mGoNKBOXsr7iYHkkS">
+            <Node Bounds="954,449,72,19" AutoConnect="true" Id="MPSWZpi6rRIOvEAUqetOXI">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetFlexWrap" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="GXIY7UDLXYJMIUisqnonym" Name="Style" Kind="InputPin" />
+              <Pin Id="PD0D8lIOQpkLTuTYC4QtyW" Name="Flex Wrap" Kind="InputPin" />
+              <Pin Id="BeLPyeWkSe3Mv7ZRlSW6Ha" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="NVJhDAnQPQCO5jC8zN8xmO" Name="Style" Kind="InputPin" />
+            <Pin Id="LyUKVPOkibXL9wknGpKGDe" Name="Flex Wrap" Kind="InputPin" />
+            <Pin Id="OXjtMWnBJtcPWadz9p7ZIW" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetGap ************************
+
+-->
+        <Node Name="SetGap" Bounds="1218,417,116,82" Id="K2u52qSWNUIOh3LJMWXZTk">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="K1ofnA3rhisNfND0yqr87t">
+            <Node Bounds="1234,449,48,19" AutoConnect="true" Id="TbEHgndBEcDN7IlwsAUThv">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetGap" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="FjUXaXezpVnNbyiMQM28zU" Name="Style" Kind="InputPin" />
+              <Pin Id="CjxrVM0StXMMmiBiTuHTNj" Name="Gutter" Kind="InputPin" />
+              <Pin Id="T6geCOj38lrLmE26bByE4D" Name="Gap Length" Kind="InputPin" />
+              <Pin Id="F72M162Q337MzafyLAJoZn" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="DbD615HUJduMIalBnRA2hk" Name="Style" Kind="InputPin" />
+            <Pin Id="K3GRgSMJrDmLHU9CyHdzL3" Name="Gutter" Kind="InputPin" />
+            <Pin Id="FH3ucP2YEvQLl8qZItSnOn" Name="Gap Length" Kind="InputPin" />
+            <Pin Id="G8wfz9gFoJAPqYeUrCyZGc" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeight ************************
+
+-->
+        <Node Name="SetHeight" Bounds="1502,417,112,82" Id="AQRwYnY2HFHMsgYaPSYiF4">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="KAtYuAfepNAPNMiqlHC1yF">
+            <Node Bounds="1514,449,60,19" AutoConnect="true" Id="CuTkJENsCZCQDHJcUOuTrt">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeight" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="ErtbdwUDg9aMk6Yf5TBort" Name="Style" Kind="InputPin" />
+              <Pin Id="GhCi5EWif4yPhWW9cSwZx0" Name="Height" Kind="InputPin" />
+              <Pin Id="ETGV1z6awNxP9h94FEf4ej" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="OBFVzAgYj2qPEZ2JBXFWU2" Name="Style" Kind="InputPin" />
+            <Pin Id="KWZicb0d9zGMdn4vXaMCnS" Name="Height" Kind="InputPin" />
+            <Pin Id="NTgJ1VDzWl6NUCcuqwh1Xg" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeightAuto ************************
+
+-->
+        <Node Name="SetHeightAuto" Bounds="1782,417,112,82" Id="U7qljUEnzC1LvQhBUiHpjc">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="HcnBSwf25pvQGfOByR9yhI">
+            <Node Bounds="1794,449,82,19" AutoConnect="true" Id="UB2sR2Z5xVnNvtW7tlTUnY">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeightAuto" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="FMB9pRk52BgOTP7asnJ4Bz" Name="Style" Kind="InputPin" />
+              <Pin Id="HD51MlNkNfEMDN9nI1Qw0d" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Q9PAomofMeRLp6bJpBrRWE" Name="Style" Kind="InputPin" />
+            <Pin Id="PWQCriToBT0MLvx3NNH5cG" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeightFitContent ************************
+
+-->
+        <Node Name="SetHeightFitContent" Bounds="102,567,131,82" Id="UXfWiAQYCKTNgk1gvEVmOZ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="BhZhomILmoUPQqnpmvujUK">
+            <Node Bounds="114,599,107,19" AutoConnect="true" Id="SDnmP96uTr6PetJKroYJ3n">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeightFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="KNV3zh2KvWONcARCuZ6ElE" Name="Style" Kind="InputPin" />
+              <Pin Id="VwhbTKBEcYdLJL2F65bp2R" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="QCGwbaBjamxPnLxxYLaO4U" Name="Style" Kind="InputPin" />
+            <Pin Id="D3HBN8dmrDINeZS6GPv2dt" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeightMaxContent ************************
+
+-->
+        <Node Name="SetHeightMaxContent" Bounds="382,567,139,82" Id="SrQgolg0u9PQRgN3na3qVb">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="GxSiEr45Ck3OC9ogoYBnwf">
+            <Node Bounds="394,599,115,19" AutoConnect="true" Id="KwYqdeVB70CNQsNRkxl0Xp">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeightMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="R6y9VLqKUZzPkaeGowbA5w" Name="Style" Kind="InputPin" />
+              <Pin Id="MP34X9BBgTKLAPkkUHvMm8" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Puj7L65uNxQMz4qnzsLGI5" Name="Style" Kind="InputPin" />
+            <Pin Id="Mn9cBAMHEWeN5Xui4UtzuR" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeightPercent ************************
+
+-->
+        <Node Name="SetHeightPercent" Bounds="662,567,118,82" Id="BZjoh19y04IMxgB3GrFkUz">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="F2vyqwE2RxVQIMQsIO9zXK">
+            <Node Bounds="674,599,94,19" AutoConnect="true" Id="AWis3iTreGFPBHbhyu9ZIM">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeightPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="S43WeI9NQpvL4Dg0n2xnMJ" Name="Style" Kind="InputPin" />
+              <Pin Id="Dunr1sDFdOiNKQetpWBbLc" Name="Height Percent" Kind="InputPin" />
+              <Pin Id="MAbAhNeQVxPLLLnLYzMkWm" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="EwZxMf6HrfPOwItkZjNTVC" Name="Style" Kind="InputPin" />
+            <Pin Id="VEZZTiwDnPdOFNwV1xbCzp" Name="Height Percent" Kind="InputPin" />
+            <Pin Id="OLkzKyFbrSGPZTLDwJm0yv" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetHeightStretch ************************
+
+-->
+        <Node Name="SetHeightStretch" Bounds="942,567,116,82" Id="KjtA9QiTbtoQDFHezTuRoy">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="EJDRXqY5HzSMSggvGGOiW2">
+            <Node Bounds="954,599,92,19" AutoConnect="true" Id="KYbRJUKJjdePMWVh4Zogeh">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetHeightStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Rae05LFiSgbLqvKZUQMKTg" Name="Style" Kind="InputPin" />
+              <Pin Id="L0KvwTmEPbfOIsfMXaZpeF" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Qg9LI01n2BaMTLVedQOuyq" Name="Style" Kind="InputPin" />
+            <Pin Id="PxcH8NBffkXQOvc41dCsrB" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetJustifyContent ************************
+
+-->
+        <Node Name="SetJustifyContent" Bounds="1222,567,118,82" Id="EctKVUkwMKpPHC2LTZl6iW">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="MrGLLipiSKWOkMsw1lfSXG">
+            <Node Bounds="1234,599,94,19" AutoConnect="true" Id="ScmoPuQsqEIQKLSwtY0UIG">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetJustifyContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Ctx6oKij2wHMSbVjJ6p7BP" Name="Style" Kind="InputPin" />
+              <Pin Id="F8rcok4rmc4O0wNnIR6pSp" Name="Justify" Kind="InputPin" />
+              <Pin Id="BZcNa1bAxSeMzCTECZFvw7" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="OpH4i10NFnNNCksrq9Jiel" Name="Style" Kind="InputPin" />
+            <Pin Id="QxZEwIFObUfOUCkVezeOCx" Name="Justify" Kind="InputPin" />
+            <Pin Id="VvX0WV6IVf2Mto9fZoLi8t" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMargin ************************
+
+-->
+        <Node Name="SetMargin" Bounds="1502,567,112,82" Id="V6nRpWkG8JYPXsuxn55ZwL">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="UQRLZGIq4VbMRtdkMqM0rz">
+            <Node Bounds="1514,599,62,19" AutoConnect="true" Id="FhfvaHDZb26OEq1QxZ9hK9">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMargin" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="LCTI7kZRm7dPUVOnFPqDuD" Name="Style" Kind="InputPin" />
+              <Pin Id="AA3Ipo8NLCHNuMgfMlnpeT" Name="Edge" Kind="InputPin" />
+              <Pin Id="Q2fjLDVIHRWLriOxEYnuxu" Name="Value" Kind="InputPin" />
+              <Pin Id="AAkD22kRiLXNVqBsTesfjQ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="OACU1ctDdFfK9zkXsD0XuM" Name="Style" Kind="InputPin" />
+            <Pin Id="VeJSWJ3wYS9M4wfaoG5EUd" Name="Edge" Kind="InputPin" />
+            <Pin Id="FPx478k2yHBMex78OWkl11" Name="Value" Kind="InputPin" />
+            <Pin Id="T33f7UvemtDOIXSTiHebH7" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMarginAuto ************************
+
+-->
+        <Node Name="SetMarginAuto" Bounds="1782,567,112,82" Id="NCd690Y69H5QXqiqPdONU7">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="TPvhe1gxYQvM2FQY4TwKbV">
+            <Node Bounds="1794,599,83,19" AutoConnect="true" Id="Cpg6GXIF4rFNc1lR4NcB1v">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMarginAuto" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="S93jOz51rx5LgKTNCBOqpA" Name="Style" Kind="InputPin" />
+              <Pin Id="J9yDLRh1CC1MkBByYP2Lao" Name="Edge" Kind="InputPin" />
+              <Pin Id="GCkTZJkT6EcNexGX4acYuu" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="UAiB9PqtqjGMeakk772qrP" Name="Style" Kind="InputPin" />
+            <Pin Id="QR0P79dw8WPNjd6Q0dqLfS" Name="Edge" Kind="InputPin" />
+            <Pin Id="JWUeMq8fKS8QHq68ir2HBW" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMarginPercent ************************
+
+-->
+        <Node Name="SetMarginPercent" Bounds="102,717,119,82" Id="Jsl6sKZDgnWOYlwhofiC6U">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="NFtgHdWUEzEQHw3qCb7x40">
+            <Node Bounds="114,749,95,19" AutoConnect="true" Id="HDgRNzUgucmPUNRASv91K8">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMarginPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="LkuF4tGCpjALAhGR6kD5tR" Name="Style" Kind="InputPin" />
+              <Pin Id="U75kV4bFAzqMRKyDZ4AhTF" Name="Edge" Kind="InputPin" />
+              <Pin Id="SvEpNEjRQI2P9eCXeeUNzJ" Name="Percent" Kind="InputPin" />
+              <Pin Id="OgRTTaTTCsEQIT0nZUYzd2" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="JZ2BmPN8wCBLewQcJcF8Z8" Name="Style" Kind="InputPin" />
+            <Pin Id="FoWyszp4xMrMcVBKEZ8acQ" Name="Edge" Kind="InputPin" />
+            <Pin Id="TrXEKL5kgNZOl1OaO1Az3S" Name="Percent" Kind="InputPin" />
+            <Pin Id="LM0AQpu3BZxOqGCfg738aU" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxHeight ************************
+
+-->
+        <Node Name="SetMaxHeight" Bounds="382,717,112,82" Id="VPetYkaeQSBNoRd0V329aJ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="PKncC7QrPmKLns7sS6PFBv">
+            <Node Bounds="394,749,79,19" AutoConnect="true" Id="PQmSSgBPRgmLMKU79P41n3">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxHeight" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="CpTbegqmeiqNAEsASz3ciK" Name="Style" Kind="InputPin" />
+              <Pin Id="AikhZDG7sn9OP9fERWkSLr" Name="Max Height" Kind="InputPin" />
+              <Pin Id="FO7dleJJAc2P8yB5n9OiB7" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="PDlYNwp6KEkOaE3rXFUsXm" Name="Style" Kind="InputPin" />
+            <Pin Id="JRp3IUXSKyhPQKqKkbwrMd" Name="Max Height" Kind="InputPin" />
+            <Pin Id="GQNEiI15C6oQZA4hIxWxFf" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxHeightFitContent ************************
+
+-->
+        <Node Name="SetMaxHeightFitContent" Bounds="662,717,150,82" Id="T2ZzvGeMMEZOxwnKapQSx3">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="L5RYnz0QgTHP5kj2tOPmPF">
+            <Node Bounds="674,749,126,19" AutoConnect="true" Id="HpbSuvinxYvNBNFIxfN8c7">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxHeightFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="NwEDqF4WpalMKkuslC0I4Y" Name="Style" Kind="InputPin" />
+              <Pin Id="OJP8Ze6tex5PRPHheSqsUH" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="SYjD5oT5cG5MX7d3mwqSux" Name="Style" Kind="InputPin" />
+            <Pin Id="UhY0F5HjYKDMaDy66C4CZe" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxHeightMaxContent ************************
+
+-->
+        <Node Name="SetMaxHeightMaxContent" Bounds="942,717,158,82" Id="SW4lRustQ4aLK73gqPW05g">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="OKby9Xwz9GSPldK8855QhA">
+            <Node Bounds="954,749,134,19" AutoConnect="true" Id="RwZOPP35YBpPmqpYtkA0qx">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxHeightMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="SRBGkPo1ye8OMwpwlPE0UC" Name="Style" Kind="InputPin" />
+              <Pin Id="AdJxkoNBbbKPOPotCI05wq" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="E03PdBXoaIhO7cVdMMcuAD" Name="Style" Kind="InputPin" />
+            <Pin Id="LVZzgwkaY5pM4OgnwS8Gh2" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxHeightPercent ************************
+
+-->
+        <Node Name="SetMaxHeightPercent" Bounds="1222,717,136,82" Id="MCQRTHMNLaWMPPWbXZVuB3">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="FERf4eEuSvLLU2mLP7Hm0f">
+            <Node Bounds="1234,749,112,19" AutoConnect="true" Id="Q1mebHb94f4L2TnqLwc394">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxHeightPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="F9KHAd7Cp6fN6X6W8Xe7Ij" Name="Style" Kind="InputPin" />
+              <Pin Id="Lu5J7LzBJ6SNF1jZzXDXzh" Name="Max Height Percent" Kind="InputPin" />
+              <Pin Id="VKLRlGQiNdeP809tUoKRPJ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="B7hDPrq3N7GOJbsI0s78W2" Name="Style" Kind="InputPin" />
+            <Pin Id="FsSOPMIQdS1OSvvBDLtWzG" Name="Max Height Percent" Kind="InputPin" />
+            <Pin Id="ETkksSpb090QZjyq53hn8F" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxHeightStretch ************************
+
+-->
+        <Node Name="SetMaxHeightStretch" Bounds="1502,717,135,82" Id="EUeWYu7z2hTOnFliHyZyJl">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Sf3f10sUC1KMidOts3id8I">
+            <Node Bounds="1514,749,111,19" AutoConnect="true" Id="Obs8cYVZK4CPqg54M7PXHt">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxHeightStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="SopyApl3QGcMW2gUMXC8c1" Name="Style" Kind="InputPin" />
+              <Pin Id="ET4f959T8KaLYgwbeItRme" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Mnzysb3e2uoNaNHoGTk8E5" Name="Style" Kind="InputPin" />
+            <Pin Id="CLEHYmwFUJvMJq3MEMmM0V" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxWidth ************************
+
+-->
+        <Node Name="SetMaxWidth" Bounds="1782,717,112,82" Id="FImaCpXUqSbNS2Mqb0nSPg">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="HZNApaczIQfNEmHU4PV62U">
+            <Node Bounds="1794,749,75,19" AutoConnect="true" Id="NrLfe8V6GA1N3N5y4kvwo1">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxWidth" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="IHfE3FwJB7hL9yThmF0ToJ" Name="Style" Kind="InputPin" />
+              <Pin Id="GaNmfzLGnHWNHeVgdkG1ar" Name="Max Width" Kind="InputPin" />
+              <Pin Id="DXSmUXGxKhxOcxtQA7eIXV" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="UgW9nR3NARANY9e9hkupH9" Name="Style" Kind="InputPin" />
+            <Pin Id="Ck1aPBErL8NQO88rve1wfy" Name="Max Width" Kind="InputPin" />
+            <Pin Id="Og8dy4RK6XLPUf0Ju5OlQK" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxWidthFitContent ************************
+
+-->
+        <Node Name="SetMaxWidthFitContent" Bounds="102,867,146,82" Id="LpInaQoTbILPqRM0ISfRj7">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Net5gkcQIHuP05yDf0XsYp">
+            <Node Bounds="114,899,122,19" AutoConnect="true" Id="Gu3IqnsEoenP5YQgL8nfdy">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxWidthFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="ENpJbdmv2s8OaPOUBB3Dvy" Name="Style" Kind="InputPin" />
+              <Pin Id="OGXET5P3oojOf4RKFjnPB0" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="NnWzlB5Tn6COBkvhaabJCn" Name="Style" Kind="InputPin" />
+            <Pin Id="MJClwtnEhz4NpwoNijiiop" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxWidthMaxContent ************************
+
+-->
+        <Node Name="SetMaxWidthMaxContent" Bounds="382,867,154,82" Id="QdFWRET1LLtM5Cg3mkizsl">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="OxmATSpfeTiNFKYOTaq8js">
+            <Node Bounds="394,899,130,19" AutoConnect="true" Id="Vk11dPxYRPxLNO5BHaKDAD">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxWidthMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="N3HZYhCJBhIP03a0itY5Co" Name="Style" Kind="InputPin" />
+              <Pin Id="RaatPzJhKwTNAJrO4TqZUd" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Kpl0Ltcjw4qOSo64GzzadT" Name="Style" Kind="InputPin" />
+            <Pin Id="E40Fwmau274POYojTBjEBu" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxWidthPercent ************************
+
+-->
+        <Node Name="SetMaxWidthPercent" Bounds="662,867,132,82" Id="VXJoekmDqzDNbcE3BGuos0">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="DP4CviirZCaLBW9yPqVtOK">
+            <Node Bounds="674,899,108,19" AutoConnect="true" Id="BSbACNcCFGvLiavGKHH97A">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxWidthPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="D6e4nusvbruMRvgkwVuhGw" Name="Style" Kind="InputPin" />
+              <Pin Id="CEkSypsTCsIOAxr8n640uZ" Name="Max Width Percent" Kind="InputPin" />
+              <Pin Id="NYbbINM15WRL1wtgJ3ofJA" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="FYexZEyaEjzQQY82srsR31" Name="Style" Kind="InputPin" />
+            <Pin Id="KgQ8Lwxv1dON93qNbUMwKM" Name="Max Width Percent" Kind="InputPin" />
+            <Pin Id="FPYla4AalnSNXiCqxM3RqH" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMaxWidthStretch ************************
+
+-->
+        <Node Name="SetMaxWidthStretch" Bounds="942,867,131,82" Id="UcJ6XJBdImkQU92f7wsn9t">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="IU79c7RMYdWOfMjcuK1AEZ">
+            <Node Bounds="954,899,107,19" AutoConnect="true" Id="Bw9NlZh28idLmlwj8HRzJS">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMaxWidthStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="GC8ILNILOkXMCuEpEs20I7" Name="Style" Kind="InputPin" />
+              <Pin Id="EkXnT0BAqodLqRplhKqdWt" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="R3YBHzlNLNsL7nGnf4TXUN" Name="Style" Kind="InputPin" />
+            <Pin Id="THZVEyLnnxbLuQR6S0TzaC" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinHeight ************************
+
+-->
+        <Node Name="SetMinHeight" Bounds="1222,867,112,82" Id="Vo19N1WUB3SOHYxp7IdkJX">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="EmTkDdrqzIRLziL8KNXEfJ">
+            <Node Bounds="1234,899,77,19" AutoConnect="true" Id="RG918itBo4WOYEnZYht8EN">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinHeight" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="GCLao9TllV6M6z5guTDNbS" Name="Style" Kind="InputPin" />
+              <Pin Id="U68e13YOhqrQcG7WaWRV9W" Name="Min Height" Kind="InputPin" />
+              <Pin Id="Hc2OFu2fRdbO11fkWjq8uk" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="KAlY87dyvPPOjUGMbvP8Ja" Name="Style" Kind="InputPin" />
+            <Pin Id="TENp8ugdGmkNMD86mrmcm9" Name="Min Height" Kind="InputPin" />
+            <Pin Id="JBU9orazsWYNnM81DH6vMF" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinHeightFitContent ************************
+
+-->
+        <Node Name="SetMinHeightFitContent" Bounds="1502,867,148,82" Id="DvIGwXn1KyjQTjHrNzBiBY">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="I2xnJiY6uNzNbYDVhlA3Vk">
+            <Node Bounds="1514,899,124,19" AutoConnect="true" Id="K9zBBNmMb81NIF1MkiV9R9">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinHeightFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="OXbVRJPygLYLfWxBvAmfgH" Name="Style" Kind="InputPin" />
+              <Pin Id="FqSzlv9r0lwN2SeSYnQ3yN" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="CVoDF0Lz8YpLxYRVUIYxh2" Name="Style" Kind="InputPin" />
+            <Pin Id="GsxSo73dX0nLV02vghneSV" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinHeightMaxContent ************************
+
+-->
+        <Node Name="SetMinHeightMaxContent" Bounds="1782,867,155,82" Id="MkWPEBIjRA5O08TwZBDc8X">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="UqKF45Bw1awOV0Dmeu8dnP">
+            <Node Bounds="1794,899,131,19" AutoConnect="true" Id="JbK4mj6Y6muMNfjUHpOhc4">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinHeightMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="EaGH5K2K2UAN4bG0nBQyxU" Name="Style" Kind="InputPin" />
+              <Pin Id="QTJPUAHfnPTQWEAsXaP4G0" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="RUdjTEAns6HOBF0sDC4WPD" Name="Style" Kind="InputPin" />
+            <Pin Id="MaPGazvwrxsP0hp8UcurRh" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinHeightPercent ************************
+
+-->
+        <Node Name="SetMinHeightPercent" Bounds="102,1017,134,82" Id="C3Ns5OWRJXyMTXyzdTTIa9">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="UxpCkoqWEeGLHZLLTpriaS">
+            <Node Bounds="114,1049,110,19" AutoConnect="true" Id="SHN1Tb6AN8ELYDXmkYiG7S">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinHeightPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="IHV10nqEtSULS6f6lwHeec" Name="Style" Kind="InputPin" />
+              <Pin Id="ETrKExDKOqdN9yMrzDc4Cn" Name="Min Height Percent" Kind="InputPin" />
+              <Pin Id="OrBr2sZeviqN2bhQbf4daP" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="TiDOdSMMG1APcutVccHwc8" Name="Style" Kind="InputPin" />
+            <Pin Id="Bx8AR2ur07lOOqFBRvAzOu" Name="Min Height Percent" Kind="InputPin" />
+            <Pin Id="E82rIDBnn0iOUE3vDcIFaz" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinHeightStretch ************************
+
+-->
+        <Node Name="SetMinHeightStretch" Bounds="382,1017,132,82" Id="VkslKIWGd4bNSZvFXld311">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="TF0kxVni5inL2boOucZkZV">
+            <Node Bounds="394,1049,108,19" AutoConnect="true" Id="PLTv37irH71MF4Tc51FdLP">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinHeightStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="JgwqFSJbaEqL5a5qGuR42G" Name="Style" Kind="InputPin" />
+              <Pin Id="VG4sHL597y1PVfyunbAMXj" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="DwLUytrqfrkOQbYz5ju8AK" Name="Style" Kind="InputPin" />
+            <Pin Id="D68hqjPulbHPvEJ7kv028U" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinWidth ************************
+
+-->
+        <Node Name="SetMinWidth" Bounds="662,1017,112,82" Id="UFqyMFZ3EADMFRoola1tjX">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="StRTpnfLytaObMUb63lZkI">
+            <Node Bounds="674,1049,73,19" AutoConnect="true" Id="SrbWvblMhOMN70F8Wdm5R0">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinWidth" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="M0bgZR3mTKvPh7oFI69nPn" Name="Style" Kind="InputPin" />
+              <Pin Id="FuVIw9vfkeXM4xchwT5n02" Name="Min Width" Kind="InputPin" />
+              <Pin Id="BHpaYS2zUeuMiR5MWzaEKq" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="KEwXLEJ9O8aO8PsWNsRyeK" Name="Style" Kind="InputPin" />
+            <Pin Id="QNxi6usRuChO4tcMeQinA5" Name="Min Width" Kind="InputPin" />
+            <Pin Id="CmBlScZcGlEQDWBPrdOUas" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinWidthFitContent ************************
+
+-->
+        <Node Name="SetMinWidthFitContent" Bounds="942,1017,144,82" Id="C3NlAmD77yuL6wex6tOTnZ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Lxj2uWvP0ZrOCvVdLPEBmQ">
+            <Node Bounds="954,1049,120,19" AutoConnect="true" Id="HGDcgtrkfYMNYlupf7yPON">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinWidthFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="QrptKnmpp7iPv48gJVOc6X" Name="Style" Kind="InputPin" />
+              <Pin Id="JuGg8CZEgS8OUz5qb1IMBB" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="KaLQKDgmlgJNP5obkLWCgV" Name="Style" Kind="InputPin" />
+            <Pin Id="R0WYvSlUxFhQJlcwzrNaoe" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinWidthMaxContent ************************
+
+-->
+        <Node Name="SetMinWidthMaxContent" Bounds="1222,1017,151,82" Id="VGoAOF23hd6OUxVcy5PFv9">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Gv7DRqFv5MgPeJLNzcO4Yn">
+            <Node Bounds="1234,1049,127,19" AutoConnect="true" Id="NcwwHOB8nOZQBknMyNbSNA">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinWidthMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="LhzJnAIY3euP7Q802oDO6Y" Name="Style" Kind="InputPin" />
+              <Pin Id="EIWqOEctSLAOzuMgoONfXB" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="OVqYB8gssA2OxUgTWbqc63" Name="Style" Kind="InputPin" />
+            <Pin Id="UWGGhv860VRQIB6BoVtm8M" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinWidthPercent ************************
+
+-->
+        <Node Name="SetMinWidthPercent" Bounds="1502,1017,130,82" Id="Lglyeq8ePMPMopjVBVW4A0">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="TVtIwcKICBeQFMT4KNjTVK">
+            <Node Bounds="1514,1049,106,19" AutoConnect="true" Id="F6lxNjycfVXOl27t2um50s">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinWidthPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Srj9DuIqL3WOi1ysVRgDWT" Name="Style" Kind="InputPin" />
+              <Pin Id="M742r3OuQ4oOOIg3R15F2u" Name="Min Width Percent" Kind="InputPin" />
+              <Pin Id="Mm84EQSGvXCNvBhwwR2tGW" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Jl7kkd3W3iLPvesU2bvKYX" Name="Style" Kind="InputPin" />
+            <Pin Id="PGo4Gb7DkcyMbVb6hbbzAT" Name="Min Width Percent" Kind="InputPin" />
+            <Pin Id="U7bOqMlVCKqM26D61QbwC3" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetMinWidthStretch ************************
+
+-->
+        <Node Name="SetMinWidthStretch" Bounds="1782,1017,128,82" Id="DTVcA17DUMZPyMossUIOOq">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="OyHsFSevTjgLAbqTTVvQca">
+            <Node Bounds="1794,1049,104,19" AutoConnect="true" Id="KxkX9ZCGVmoO6PM6596uOz">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetMinWidthStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Odcqjvm9aKeLtrdzUfwazm" Name="Style" Kind="InputPin" />
+              <Pin Id="RfcTQFN94K7Nfmr6ePNbdl" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="KYFJzBKDDGhMGqHtmfZ13C" Name="Style" Kind="InputPin" />
+            <Pin Id="EXFZlJuCD45NCct3Tj461I" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetOverflow ************************
+
+-->
+        <Node Name="SetOverflow" Bounds="102,1167,112,82" Id="DqqgoBh0IkhQDiihxnz93f">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="RNweyL4pBxNO6ou7aSfiZA">
+            <Node Bounds="114,1199,70,19" AutoConnect="true" Id="MtaXhNg3Ew0QPkXhrubWHO">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetOverflow" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="UQE32Q7bGNyOgkjjDDQxUW" Name="Style" Kind="InputPin" />
+              <Pin Id="MpNgSIyBx9iLxkjeR3roUG" Name="Overflow" Kind="InputPin" />
+              <Pin Id="ERNPaC4ZYesPCVHQkoyYz5" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="DHFrU3dcsMhO67ht0jxbYH" Name="Style" Kind="InputPin" />
+            <Pin Id="BaN2LYNKLT7LLf7A85vRCd" Name="Overflow" Kind="InputPin" />
+            <Pin Id="O2RM7scSrZfNj7y6xGOWRn" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetPadding ************************
+
+-->
+        <Node Name="SetPadding" Bounds="382,1167,112,82" Id="QU1wM4sgRZyP64fplniOo7">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Kk8ZLAVF6IKPNfpKM39EQZ">
+            <Node Bounds="394,1199,67,19" AutoConnect="true" Id="LC7TkV5mNT8PCFvdtA5n7y">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetPadding" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="EZ8pkwFDw04MW7o15qhUBd" Name="Style" Kind="InputPin" />
+              <Pin Id="GzYWP4Nj5YePsn9zyyU2Xf" Name="Edge" Kind="InputPin" />
+              <Pin Id="QOB8uVigfDKOlYUfAYligQ" Name="Value" Kind="InputPin" />
+              <Pin Id="VcJXtU8wt6KLFFjdsEHJuX" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Ec7zUCdLmxUMp6IlAthtRj" Name="Style" Kind="InputPin" />
+            <Pin Id="VrVGdYn2ksVOSELJZL6Kmw" Name="Edge" Kind="InputPin" />
+            <Pin Id="QMVo4Ho9t9aNDvwMnnuTZN" Name="Value" Kind="InputPin" />
+            <Pin Id="KYlXbvANtO6OIoxrxD1zEK" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetPaddingPercent ************************
+
+-->
+        <Node Name="SetPaddingPercent" Bounds="662,1167,124,82" Id="RGYVWDJY2c7QMIAegeU6VY">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="HuvlPIodVZKPMysZ4B4H5s">
+            <Node Bounds="674,1199,100,19" AutoConnect="true" Id="E5ixejnPgqELZ8AWdpmQ54">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetPaddingPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="RauF8I4eS1UNdo603axkSh" Name="Style" Kind="InputPin" />
+              <Pin Id="ExTsy5TKt3JQYUd9fegdEL" Name="Edge" Kind="InputPin" />
+              <Pin Id="AdDznmAwpKyP3xaWaTEL4v" Name="Percent" Kind="InputPin" />
+              <Pin Id="VY1CNgIthF0LMDSBCRdPjz" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="KgIrNCjOyZwLs6aPjCepTv" Name="Style" Kind="InputPin" />
+            <Pin Id="Hj3pc1pS9KAMMnxnTf7YPi" Name="Edge" Kind="InputPin" />
+            <Pin Id="QIWcBALKH77P3i8JsQJCXY" Name="Percent" Kind="InputPin" />
+            <Pin Id="Gd3bufdVsBYQHjfFwhguzD" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetPosition ************************
+
+-->
+        <Node Name="SetPosition" Bounds="942,1167,112,82" Id="NlzqZPp87qaMsQwizJnJoa">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="OQ5zRMrHoYkO4uCnebwxt5">
+            <Node Bounds="954,1199,66,19" AutoConnect="true" Id="InUteKAeitRPJZPukXzYvW">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetPosition" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Kz0gS0eLzIELg9aQOVuu0h" Name="Style" Kind="InputPin" />
+              <Pin Id="NvuNfNkk6wAMu95RGhwn2o" Name="Edge" Kind="InputPin" />
+              <Pin Id="OLiAYT6w5n3OkJHiDkaVK0" Name="Value" Kind="InputPin" />
+              <Pin Id="NRlxC7KZ3tLQWETQPkr2yv" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="SJppIbws5bUNnWbqVd9ojM" Name="Style" Kind="InputPin" />
+            <Pin Id="TMh9s8VfnzAOLdjZU3QzlB" Name="Edge" Kind="InputPin" />
+            <Pin Id="JHGS0uguhlBMc5UUnXQ88L" Name="Value" Kind="InputPin" />
+            <Pin Id="GHJ3E5JLd6sOtJ13E9hEq7" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetPositionPercent ************************
+
+-->
+        <Node Name="SetPositionPercent" Bounds="1222,1167,124,82" Id="TOQLpH4y3ntMmptPEyPYWO">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="LKUXAyJUPP2OuBDFA0S14C">
+            <Node Bounds="1234,1199,100,19" AutoConnect="true" Id="K6eBpF44mojLonOTuaPszR">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetPositionPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="FWpWc2Bo5uwOSIOO43Pzg3" Name="Style" Kind="InputPin" />
+              <Pin Id="VOcHX7nA3Q7PzTBKdc0gEY" Name="Edge" Kind="InputPin" />
+              <Pin Id="OoQB6IRbtBkLRVidDd7h7s" Name="Percent" Kind="InputPin" />
+              <Pin Id="RRsRdn7a4K4LSieuZ9dB5g" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="VJcM3mGaNWvMPD1IoXlbUe" Name="Style" Kind="InputPin" />
+            <Pin Id="H60mTAgiAChM58WEGlOUFt" Name="Edge" Kind="InputPin" />
+            <Pin Id="JLvwSxVYof6Opaq2wvjOla" Name="Percent" Kind="InputPin" />
+            <Pin Id="JDho9L1mrr3MHsUgm26RpV" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetPositionType ************************
+
+-->
+        <Node Name="SetPositionType" Bounds="1502,1167,112,82" Id="F4gxpKxioAiNlC0GAe74AJ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="FOV93vaQSWqPKrNomidMam">
+            <Node Bounds="1514,1199,88,19" AutoConnect="true" Id="B6oyfrOhNULLVSWKDkEof1">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetPositionType" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="MJI1ZYKX6DFQIqUFpW9nVK" Name="Style" Kind="InputPin" />
+              <Pin Id="ASIC31sFn9sN2ZfTbpgD3E" Name="Position Type" Kind="InputPin" />
+              <Pin Id="AbuS7kzhoVvNmqKfqVg1qG" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="IK5YNW7llfiQGdaFtPmAM3" Name="Style" Kind="InputPin" />
+            <Pin Id="Uq3B8ksLsNGL4dieP0sSvm" Name="Position Type" Kind="InputPin" />
+            <Pin Id="PB9kGIEZ0e2L4SnLex8Pak" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidth ************************
+
+-->
+        <Node Name="SetWidth" Bounds="1782,1167,112,82" Id="NY8IVdjSd4IQHmYaKdL6aw">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="P8tcuDfnWAdL3AnxR3cuQY">
+            <Node Bounds="1794,1199,56,19" AutoConnect="true" Id="AIOyyKWFQzzPSDhySfSKWq">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidth" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="Jse2CflcU9kPxNQUhr1nPA" Name="Style" Kind="InputPin" />
+              <Pin Id="UnYoM7BftP5QT9JPoOK36O" Name="Width" Kind="InputPin" />
+              <Pin Id="VB1qkJ6RmXqL9yhOkAhSVl" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="UUfQIbfdGOkMwwHffJnjet" Name="Style" Kind="InputPin" />
+            <Pin Id="Tngx1KTIaOQOYMf3Sj8MQx" Name="Width" Kind="InputPin" />
+            <Pin Id="IH1iUk8mmr2MONMoi21Q9Y" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidthAuto ************************
+
+-->
+        <Node Name="SetWidthAuto" Bounds="102,1317,112,82" Id="F304TKXavKGMF72Ny8o5Yu">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="TaQ2gvS2dFHOyo9UQdyAcL">
+            <Node Bounds="114,1349,78,19" AutoConnect="true" Id="VdmkM9tt3r4OlgtnupEF4b">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidthAuto" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="J3knGB6XOyoMur08fOEzan" Name="Style" Kind="InputPin" />
+              <Pin Id="Vk0Kp8k60qaPYW0dgYulGl" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="TBFuxOpMEGNLnuTjh98paV" Name="Style" Kind="InputPin" />
+            <Pin Id="OoNT44eFfCSOPFfScf8Khi" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidthFitContent ************************
+
+-->
+        <Node Name="SetWidthFitContent" Bounds="382,1317,127,82" Id="C8sqal95ob3MQu4n04wn8I">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Acr8WtEclGFLCVNd1QJ6ZU">
+            <Node Bounds="394,1349,103,19" AutoConnect="true" Id="STXfEyCxaQiQbW9jIgdyZR">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidthFitContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="PgBSo5zXmFdL10sqmxKqTB" Name="Style" Kind="InputPin" />
+              <Pin Id="ANgdx7S5TunNJnmtPEMDMq" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="PTRX4WMva9UMm9PlcjvZtq" Name="Style" Kind="InputPin" />
+            <Pin Id="KgbVX28JAFUL2CgBINvsnp" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidthMaxContent ************************
+
+-->
+        <Node Name="SetWidthMaxContent" Bounds="662,1317,135,82" Id="VOKyM89jP1BMg8Xj0F7QLs">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Fxj1BDtzKOpNmKMofLm9xR">
+            <Node Bounds="674,1349,111,19" AutoConnect="true" Id="BRfSuGtpPwkLTEImeTj1OK">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidthMaxContent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="UDZNkzBmByhMyNu8ZQWGgx" Name="Style" Kind="InputPin" />
+              <Pin Id="SJvZIbobRZwO0J9IAnqNvN" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="VdSqy5Au87cNexciOmpVky" Name="Style" Kind="InputPin" />
+            <Pin Id="OBl9JHoVTRhMHv4Mm72W5X" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidthPercent ************************
+
+-->
+        <Node Name="SetWidthPercent" Bounds="942,1317,113,82" Id="I13rIZ5a32zLJO6rv9tXPC">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="FbLkptOED9TMxoIXG84dQq">
+            <Node Bounds="954,1349,89,19" AutoConnect="true" Id="MvJNCjkt8kkPInng3VJK5r">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidthPercent" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="PsHAM9MpBWVMZCaEwoAlFq" Name="Style" Kind="InputPin" />
+              <Pin Id="Jwio1sKPZQbLMJEmmt2hAo" Name="Width Percent" Kind="InputPin" />
+              <Pin Id="EvVfegYuEyPNVRsQMOYtvo" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="HQttfcYL3rVM9IjMV3fsAc" Name="Style" Kind="InputPin" />
+            <Pin Id="H80UgH1QOM7Ov0nQfdONVY" Name="Width Percent" Kind="InputPin" />
+            <Pin Id="HMT2jLS4kxWM4rM7dSHTSb" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SetWidthStretch ************************
+
+-->
+        <Node Name="SetWidthStretch" Bounds="1222,1317,112,82" Id="LI8GWha1Qn2OhDgyieoCxt">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="QepskXUjou7MIS782WNvt4">
+            <Node Bounds="1234,1349,88,19" AutoConnect="true" Id="ID1oIovvMO0Mi4bGMJk0Gv">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexStyle" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="SetWidthStretch" />
+                <FullNameCategoryReference ID="VL.Flex.FlexStyle" />
+              </p:NodeReference>
+              <Pin Id="BSzhD5eyrNDNaKsoBju92J" Name="Style" Kind="InputPin" />
+              <Pin Id="VHuBTdWF9GLMAIt2obwMzU" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="GJYigTja7eaLzcPWGbFlCG" Name="Style" Kind="InputPin" />
+            <Pin Id="FUrDKKJfyyNMMRBpmW8IgI" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="BiJ5A0tyyZsNzjSqhP3vqt" Name="Config" Position="120,432">
+        <!--
+
+    ************************ FlexConfigGlobal ************************
+
+-->
+        <Node Name="FlexConfigGlobal" Bounds="211,144" Id="QngxjUw4ya6Lg1NmNuTu0w">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
+            <Choice Kind="TypeFlag" Name="FlexConfigGlobal" />
+          </p:TypeAnnotation>
+          <Patch Id="DQ98CeYqfQBPNrukv3WHFC">
+            <Canvas Id="NnYO1yTvISWNSFo0TOMSdw" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="VV3O1Q19t5WO0E2dQSIK5G" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="QO1ZCvqiMmxNttDU6YaMZ5" Name="Debug" Position="119,471">
+        <!--
+
+    ************************ DebugFlexNodeConfig ************************
+
+-->
+        <Node Name="DebugFlexNodeConfig" Bounds="274,241,142,82" Id="R3zjCef7LXtP08ejDOlJeL">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="H1ElQHiozEKLVrPlh3bCE9">
+            <Node Bounds="286,273,118,19" AutoConnect="true" Id="MaYZtnA9f03Nopw9h2kVgO">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexDebug" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="DebugFlexNodeConfig" />
+                <FullNameCategoryReference ID="VL.Flex.FlexDebug" />
+              </p:NodeReference>
+              <Pin Id="Kz02gHPocQiLLlWzqy5iSK" Name="Node" Kind="InputPin" />
+              <Pin Id="VsFoCj54XtaPAyY9A7Su5E" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="RiWJ5zDKfKYMrJC5C0JrSF" Name="Node" Kind="InputPin" />
+            <Pin Id="JP4EdHYSumQMzQ0D1VKbvC" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ DebugFlexNodeStyle ************************
+
+-->
+        <Node Name="DebugFlexNodeStyle" Bounds="274,391,134,82" Id="I7Z1LwbkBvONLEWv6xvwtP">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="RnBIUUOepE8Ow9DUvGYgO3">
+            <Node Bounds="286,423,110,19" AutoConnect="true" Id="CZlSN1tUicnMOzCc9UZ0WZ">
+              <p:NodeReference LastCategoryFullName="VL.Flex.FlexDebug" LastDependency="VL.Flex.dll">
+                <Choice Kind="OperationNode" Name="DebugFlexNodeStyle" />
+                <FullNameCategoryReference ID="VL.Flex.FlexDebug" />
+              </p:NodeReference>
+              <Pin Id="D14dCg08P4bNpoVFnaYVoK" Name="Node" Kind="InputPin" />
+              <Pin Id="M8LDgExGS6PLA1jhIAXM5Z" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="Ixi7P0L6MCAMNWQJ3XdmAy" Name="Node" Kind="InputPin" />
+            <Pin Id="Gdfg98IrmXwOI7L2TFNpYO" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="CpodiX59gg6PU214OR94f1" Name="Layout" Position="120,513">
+        <!--
+
+    ************************ FlexLayout ************************
+
+-->
+        <Node Name="FlexLayout" Bounds="123,116" Id="AKjTPKG4iZRLjutBbHQwFR">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
+            <Choice Kind="TypeFlag" Name="FlexLayout" />
+          </p:TypeAnnotation>
+          <Patch Id="AzPFzZjBaXBNXMptDY0DhX">
+            <Canvas Id="SZLcFagb2VrMpNSHf4WYcY" CanvasType="Group" />
+            <ProcessDefinition Id="G4D4bNTFD6PNXazg9yKRfd" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FlexLayoutArgs ************************
+
+-->
+        <Node Name="FlexLayoutArgs" Bounds="125,172" Id="HO1i3gu6btiNfe0u96kJJc">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
+            <Choice Kind="TypeFlag" Name="FlexLayoutArgs" />
+          </p:TypeAnnotation>
+          <Patch Id="NmsNiO7aMlHPTGkMlVauEt">
+            <Canvas Id="Kwnbxn6KueUMqonkKTq4OZ" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="N16OP8Z7RtgMIImaiYuPuo" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ FlexLayout ************************
+
+-->
+        <Node Name="FlexLayout" Bounds="321,365,323,207" Id="CVbdxyqk6mtOfw8j0phNOX">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" />
+          </p:NodeReference>
+          <Patch Id="BwbZzb4qawpPpuRq0qF0PJ">
+            <Node Bounds="333,399,50,26" Id="R7nXPO3Qiy3Lhxaz55RYwO">
+              <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Layout" />
+              </p:NodeReference>
+              <Pin Id="RgT3LyhKqgiNUacoqrcC06" Name="Input" Kind="StateInputPin" />
+              <Pin Id="O4gQEgr4H2kPSuIbsRvxPx" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="EMamc9A0torMpueOrEbWwi" Name="Layout" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="506,445,55,26" Id="FkqnPmtrEA5PG1j5WNiPJ2">
+              <p:NodeReference LastCategoryFullName="Flex.FlexLayout" LastDependency="VL.Flex.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="FlexLayout" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Width" />
+              </p:NodeReference>
+              <Pin Id="H1hKlB2xj0oOa2n7fxniXs" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Fuc7U8cO5x2O9uJMRyCR3J" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Ag65ari3MMvN0RWVUiMw2n" Name="Width" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="567,445,55,26" Id="IImvgUI13z3PVd0R8meerU">
+              <p:NodeReference LastCategoryFullName="Flex.FlexLayout" LastDependency="VL.Flex.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="FlexLayout" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Height" />
+              </p:NodeReference>
+              <Pin Id="ELek6IUvmm6NNToR51rbkL" Name="Input" Kind="StateInputPin" />
+              <Pin Id="GqMbtHqMNtOPntAoDmahda" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="EYxtE8hu8j2L1nNTr7VS3D" Name="Height" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="425,525,61,19" Id="Sb8mK8lhzJJOy6I6wG99h0">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
+              </p:NodeReference>
+              <Pin Id="UsEj5RNjezZLCuZaq6EAb5" Name="Position" Kind="InputPin" />
+              <Pin Id="SrUnjwcCqCxMvjUc3Hd7wA" Name="Size" Kind="InputPin" />
+              <Pin Id="Ae3qZludATZPwiXUVh1ezK" Name="Anchor" Kind="InputPin" DefaultValue="TopLeft" />
+              <Pin Id="MbzaiMOF3wWL9gzPLleHXY" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="425,483,66,19" Id="D9aFfUAu66FLrbXnhBkjVq">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="4043309057" Name="Vector2" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Vector (Join)" />
+              </p:NodeReference>
+              <Pin Id="BWKFePQMmMLNbnoTB9TdfY" Name="X" Kind="InputPin" />
+              <Pin Id="JReZHz6C69wLxOhbH5LLu3" Name="Y" Kind="InputPin" />
+              <Pin Id="Ufk8dTmYdNvOEEXvKx6Xqw" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="553,483,79,19" Id="NGKYIUeldS8OfQgSy5mmd8">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="4043309057" Name="Vector2" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Vector (Join)" />
+              </p:NodeReference>
+              <Pin Id="CFxDr18xuHMN8LE0eaMAi6" Name="X" Kind="InputPin" />
+              <Pin Id="VNKyXwAk2ojPOwiKk8zFy8" Name="Y" Kind="InputPin" />
+              <Pin Id="JMearci5M3vLiZpBAnPXmf" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="365,445,55,26" Id="LqHeyRQU8z7PrfbHc7UxB8">
+              <p:NodeReference LastCategoryFullName="Flex.FlexLayout" LastDependency="VL.Flex.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="FlexLayout" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Left" />
+              </p:NodeReference>
+              <Pin Id="BBahrsS0kSbQGHqAxQuFh9" Name="Input" Kind="StateInputPin" />
+              <Pin Id="QNiXywmQFFWM0oWX1HSd2L" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="E9th0s5s6dsLsrlA6oX5dW" Name="Left" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="439,445,55,26" Id="OdLOn57M0SsQYP9sV0izBk">
+              <p:NodeReference LastCategoryFullName="Flex.FlexLayout" LastDependency="VL.Flex.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="FlexLayout" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="Top" />
+              </p:NodeReference>
+              <Pin Id="TVBZhansE0KLjM32XIwcje" Name="Input" Kind="StateInputPin" />
+              <Pin Id="J05h9G17H0gLJJxOwGzQZt" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="KZrZlYGhrCHOOVv51n8UVl" Name="Top" Kind="OutputPin" />
+            </Node>
+            <Link Id="VEO1Tt6fJHkPXsQvCx9F41" Ids="EMamc9A0torMpueOrEbWwi,H1hKlB2xj0oOa2n7fxniXs" />
+            <Link Id="JdsHAvkSIsxLUPj5TxCAKk" Ids="EMamc9A0torMpueOrEbWwi,ELek6IUvmm6NNToR51rbkL" />
+            <Link Id="JHHIBJ5Khq4NDQTc1eipVY" Ids="EMamc9A0torMpueOrEbWwi,BBahrsS0kSbQGHqAxQuFh9" />
+            <Link Id="TUIhNmQhEiLPHHlTcDhARZ" Ids="Ufk8dTmYdNvOEEXvKx6Xqw,UsEj5RNjezZLCuZaq6EAb5" />
+            <Link Id="Dlt2BTkee0GMrl9ySKOMXl" Ids="EMamc9A0torMpueOrEbWwi,TVBZhansE0KLjM32XIwcje" />
+            <Link Id="VJLhqgI4VNTOVDBCIRnxrZ" Ids="JMearci5M3vLiZpBAnPXmf,SrUnjwcCqCxMvjUc3Hd7wA" />
+            <Link Id="AVtKwzWSBw5Mi2GMaYq8LQ" Ids="E9th0s5s6dsLsrlA6oX5dW,BWKFePQMmMLNbnoTB9TdfY" />
+            <Link Id="OX4fL5wcTf5LyZgW87hkNB" Ids="KZrZlYGhrCHOOVv51n8UVl,JReZHz6C69wLxOhbH5LLu3" />
+            <Link Id="HXUTNIzoz9IOQgKdaV2k7a" Ids="Ag65ari3MMvN0RWVUiMw2n,CFxDr18xuHMN8LE0eaMAi6" />
+            <Link Id="PehKzafnKxINKNPSUQNqgD" Ids="EYxtE8hu8j2L1nNTr7VS3D,VNKyXwAk2ojPOwiKk8zFy8" />
+            <ControlPoint Id="QtqFZIFmrwWMy2Pkrfs6s9" Bounds="336,383" />
+            <Link Id="MqQfbOlGCCoP5vQUSYvQuf" Ids="QtqFZIFmrwWMy2Pkrfs6s9,RgT3LyhKqgiNUacoqrcC06" />
+            <Pin Id="DoA7BFUwMmFL1I4YTfma7p" Name="Input" Kind="InputPin" />
+            <Link Id="DySoGF4dLv8Prl6ZP2sRIH" Ids="DoA7BFUwMmFL1I4YTfma7p,QtqFZIFmrwWMy2Pkrfs6s9" IsHidden="true" />
+            <ControlPoint Id="KwVBZUhaOrfMdniIip5X2S" Bounds="427,555" />
+            <Link Id="ARK9EfdQSx2Py3MhLyTg31" Ids="MbzaiMOF3wWL9gzPLleHXY,KwVBZUhaOrfMdniIip5X2S" />
+            <Pin Id="P94f6ae988XPMyozXCkkE2" Name="Output" Kind="OutputPin" />
+            <Link Id="HTkI4ZN54CIMv4HUPu6U3S" Ids="KwVBZUhaOrfMdniIip5X2S,P94f6ae988XPMyozXCkkE2" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="MKS84l2ELSkNlEBEL9edgs" Name="Units" Position="119,558">
+        <!--
 
     ************************ YGSize ************************
 
 -->
-      <Node Name="YGSize" Bounds="753,447" Id="MyCXwl2dOwSOxuquHBSfWC">
+        <Node Name="YGSize" Bounds="165,125" Id="B03C38J6q0PMwvsc5nC7G4">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="YogaSharp" LastDependency="YogaSharp.dll">
+            <Choice Kind="TypeFlag" Name="YGSize" />
+          </p:TypeAnnotation>
+          <Patch Id="HTWl8fLtG23MfghJ7xHurU">
+            <Canvas Id="T5Ec7qWIi2TOywfaieyXiP" CanvasType="Group">
+              <!--
+
+    ************************ YGSize ************************
+
+-->
+              <Node Name="YGSize" Bounds="176,105,116,82" Id="VVEnzUxLoqEP7M38szKpLu">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="FNha0OLxrE8LfkjrNYxLSM">
+                  <Node Bounds="192,137,47,19" AutoConnect="true" Id="Nahx4r2Or36PeZBShAqF40">
+                    <p:NodeReference LastCategoryFullName="VL.Flex.Extensions.YGSizeExtensions" LastDependency="VL.Flex.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="YGSize" />
+                      <FullNameCategoryReference ID="VL.Flex.Extensions.YGSizeExtensions" />
+                      <PinReference Kind="InputPin" Name="Size">
+                        <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="2D" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="TypeFlag" Name="Vector2" />
+                        </p:DataTypeReference>
+                      </PinReference>
+                    </p:NodeReference>
+                    <Pin Id="IEianxhH1xjQGgwWU7xobh" Name="Size" Kind="InputPin" />
+                    <Pin Id="B0ixSpBW4ZZOp790e7pnFM" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="UiVzsF4WJ3hMbTUD59VbEG" Name="Size" Kind="InputPin" />
+                  <Pin Id="MOpfktsQ760PueIdyuAKWH" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+              <!--
+
+    ************************ YGSize ************************
+
+-->
+              <Node Name="YGSize" Bounds="183,254,116,82" Id="UIAGRH7mBvDMFqI3V7LJ6U">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="Lbu4vxWGwb0Pe2tMWtEIL8">
+                  <Node Bounds="200,286,47,19" AutoConnect="true" Id="GZ6GJNyn6P0MEtgh0SbBQh">
+                    <p:NodeReference LastCategoryFullName="VL.Flex.Extensions.YGSizeExtensions" LastDependency="VL.Flex.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="OperationNode" Name="YGSize" />
+                      <FullNameCategoryReference ID="VL.Flex.Extensions.YGSizeExtensions" />
+                      <PinReference Kind="InputPin" Name="Size">
+                        <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Flex" LastDependency="VL.Flex.vl">
+                          <Choice Kind="TypeFlag" Name="YGSize" />
+                        </p:DataTypeReference>
+                      </PinReference>
+                    </p:NodeReference>
+                    <Pin Id="KdEFPLN2kbsNwJA97L0aLx" Name="Size" Kind="InputPin" />
+                    <Pin Id="QnOZsCbT7UmM3usThoOm5r" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Pin Id="Oty7OgQC2e3PLYUchwGZDs" Name="Size" Kind="InputPin" />
+                  <Pin Id="BGERV1XMYHHOK0i8jyv2Hd" Name="Result" Kind="OutputPin" />
+                </Patch>
+              </Node>
+            </Canvas>
+            <ProcessDefinition Id="JnZzM9A90i8PpVllP0TzjV" IsHidden="true">
+              <Fragment Id="V6ejKyCobyiLFxJWmO2ynu" Patch="VVEnzUxLoqEP7M38szKpLu" />
+              <Fragment Id="O9foinWKXynNELktBXgAOj" Patch="UIAGRH7mBvDMFqI3V7LJ6U" />
+            </ProcessDefinition>
+          </Patch>
+        </Node>
+      </Canvas>
+      <!--
+
+    ************************ FlexNode ************************
+
+-->
+      <Node Name="FlexNode" Bounds="123,278" Id="LYinJO9kQuzP7HFeK34Aya">
         <p:NodeReference>
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="YogaSharp" LastDependency="YogaSharp.dll">
-          <Choice Kind="TypeFlag" Name="YGSize" />
+        <p:TypeAnnotation LastCategoryFullName="VL.Flex" LastDependency="VL.Flex.dll">
+          <Choice Kind="TypeFlag" Name="FlexNode" />
         </p:TypeAnnotation>
-        <Patch Id="Nw1ncQju1FEPpB35ox2n9h">
-          <Canvas Id="H07MOzxqBzFPFi2xP9yesc" CanvasType="Group">
-            <!--
-
-    ************************ YGSize ************************
-
--->
-            <Node Name="YGSize" Bounds="176,105,116,82" Id="IK8IVnee02WLlsfGXbSN8Q">
-              <p:NodeReference>
-                <Choice Kind="OperationDefinition" Name="Operation" />
-                <CategoryReference Kind="Category" Name="Primitive" />
-              </p:NodeReference>
-              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
-              <Patch Id="MNQL2yydYQON195uQwhmtT">
-                <Node Bounds="192,137,47,19" AutoConnect="true" Id="DQz0jdw3WvlNbBl01ixmkK">
-                  <p:NodeReference LastCategoryFullName="VL.Flex.Extensions.YGSizeExtensions" LastDependency="VL.Flex.dll" OverloadStrategy="AllPinsThatAreNotCommon">
-                    <Choice Kind="OperationNode" Name="YGSize" />
-                    <FullNameCategoryReference ID="VL.Flex.Extensions.YGSizeExtensions" />
-                    <PinReference Kind="InputPin" Name="Size">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="2D" LastDependency="VL.CoreLib.vl">
-                        <Choice Kind="TypeFlag" Name="Vector2" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                  </p:NodeReference>
-                  <Pin Id="EfPHIHovNvHPBQ90bd8nHf" Name="Size" Kind="InputPin" />
-                  <Pin Id="VcBkwfIdUh8QViepljmsbw" Name="Result" Kind="OutputPin" />
-                </Node>
-                <Pin Id="Uzj3g9Stk6MNJnh9JmtiVc" Name="Size" Kind="InputPin" />
-                <Pin Id="IntueEHt6NxQFwO5eJzCS8" Name="Result" Kind="OutputPin" />
-              </Patch>
-            </Node>
-            <!--
-
-    ************************ YGSize ************************
-
--->
-            <Node Name="YGSize" Bounds="183,254,116,82" Id="ROR906Nv2LoPP2uwFIMfCJ">
-              <p:NodeReference>
-                <Choice Kind="OperationDefinition" Name="Operation" />
-                <CategoryReference Kind="Category" Name="Primitive" />
-              </p:NodeReference>
-              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
-              <Patch Id="RiN8AF0o75wN7cH1qOEKQ1">
-                <Node Bounds="200,286,47,19" AutoConnect="true" Id="BsJOzucDotfQDmzFWIs9x1">
-                  <p:NodeReference LastCategoryFullName="VL.Flex.Extensions.YGSizeExtensions" LastDependency="VL.Flex.dll" OverloadStrategy="AllPinsThatAreNotCommon">
-                    <Choice Kind="OperationNode" Name="YGSize" />
-                    <FullNameCategoryReference ID="VL.Flex.Extensions.YGSizeExtensions" />
-                    <PinReference Kind="InputPin" Name="Size">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Flex" LastDependency="VL.Flex.vl">
-                        <Choice Kind="TypeFlag" Name="YGSize" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                  </p:NodeReference>
-                  <Pin Id="SUTKSIlObWgO6L6bOUUW9J" Name="Size" Kind="InputPin" />
-                  <Pin Id="L7cV40KpSn7NDrfuOiv7TY" Name="Result" Kind="OutputPin" />
-                </Node>
-                <Pin Id="SkDc4tDalg3P1nCxWvCLEk" Name="Size" Kind="InputPin" />
-                <Pin Id="Bq6MmGNGMLRODXtwETcPUm" Name="Result" Kind="OutputPin" />
-              </Patch>
-            </Node>
-          </Canvas>
-          <ProcessDefinition Id="RSb8KP0GLKBLPlV8xgJMvM" IsHidden="true">
-            <Fragment Id="LUSxqkfHcTNNifBAMPjuon" Patch="IK8IVnee02WLlsfGXbSN8Q" />
-            <Fragment Id="RuASqDMS6dCPBBHfsmO7Cs" Patch="ROR906Nv2LoPP2uwFIMfCJ" />
-          </ProcessDefinition>
+        <Patch Id="SbVT71Cxq3WOWR9C5JpsA3">
+          <Canvas Id="VgM8zYZQ6CTOkXnHgnryIE" CanvasType="Group" />
+          <ProcessDefinition Id="Cim39wfDRm1N2DUj2U4FAs" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
@@ -1347,4 +2968,5 @@
   </Patch>
   <NugetDependency Id="NPC6Ov7t3vaOvAThlINOHL" Location="antokhio.YogaSharp" Version="1.1.3" />
   <PlatformDependency Id="QrvK5sLb70yMGuwHQp7l1m" Location="./lib/x64/Debug/net8.0/VL.Flex.dll" />
+  <NugetDependency Id="C5ZqfR5gMceO0jI47E8gQ9" Location="VL.Flex" Version="0.0.4" />
 </Document>

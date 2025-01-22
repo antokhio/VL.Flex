@@ -6,7 +6,7 @@ namespace VL.Flex
 {
     public static class FlexDebug
     {
-        public static string? DebugFlexNodeStyle(FlexBase? node)
+        public static string? DebugFlexNodeStyle(FlexNode? node)
         {
             unsafe
             {
@@ -96,7 +96,7 @@ namespace VL.Flex
             }
         }
 
-        public static string? DebugFlexNodeConfig(FlexBase? node)
+        public static string? DebugFlexNodeConfig(FlexNode? node)
         {
             unsafe
             {

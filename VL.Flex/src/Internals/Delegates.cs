@@ -4,12 +4,15 @@ using YogaSharp;
 
 namespace VL.Flex.Internals
 {
+    /// <summary>
+    /// Native delegates wrappers
+    /// </summary>
     public class Delegates
     {
         /// <summary>
         /// Native delegate adapter, used internally.
         /// </summary>
-        [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
+        [UnmanagedCallersOnly(CallConvs = [typeof(CallConvCdecl)])]
         public static unsafe YGSize MeasureFuncAdapter(YGNode* node, float width, YGMeasureMode widthMode, float height, YGMeasureMode heightMode)
         {
             var item = Store.GetRegistry().GetNode(node);
@@ -53,7 +56,7 @@ namespace VL.Flex.Internals
         /// <summary>
         /// Native delegate adapter, used internally.
         /// </summary>
-        [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
+        [UnmanagedCallersOnly(CallConvs = [typeof(CallConvCdecl)])]
         public static unsafe float BaselineFuncAdapter(YGNode* node, float width, float height)
         {
             var item = Store.GetRegistry().GetNode(node);
