@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="U0JqFjq7QSHPfUHRgk0ULE" LanguageVersion="2024.6.7-0301-gd769b48db0" Version="0.128">
-  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2024.6.7-0301-gd769b48db0" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="U0JqFjq7QSHPfUHRgk0ULE" LanguageVersion="2025.7.0-0012-gd100e9c4a4" Version="0.128">
+  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2025.7.0-0012-gd100e9c4a4" />
   <Patch Id="Op5UWSrlNePLliD6fgwCQs">
     <Canvas Id="OuMZkufbIFdOq3CPzcc4Qg" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -47,6 +47,8 @@
             <Pin Id="A6gNbpiXDTbNZ09tok9qNo" Name="Style" Kind="InputPin" />
             <Pin Id="UxWPOzDX5FOMVDcACdg66o" Name="Measure Func" Kind="InputPin" />
             <Pin Id="UG8Cr943BSGNyS3dNRtWF0" Name="Output" Kind="OutputPin" />
+            <Pin Id="JRNlY9OBvYENhq6Dyg6JeD" Name="Helper" Kind="InputPin" />
+            <Pin Id="Cd29Hd6DlvqONcQZrSoWhK" Name="Clipping" Kind="InputPin" />
           </Node>
           <Node Bounds="164,-104,794,450" Id="TwJje5yOT7nOj50DDq9hqe">
             <p:NodeReference LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
@@ -224,7 +226,7 @@
                   <Choice Kind="ImmutableTypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="E4PX9PH0Az4M31jUn2jraK" Bounds="637,228,182,20" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Context Object">
+              <Pad Id="E4PX9PH0Az4M31jUn2jraK" Bounds="637,228,229,20" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Context Object (can be anything)">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
@@ -383,7 +385,7 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
-              <Pad Id="GySI0S5bh24NUzoojFItoE" Bounds="1340,-473,184,53" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Options witch Yoga passes to measure func callback">
+              <Pad Id="GySI0S5bh24NUzoojFItoE" Bounds="1340,-473,184,53" ShowValueBox="true" isIOBox="true" Value="&lt;&lt; Options that Yoga passes to measure func callback">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
@@ -452,6 +454,8 @@
             <Pin Id="ViNNdLZfUtgOSRe5VsOSu6" Name="Style" Kind="InputPin" />
             <Pin Id="KRlX0mEtWNsL8hw1YymMup" Name="Measure Func" Kind="InputPin" />
             <Pin Id="NzP7HU29kGKNn1KV9P2gUV" Name="Output" Kind="OutputPin" />
+            <Pin Id="Qki4veh7OszPSifnF4wan0" Name="Helper" Kind="InputPin" />
+            <Pin Id="F8D7O5y3z6pMWDWPAhS025" Name="Clipping" Kind="InputPin" />
           </Node>
           <Pad Id="NVAAgaRYhPLPshidKTp2dG" Bounds="806,-560,123,87" ShowValueBox="true" isIOBox="true" Value="Measure function created via MeasureFunction node">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -564,6 +568,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="N58eBE65gJGLUWBTfBYTlI" Location="VL.Flex" Version="0.0.4" />
-  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2024.6.7-0301-gd769b48db0" />
+  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2025.7.0-0012-gd100e9c4a4" />
   <NugetDependency Id="KOdI6Jt0SSVMpUp2aSBuS8" Location="VL.Flex.Skia" Version="0.0.0" />
 </Document>
