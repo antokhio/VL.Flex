@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>VL.Flex</id>
+    <id>VL.Flex.Skia</id>
     <version>{{ VERSION }}</version>
-    <title>VL.Flex</title>
+    <title>VL.Flex.ImGui</title>
     <authors>antokhio</authors>
     <owners>antokhio</owners>
     <license type="expression">MIT</license>
@@ -13,17 +13,13 @@
     <summary>https://github.com/facebook/yoga port to https://visualprogramming.net/</summary>
     <description>Set of nodes to create flex layouts</description>
     <copyright>Copyright © 2024 antokhio</copyright>
-    <tags>VL, vvvv, yoga, flex</tags>
+    <tags>VL, vvvv, yoga, flex, skia, imgui</tags>
     <dependencies>
-      <dependency id="antokhio.YogaSharp" version="1.1.2" />
-      <dependency id="VL.Flex.Skia" version="{{ VERSION }}" />
-      <dependency id="VL.Flex.ImGui" version="{{ VERSION }}" />
     </dependencies>
-  </metadata>
+  </metadata> 
    <files>
-    <file src="..\VL.Flex\lib\x64\Release\net8.0\*.dll" target="lib\net8.0\" />
-    <file src="..\VL.Flex\*.vl"/>
-    <!-- <file src="..\help\*.vl" target="help"/> -->
+    <file src="..\VL.Flex.ImGui\*.vl" target=""/>
+    <file src="..\VL.Flex.ImGui\help\*.vl" target="help"/>
     <file src="..\README.md" />
     <file src="..\LICENSE" />
   </files>

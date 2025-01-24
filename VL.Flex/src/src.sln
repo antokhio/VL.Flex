@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.Flex", "VL.Flex.csproj", "{77F5947B-57E3-1792-BA30-144611BCA79B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77F5947B-57E3-1792-BA30-144611BCA79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F5947B-57E3-1792-BA30-144611BCA79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F5947B-57E3-1792-BA30-144611BCA79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F5947B-57E3-1792-BA30-144611BCA79B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EDB2A0B-56CE-4A3F-969B-D0FF1A296963}
+	EndGlobalSection
+EndGlobal

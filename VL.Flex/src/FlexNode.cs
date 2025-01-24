@@ -8,7 +8,7 @@ namespace VL.Flex
     /// <summary>
     /// Base class for handling Flex Layouts
     /// </summary>
-    public class FlexNode : IDisposable
+    public partial class FlexNode : IDisposable
     {
         #region NodePtr
         protected unsafe YGNode* _handle = YGNode.New();

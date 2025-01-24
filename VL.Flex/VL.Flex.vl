@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0012-gd100e9c4a4" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0012-gd100e9c4a4" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0025-gfbed52623d" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0025-gfbed52623d" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -2925,6 +2925,24 @@
             </ProcessDefinition>
           </Patch>
         </Node>
+        <!--
+
+    ************************ YGValue ************************
+
+-->
+        <Node Name="YGValue" Bounds="165,192" Id="S3HoxAR4CTTPEpTprCIoSO">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="YogaSharp" LastDependency="YogaSharp.dll">
+            <Choice Kind="TypeFlag" Name="YGValue" />
+          </p:TypeAnnotation>
+          <Patch Id="C4KAeD9BmoeLhAFdTwaQuj">
+            <Canvas Id="AuxHQRiICYqPJtEwClAzAg" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="HnUnvOsPbdONQECwqmRkOv" IsHidden="true" />
+          </Patch>
+        </Node>
       </Canvas>
       <!--
 
@@ -2940,8 +2958,35 @@
           <Choice Kind="TypeFlag" Name="FlexNode" />
         </p:TypeAnnotation>
         <Patch Id="SbVT71Cxq3WOWR9C5JpsA3">
-          <Canvas Id="VgM8zYZQ6CTOkXnHgnryIE" CanvasType="Group" />
-          <ProcessDefinition Id="Cim39wfDRm1N2DUj2U4FAs" IsHidden="true" />
+          <Canvas Id="VgM8zYZQ6CTOkXnHgnryIE" CanvasType="Group">
+            <!--
+
+    ************************ StyleGetPaddingSize ************************
+
+-->
+            <Node Name="StyleGetPaddingSize" Bounds="142,192,132,82" Id="FfoGqT6ECnwMOi5HaIiP33">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="FgEIIaeEzYwLVPmfR1bSob">
+                <Node Bounds="154,224,108,19" AutoConnect="true" Id="I84IA1exXE9OjdI1iHV8ou">
+                  <p:NodeReference LastCategoryFullName="VL.Flex.FlexNodeUtils" LastDependency="VL.Flex.dll">
+                    <Choice Kind="OperationNode" Name="StyleGetPaddingSize" />
+                    <FullNameCategoryReference ID="VL.Flex.FlexNodeUtils" />
+                  </p:NodeReference>
+                  <Pin Id="VXbJyM1P1t0LC8K1Hw61Eq" Name="Flex Node" Kind="InputPin" />
+                  <Pin Id="FL8NRXHIaHXN1uMHNcTOQD" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="DgBtBA1eIIXNlIUJUb45y4" Name="Flex Node" Kind="InputPin" />
+                <Pin Id="ETB020VLt4KL1wQpTlmSoZ" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="Cim39wfDRm1N2DUj2U4FAs" IsHidden="true">
+            <Fragment Id="P2NjPE3DiwLOk43plK063U" Patch="FfoGqT6ECnwMOi5HaIiP33" />
+          </ProcessDefinition>
         </Patch>
       </Node>
     </Canvas>
