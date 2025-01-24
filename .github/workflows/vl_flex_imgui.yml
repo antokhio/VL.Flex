@@ -1,0 +1,29 @@
+name: Push VL.Flex.ImGui Nuget
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Nuget.exe
+        uses: nuget/setup-nuget@v1
+
+      - name: Patch Version from tag
+        run: |
+          cd .nuget
+          .\patch-version.cmd "VL.Flex.ImGui.nuspec" "${{ github.ref_name }}"
+          cd ..
+
+      - name: Publish VL Nuget
+        uses: vvvv/PublishVLNuget@1.0.43
+        with:
+          nuspec: .nuget\VL.Flex.ImGui.nuspec
+          nuget-key: ${{ secrets.NUGET_KEY }}
