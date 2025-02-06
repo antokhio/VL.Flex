@@ -1,4 +1,5 @@
-﻿using VL.Flex.Internals;
+﻿using Stride.Core.Mathematics;
+using VL.Flex.Internals;
 using VL.Lib.Collections;
 using YogaSharp;
 using static VL.Flex.Internals.Delegates;
@@ -98,18 +99,23 @@ namespace VL.Flex
         }
 
         /// <summary>
+        /// Arguments used in layout calculation, passed to breakpoints
+        /// </summary>
+        public record struct FlexCalculateLayoutArgs(Vector2? OwnerPosition, Vector2? OwnerSize, YGDirection? OwnerDirection) { }
+
+        /// <summary>
         /// Event fired on layout change, used in Breakpoints to conditionally change style.
         /// </summary>
-        public virtual event Action<FlexLayoutArgs>? OnLayoutChanged;
+        public virtual event Action<FlexCalculateLayoutArgs>? OnLayoutChanged;
 
         /// <summary>
         /// Applies parent layout to node layout
         /// </summary>
-        public virtual void ApplyLayout(FlexLayoutArgs args, FlexLayout? ownerLayout = null)
+        public virtual void ApplyLayout(FlexCalculateLayoutArgs args, FlexLayout? ownerLayout = null)
         {
             if (HasNewLayout)
             {
-                Layout = new FlexLayout(this, ownerLayout);
+                Layout = new FlexLayout(this, ownerLayout ?? new(args.OwnerPosition));
                 Children?.ForEach(child =>
                 {
                     child?.ApplyLayout(args, Layout);
@@ -151,7 +157,7 @@ namespace VL.Flex
         /// </summary>
         public virtual unsafe bool HasNewLayout
         {
-            internal get => _handle->GetHasNewLayout();
+            get => _handle->GetHasNewLayout();
             set
             {
                 _handle->SetHasNewLayout(value);
@@ -168,8 +174,22 @@ namespace VL.Flex
                 _handle->CalculateLayout(ownerWidth ?? float.NaN, ownerHeight ?? float.NaN, ownerDirection ?? YGDirection.LTR);
             }
 
-            ApplyLayout(new FlexLayoutArgs(ownerWidth, ownerHeight, ownerDirection));
+            ApplyLayout(new FlexCalculateLayoutArgs(Vector2.Zero, new Vector2(ownerWidth ?? .0f, ownerHeight ?? .0f), ownerDirection));
         }
+
+        /// <summary>
+        /// Calculates layout and sets root node position, for case where flex starts not from 0.
+        /// </summary>
+        public virtual void CalculateLayout(Vector2? ownerPosition, Vector2? ownerSize, YGDirection? ownerDirection)
+        {
+            unsafe
+            {
+                _handle->CalculateLayout(ownerSize?.X ?? float.NaN, ownerSize?.Y ?? float.NaN, ownerDirection ?? YGDirection.Inherit);
+            }
+
+            ApplyLayout(new FlexCalculateLayoutArgs(ownerPosition, ownerSize, ownerDirection));
+        }
+
         #endregion
 
         #region Constructors
@@ -216,6 +236,16 @@ namespace VL.Flex
         }
 
         /// <summary>
+        /// Object that going to be passed to measure func.
+        /// </summary>
+        protected object? _measureContext;
+        public virtual object? MeasureContext
+        {
+            internal get => _measureContext;
+            set => _measureContext = value;
+        }
+
+        /// <summary>
         /// Whether a measure function is set.
         /// </summary>
         public virtual bool HasMeasureFunc
@@ -228,6 +258,7 @@ namespace VL.Flex
                 }
             }
         }
+
         #endregion
 
         #region BaselineFunc
@@ -262,6 +293,17 @@ namespace VL.Flex
                 }
             }
         }
+
+        /// <summary>
+        /// Object that going to be passed to baseline func.
+        /// </summary>
+        protected object? _baselineContext;
+        public virtual object? BaselineContext
+        {
+            internal get => _baselineContext;
+            set => _baselineContext = value;
+        }
+
         /// <summary>
         ///  Whether a baseline function is set.
         /// </summary>
@@ -368,19 +410,6 @@ namespace VL.Flex
         }
         #endregion
 
-        #region NodeContext
-
-        /// <summary>
-        /// Basically anything (object), that we want to pass to measure func, baseline func.
-        /// </summary>
-        protected object? _nodeContext;
-        public virtual object? NodeContext
-        {
-            internal get => _nodeContext;
-            set => _nodeContext = value;
-        }
-        #endregion
-
         #region Dispose
         public virtual void Dispose()
         {
@@ -402,4 +431,3 @@ namespace VL.Flex
         #endregion  
     }
 }
-

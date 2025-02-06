@@ -9,6 +9,18 @@ namespace VL.Flex.Internals
     /// </summary>
     public class Delegates
     {
+        public record struct MeasureFuncArgs(object? Context, float Width, YGMeasureMode WidthMode, float Hight, YGMeasureMode HeightMode)
+        {
+            public static void Split(in MeasureFuncArgs args, out object? context, out float width, out YGMeasureMode widthMode, out float height, out YGMeasureMode heightMode)
+            {
+                context = args.Context;
+                width = args.Width;
+                widthMode = args.WidthMode;
+                height = args.Hight;
+                heightMode = args.HeightMode;
+            }
+        };
+
         /// <summary>
         /// Native delegate adapter, used internally.
         /// </summary>
@@ -19,7 +31,7 @@ namespace VL.Flex.Internals
 
             if (item != null)
             {
-                var size = item.MeasureFunc?.Invoke(item.NodeContext, width, widthMode, height, heightMode);
+                var size = item.MeasureFunc?.Invoke(new MeasureFuncArgs(item.MeasureContext, width, widthMode, height, heightMode));
 
                 if (size != null)
                 {
@@ -51,7 +63,7 @@ namespace VL.Flex.Internals
         /// <returns>
         /// The size of the leaf node, measured under the given constraints.
         /// </returns>
-        public delegate YGSize MeasureFunc(object? context, float width, YGMeasureMode widthMode, float height, YGMeasureMode heightMode);
+        public delegate YGSize MeasureFunc(MeasureFuncArgs args);
 
         /// <summary>
         /// Native delegate adapter, used internally.
@@ -62,7 +74,7 @@ namespace VL.Flex.Internals
             var item = Store.GetRegistry().GetNode(node);
             if (item != null)
             {
-                var baseline = item.BaselineFunc?.Invoke(item.NodeContext, width, height);
+                var baseline = item.BaselineFunc?.Invoke(item.BaselineContext, width, height);
 
                 if (baseline != null)
                 {

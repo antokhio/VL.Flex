@@ -1,8 +1,10 @@
-﻿namespace VL.Flex
+﻿using static VL.Flex.FlexNode;
+
+namespace VL.Flex
 {
     public class FlexStyleBreakpoint : IFlexStyle, IDisposable
     {
-        public Func<FlexLayoutArgs, IFlexStyle>? Breakpoint { internal get; set; }
+        public Func<FlexCalculateLayoutArgs, IFlexStyle>? Breakpoint { internal get; set; }
 
         private FlexNode? _node = null;
 
@@ -24,7 +26,7 @@
             }
         }
 
-        private void OnLayoutChanged(FlexLayoutArgs args)
+        private void OnLayoutChanged(FlexCalculateLayoutArgs args)
         {
             var style = Breakpoint?.Invoke(args);
 
