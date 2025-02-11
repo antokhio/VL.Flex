@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="U0JqFjq7QSHPfUHRgk0ULE" LanguageVersion="2025.7.0-0057-g878c1609bc" Version="0.128">
-  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2025.7.0-0057-g878c1609bc" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="U0JqFjq7QSHPfUHRgk0ULE" LanguageVersion="2025.7.0-0089-gc4a016e3f8" Version="0.128">
+  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2025.7.0-0089-gc4a016e3f8" />
   <Patch Id="Op5UWSrlNePLliD6fgwCQs">
     <Canvas Id="OuMZkufbIFdOq3CPzcc4Qg" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -30,17 +30,17 @@
               <Patch Id="M88jDGlQbzzNa7EMqGMrrr" Name="Update" ParticipatingElements="MqU4fj3RLgWP9yODclH7Uw,GpZFy8f4ncyO1ka0HFPTOL" ManuallySortedPins="true" />
               <Patch Id="DT8ZR5cdLjqO7OQDDlEDyW" Name="Dispose" ManuallySortedPins="true" />
               <Node Bounds="407,-174,96,19" Id="LPVY1mEnq6RO9mG1duYnel">
-                <p:NodeReference LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
+                <p:NodeReference LastCategoryFullName="Flex.Skia" LastDependency="VL.Flex.Skia.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="FlexRegionLayout" />
+                  <Choice Kind="ProcessAppFlag" Name="GetLayout (FlexRegion)" />
                 </p:NodeReference>
                 <Pin Id="N4Hy5Bn68bKLeONfFAHrgY" Name="Output" Kind="OutputPin" />
                 <Pin Id="JVOJOUvAH85Ll87t8gXupn" Name="Node Context" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="409,83,90,19" Id="N3nJwHOCAPuPYfM1YvPwrg">
-                <p:NodeReference LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
+                <p:NodeReference LastCategoryFullName="Flex.Skia" LastDependency="VL.Flex.Skia.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="FlexRegionLayer" />
+                  <Choice Kind="ProcessAppFlag" Name="SetLayer (FlexRegion)" />
                 </p:NodeReference>
                 <Pin Id="BaI8y7NnNecPP2vpuXZlwc" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="OsAu27FkqiTNS9O4SZRNAe" Name="Input" Kind="InputPin" />
@@ -723,6 +723,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="N58eBE65gJGLUWBTfBYTlI" Location="VL.Flex" Version="0.0.4" />
-  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2025.7.0-0057-g878c1609bc" />
+  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2025.7.0-0089-gc4a016e3f8" />
   <NugetDependency Id="KOdI6Jt0SSVMpUp2aSBuS8" Location="VL.Flex.Skia" Version="0.0.0" />
 </Document>
