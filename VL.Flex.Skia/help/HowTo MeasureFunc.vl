@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="VAti9b6scwXL53mMG2zIh7" LanguageVersion="2025.7.0-0089-gc4a016e3f8" Version="0.128">
-  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2025.7.0-0089-gc4a016e3f8" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="VAti9b6scwXL53mMG2zIh7" LanguageVersion="2025.7.0-0167-g0cfb068072" Version="0.128">
+  <NugetDependency Id="USdGjROOxrJNijCZlYE5gP" Location="VL.CoreLib" Version="2025.7.0-0167-g0cfb068072" />
   <Patch Id="Op5UWSrlNePLliD6fgwCQs">
     <Canvas Id="OuMZkufbIFdOq3CPzcc4Qg" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -47,8 +47,8 @@
             <Pin Id="A6gNbpiXDTbNZ09tok9qNo" Name="Style" Kind="InputPin" />
             <Pin Id="UxWPOzDX5FOMVDcACdg66o" Name="Measure Func" Kind="InputPin" />
             <Pin Id="UG8Cr943BSGNyS3dNRtWF0" Name="Output" Kind="OutputPin" />
-            <Pin Id="JRNlY9OBvYENhq6Dyg6JeD" Name="Helper" Kind="InputPin" />
             <Pin Id="Cd29Hd6DlvqONcQZrSoWhK" Name="Clipping" Kind="InputPin" />
+            <Pin Id="JRNlY9OBvYENhq6Dyg6JeD" Name="Helper" Kind="InputPin" />
           </Node>
           <Node Bounds="164,-104,794,450" Id="TwJje5yOT7nOj50DDq9hqe">
             <p:NodeReference LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
@@ -56,7 +56,6 @@
               <Choice Kind="ProcessAppFlag" Name="FlexRegion" />
             </p:NodeReference>
             <Pin Id="Nw0KVJELS5rPwcvwif3EW9" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="GkzMywT0cb3LxFknMr1mov" Name="Children" Kind="InputPin" />
             <Pin Id="TIEz61khMrZLQMPw9GePev" Name="Style" Kind="InputPin" />
             <Pin Id="OzN8z1VLyKCL8vyFrE1JrG" Name="Measure Func" Kind="InputPin" />
             <Pin Id="Vc0jmxeGfZoNuuHb4trDqR" Name="Output" Kind="OutputPin" />
@@ -136,7 +135,7 @@
                 <Pin Id="P76UFVZfhSvLBoR96MSUut" Name="Input" Kind="StateInputPin" />
                 <Pin Id="RX3v5oyK31IOoIKrvOgkbp" Name="Width" Kind="OutputPin" />
               </Node>
-              <Node Bounds="458,307,102,19" Id="Ibr6RdnZKHpORtNeFwvDqX">
+              <Node Bounds="458,307,104,19" Id="Ibr6RdnZKHpORtNeFwvDqX">
                 <p:NodeReference LastCategoryFullName="Flex.Skia" LastDependency="VL.Flex.Skia.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="SetMeasureContext (FlexRegion)" />
@@ -269,6 +268,8 @@
                 <Pin Id="HPi9CsE900LN4mqt87R1LJ" Name="Output" Kind="OutputPin" />
               </Node>
             </Patch>
+            <Pin Id="Mcq0sPRPjpSLNkP07HttXE" Name="Clipping" Kind="InputPin" />
+            <Pin Id="GkzMywT0cb3LxFknMr1mov" Name="Children" Kind="InputPin" />
           </Node>
           <Node Bounds="953,-604,590,400" Id="Ohhdxo9E6xKM2qaOGvGauQ">
             <p:NodeReference LastCategoryFullName="Flex" LastDependency="VL.Flex.vl">
@@ -443,8 +444,8 @@
             <Pin Id="ViNNdLZfUtgOSRe5VsOSu6" Name="Style" Kind="InputPin" />
             <Pin Id="KRlX0mEtWNsL8hw1YymMup" Name="Measure Func" Kind="InputPin" />
             <Pin Id="NzP7HU29kGKNn1KV9P2gUV" Name="Output" Kind="OutputPin" />
-            <Pin Id="Qki4veh7OszPSifnF4wan0" Name="Helper" Kind="InputPin" />
             <Pin Id="F8D7O5y3z6pMWDWPAhS025" Name="Clipping" Kind="InputPin" />
+            <Pin Id="Qki4veh7OszPSifnF4wan0" Name="Helper" Kind="InputPin" />
           </Node>
           <Pad Id="NVAAgaRYhPLPshidKTp2dG" Bounds="806,-560,123,87" ShowValueBox="true" isIOBox="true" Value="Measure function created via MeasureFunction node">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -464,7 +465,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1152,207,55,19" Id="O5Q5imRqXk7PmO8uyoBSPw">
+          <Node Bounds="1152,207,65,19" Id="O5Q5imRqXk7PmO8uyoBSPw">
             <p:NodeReference LastCategoryFullName="VL.Flex.Skia" LastDependency="VL.Flex.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="FlexText" />
@@ -472,8 +473,9 @@
             <Pin Id="MoGHN87aNtQNS2VaHcFVaQ" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="NTRpApq4prBMFSHJpFRKJl" Name="Text" Kind="InputPin" DefaultValue="Hello" />
             <Pin Id="R4QRY0n61okMmTc64EtrP5" Name="Text Paint" Kind="InputPin" />
-            <Pin Id="SQKY3jhe5kpQddJ7k0pQSR" Name="Helper" Kind="InputPin" />
-            <Pin Id="I2OrxjvIXkkNemeS9jgyFv" Name="Output" Kind="OutputPin" />
+            <Pin Id="BfW9cn9EMDVL3VPk4kpFym" Name="Helper" Kind="InputPin" />
+            <Pin Id="CRunTxvYoBTN0M9fA1nths" Name="Style" Kind="InputPin" />
+            <Pin Id="Hr1auZ9jNc4MeHYPfGt7B9" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="1177,173,165,19" Id="INBnAWqJgn9Nb1It5TbMK4">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Text" LastDependency="VL.Skia.vl">
@@ -552,6 +554,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="N58eBE65gJGLUWBTfBYTlI" Location="VL.Flex" Version="0.0.4" />
-  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2025.7.0-0089-gc4a016e3f8" />
+  <NugetDependency Id="BIEcKjBLGN2NU9c5BgpNoP" Location="VL.Skia" Version="2025.7.0-0167-g0cfb068072" />
   <NugetDependency Id="KOdI6Jt0SSVMpUp2aSBuS8" Location="VL.Flex.Skia" Version="0.0.0" />
 </Document>
