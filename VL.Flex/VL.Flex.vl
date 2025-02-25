@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0089-gc4a016e3f8" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0089-gc4a016e3f8" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0167-g0cfb068072" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0167-g0cfb068072" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -1049,7 +1049,7 @@
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
               </p:NodeReference>
               <Pin Id="LQnm0MCQNg3OeP9aAgVckk" Name="Force" Kind="InputPin" />
-              <Pin Id="V1BA3Fsu1xjMqZqeQEAsjz" Name="Dispose Cached Outputs" Kind="InputPin" />
+              <Pin Id="V1BA3Fsu1xjMqZqeQEAsjz" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True" />
               <Pin Id="KIViDPxXd8XOp274T9PEUJ" Name="Has Changed" Kind="OutputPin" />
               <Patch Id="LuPWVBfv4PrQaLtXguVEPy" ManuallySortedPins="true">
                 <Patch Id="KyRf6kYzpmCPLAZqkDtkah" Name="Create" ManuallySortedPins="true" />
