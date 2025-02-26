@@ -2184,18 +2184,7 @@
               <Pin Id="MlZ2ATofGpXMw7qZfmCjrd" Name="Not Assigned" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="HeRjyY3pwNyOCBM3crPMk4" Bounds="354,640" />
-            <Node Bounds="352,590,64,19" Id="AUu2Io5HfKKPzTrJXGzO13">
-              <p:NodeReference LastCategoryFullName="Graphics.Skia.Transform" LastDependency="VL.Skia.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Graphics.Skia.Transform" />
-                <Choice Kind="ProcessAppFlag" Name="Transform" />
-              </p:NodeReference>
-              <Pin Id="GouQWMXpY4zLcKhR2OL8Ju" Name="Node Context" Kind="InputPin" IsHidden="true" />
-              <Pin Id="JJ3WOzeHs5BOu6zWporadi" Name="Input" Kind="InputPin" />
-              <Pin Id="QD1NO44raC1OslxLk9ZhuD" Name="Transformation" Kind="InputPin" />
-              <Pin Id="IrDjK0Ykn02L5FwuXa3uHh" Name="Output" Kind="OutputPin" />
-            </Node>
-            <Node Bounds="352,540,347,19" Id="CG9hhRQSrvjNr8sLQb34Lr">
+            <Node Bounds="352,555,347,19" Id="CG9hhRQSrvjNr8sLQb34Lr">
               <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Group" />
@@ -2290,8 +2279,6 @@
           <Link Id="TTChu0clMEHMZNU1eMw8bK" Ids="LNBYQccrPRBLA53rOSd38j,SfJsjif9PrdOjgQQD185kq" />
           <Link Id="OuzHjlLOIunNBy0InIlli5" Ids="RjSuYGwYztQO8n0qbKqs7H,LNBYQccrPRBLA53rOSd38j" IsHidden="true" />
           <Link Id="EtXvHMDQ2dBPY7q7KVCjiN" Ids="VWYTWuvYyxzQBmdTpJuJh6,CktByZx0852L3orq1AK6oj" />
-          <Link Id="Sy0jwuUyaanLMigv1j8utq" Ids="DUIIkBoEGYdPyxMqgPm3ot,JJ3WOzeHs5BOu6zWporadi" />
-          <Link Id="EhVN2oURG7nPeWtM54aN5O" Ids="IrDjK0Ykn02L5FwuXa3uHh,HeRjyY3pwNyOCBM3crPMk4" />
           <Link Id="ACR38ggRbxEQCOgG5XVv0P" Ids="NeLxYHBuRX1PoNMX96UcXl,NzS23eMsZW3QS7mo3tZZxD" />
           <Link Id="I2C51T7sycENbLmNH9Q8rA" Ids="VJXAglC2vHMN6Wi972boFB,OsL9heBImHtLYlsSgMU7AU" />
           <Link Id="Eh3iHWGCuVpOiSmV1n6T9s" Ids="OysWFnNEY9ONPAIrwXEtqr,I6k7CwqX2nXNStZQsmntUW" />
@@ -2303,6 +2290,7 @@
           <Link Id="Oo9yFJCWKKoP6gQvVRleVr" Ids="DEilZs3zJplLLTUlooGBAG,FW5coRM5eIHNqb0RZXaNsx" IsHidden="true" />
           <Link Id="Jmt0ncHa7vWLcCcDjibBt6" Ids="FW5coRM5eIHNqb0RZXaNsx,QrUs1faLkIcMvJ6m3Hp9Am" />
           <Link Id="Qd0AIRpEo3BPKq5D4eKyOy" Ids="FW5coRM5eIHNqb0RZXaNsx,TPTShTAydnWNhmjzIL70TY" />
+          <Link Id="Im8F4cxNWV5QOusZazwanC" Ids="DUIIkBoEGYdPyxMqgPm3ot,HeRjyY3pwNyOCBM3crPMk4" />
         </Patch>
       </Node>
       <!--
