@@ -631,24 +631,6 @@
         </Node>
         <!--
 
-    ************************ YGNode ************************
-
--->
-        <Node Name="YGNode" Bounds="974,198" Id="M3e2MZB6HhNPv27ncZwcQU">
-          <p:NodeReference>
-            <Choice Kind="ForwardDefinition" Name="Forward" />
-            <CategoryReference Kind="Category" Name="Primitive" />
-          </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="YogaSharp" LastDependency="YogaSharp.dll">
-            <Choice Kind="TypeFlag" Name="YGNode" />
-          </p:TypeAnnotation>
-          <Patch Id="Rn3iZuVRf3vPWfMmZmb8WE">
-            <Canvas Id="KIfuBK7zuvWOyei72wyzvt" BordersChecked="false" CanvasType="Group" />
-            <ProcessDefinition Id="BBQDQ48PpYFPn8WynRfCNZ" IsHidden="true" />
-          </Patch>
-        </Node>
-        <!--
-
     ************************ YGNodeType ************************
 
 -->
