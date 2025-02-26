@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="K4Boj5AQFQzN6w8O8pYVP2" LanguageVersion="2025.7.0-0057-g878c1609bc" Version="0.128">
-  <NugetDependency Id="NNQFuZJLmjbOtKlyM0qRYR" Location="VL.CoreLib" Version="2025.7.0-0057-g878c1609bc" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="K4Boj5AQFQzN6w8O8pYVP2" LanguageVersion="2025.7.0-0170-gf0ee7a321e" Version="0.128">
+  <NugetDependency Id="NNQFuZJLmjbOtKlyM0qRYR" Location="VL.CoreLib" Version="2025.7.0-0170-gf0ee7a321e" />
   <Patch Id="NloNCw2mZHJQcHHgUD39r3">
     <Canvas Id="P8kxVAr0KWDLJrP3kBAyz9" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VFaNsMfYYPcMi6OUEwctQG" Name="Bounds" Kind="InputPin" DefaultValue="1009, 243, 594, 1110" IsHidden="true" />
+            <Pin Id="VFaNsMfYYPcMi6OUEwctQG" Name="Bounds" Kind="InputPin" DefaultValue="-1272, 512, 689, 393" IsHidden="true" />
             <Pin Id="KRfohYnGlydOlHy9Fxzvvm" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="CWUlFCWOfNzNIFgKJbN4aR" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="Lwyhzq4BRXANES7fhNOycJ" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -73,15 +73,12 @@
               <Node Bounds="687,633,105,19" Id="DyIAvewnn5SQQl4DrAocQj">
                 <p:NodeReference LastCategoryFullName="Flex.ImGui" LastDependency="VL.Flex.ImGui.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="CalculateLayout" />
+                  <Choice Kind="ProcessAppFlag" Name="FlexLayout" />
                 </p:NodeReference>
                 <Pin Id="HQg73DJr3iUO6TQ8iHqzJx" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="RzTm7DzYoouQYUereFpTlW" Name="Input" Kind="InputPin" />
-                <Pin Id="V7P6zTlx1FZMyL68zDj8Rf" Name="Owner Size" Kind="InputPin" />
-                <Pin Id="H3TGkhWYfuqNoSHUgbKx4m" Name="Owner Direction" Kind="InputPin" />
-                <Pin Id="DuH0KAFiORvNKFtrBHRS0Q" Name="Point Scale Factor" Kind="InputPin" />
-                <Pin Id="LhjFTXfui5KOt7GVbmgvPj" Name="Errata" Kind="InputPin" />
-                <Pin Id="Cz3NCOxnaHOQDb3YL4FjCV" Name="Use Web Defaults" Kind="InputPin" />
+                <Pin Id="DR42rj7ViNtNeUPALD3xE7" Name="Owner Bounds" Kind="InputPin" />
+                <Pin Id="IG8Ved6YbXHO8seTrQBHS1" Name="Owner Direction" Kind="InputPin" />
               </Node>
               <Node Bounds="697,543,121,19" Id="FtGuxcTFxgBLGoZTN1TssC">
                 <p:NodeReference LastCategoryFullName="ImGui.Queries" LastDependency="VL.ImGui.vl">
@@ -105,7 +102,7 @@
                 <Pin Id="OgsC1W6g4ykOFITs0Ks1H5" Name="Output" Kind="OutputPin" />
                 <Pin Id="RLnSMpgROPUOglVFz1PUQ5" Name="Measure Func" Kind="InputPin" IsHidden="true" />
               </Node>
-              <Node Bounds="747,310,60,26" Id="UX4NpKzVLQ5OXryi0akQZi">
+              <Node Bounds="747,310,60,19" Id="UX4NpKzVLQ5OXryi0akQZi">
                 <p:NodeReference LastCategoryFullName="Flex.Styles" LastDependency="VL.Flex.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Styles" NeedsToBeDirectParent="true">
@@ -130,7 +127,7 @@
                 <Pin Id="Mq8XkwymFHLO5BdTIfGVMA" Name="Output" Kind="OutputPin" />
                 <Pin Id="Mgxoz1qCTuoQLcFi49m5Ei" Name="Measure Func" Kind="InputPin" IsHidden="true" />
               </Node>
-              <Node Bounds="747,473,90,26" Id="GsVNLAbf175LAXjohF35ey">
+              <Node Bounds="747,473,90,19" Id="GsVNLAbf175LAXjohF35ey">
                 <p:NodeReference LastCategoryFullName="Flex.Styles" LastDependency="VL.Flex.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Styles" NeedsToBeDirectParent="true">
@@ -142,7 +139,7 @@
                 <Pin Id="LtXqgPQegfbPwxaQBq9RBn" Name="Flex Direction" Kind="InputPin" DefaultValue="Row" />
                 <Pin Id="GakTDspFlS1LyWkMaUv4Qm" Name="Result" Kind="OutputPin" />
               </Node>
-              <Node Bounds="747,262,49,26" Id="R4VBbR6ZIZiNArOTs0R9Vl">
+              <Node Bounds="747,262,49,19" Id="R4VBbR6ZIZiNArOTs0R9Vl">
                 <p:NodeReference LastCategoryFullName="Flex.Styles" LastDependency="VL.Flex.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Styles" NeedsToBeDirectParent="true">
@@ -154,7 +151,7 @@
                 <Pin Id="Klb9DBi3RazNCYQkOciXjH" Name="Flex" Kind="InputPin" DefaultValue="1" />
                 <Pin Id="PvBkh4q1rJyQPB3unMic3F" Name="Result" Kind="OutputPin" />
               </Node>
-              <Node Bounds="747,440,67,26" Id="PGAjVANoUO9NEMeTOGA9kr">
+              <Node Bounds="747,440,67,19" Id="PGAjVANoUO9NEMeTOGA9kr">
                 <p:NodeReference LastCategoryFullName="Flex.Styles" LastDependency="VL.Flex.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Styles" NeedsToBeDirectParent="true">
@@ -167,7 +164,7 @@
                 <Pin Id="P76Z778FZaYLJJ6gefyNNi" Name="Value" Kind="InputPin" DefaultValue="0.31" />
                 <Pin Id="BAV3op3jHScQKTgaqZs6Zp" Name="Result" Kind="OutputPin" />
               </Node>
-              <Node Bounds="747,407,48,26" Id="JRKFz53BVzWPVohzfqKvL9">
+              <Node Bounds="747,407,48,19" Id="JRKFz53BVzWPVohzfqKvL9">
                 <p:NodeReference LastCategoryFullName="Flex.Styles" LastDependency="VL.Flex.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Styles" NeedsToBeDirectParent="true">
@@ -180,32 +177,15 @@
                 <Pin Id="TMMQkGw7aOWNcRG16pRnHG" Name="Gap Length" Kind="InputPin" DefaultValue="0.2" />
                 <Pin Id="G7pnoV2KDaBL8SO3p3YEgF" Name="Result" Kind="OutputPin" />
               </Node>
-              <Node Bounds="813,573,44,26" Id="SPJdwJhKpWxNaXzrVN6SDi">
-                <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
+              <Node Bounds="737,590,61,19" Id="IQrjpfyEJeGK939BDCJE5e">
+                <p:NodeReference LastCategoryFullName="2D.Rectangle" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <FullNameCategoryReference ID="2D.Vector2" />
-                  <Choice Kind="OperationCallFlag" Name="X" />
+                  <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
                 </p:NodeReference>
-                <Pin Id="FwNsoupU020LNb0L5eHX2S" Name="Input" Kind="StateInputPin" />
-                <Pin Id="N62BlBrBUwLLbqoc5l3Axi" Name="X" Kind="OutputPin" />
-              </Node>
-              <Node Bounds="707,606,46,19" Id="GOuaF4SnzqiPfiGNQ36Dke">
-                <p:NodeReference LastCategoryFullName="2D.Vector2" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="4043309057" Name="Vector2" NeedsToBeDirectParent="true" />
-                  <Choice Kind="OperationCallFlag" Name="Vector (Join)" />
-                </p:NodeReference>
-                <Pin Id="Ixz2iNEa7IjNQORCsQI1RH" Name="X" Kind="InputPin" />
-                <Pin Id="TtPmGRXTqN7M8z0okR12CH" Name="Y" Kind="InputPin" />
-                <Pin Id="GrQCrydSP7IOkKdJFiECuY" Name="Output" Kind="StateOutputPin" />
-              </Node>
-              <Node Bounds="748,578,35,19" Id="SuJrwm1Tk2mMfTKMzcsQBi">
-                <p:NodeReference LastCategoryFullName="Primitive.Float32" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <FullNameCategoryReference ID="Primitive.Float32" />
-                  <Choice Kind="OperationCallFlag" Name="NaN" />
-                </p:NodeReference>
-                <Pin Id="KoUSVEK8MCdNFkbk04wBLl" Name="Na N" Kind="OutputPin" />
+                <Pin Id="SVhDXXa2NwkNT4aSOvyLQC" Name="Position" Kind="InputPin" />
+                <Pin Id="EDhueFsd00tOzWSzQV0TsZ" Name="Size" Kind="InputPin" />
+                <Pin Id="BNUFeuwFEyIMlTIrq6Yant" Name="Anchor" Kind="InputPin" />
+                <Pin Id="FMUPFntDNKOP2kcPkBYFmZ" Name="Output" Kind="StateOutputPin" />
               </Node>
             </Patch>
           </Node>
@@ -254,16 +234,14 @@
         <Link Id="SYL5Gy9XaIYMV6NQ8Md6VU" Ids="BfPkFN1bmfcQMKoxy5Qn2G,E0TWSCfkkwNN9dRSO3ezxc" />
         <Link Id="HuFyTC5W7g0NrWKNzleTr4" Ids="BAV3op3jHScQKTgaqZs6Zp,NOWFjirp4MYNhFAQXc86dV" />
         <Link Id="NaNyLoK7fNkNe4trzF0YJC" Ids="G7pnoV2KDaBL8SO3p3YEgF,VHQtXyADB3DM8E8ywa7GNZ" />
-        <Link Id="FIGAoOKOUGUOCnT1qjqlye" Ids="RUwOVSY9LzvLYXq7Dlcwy4,FwNsoupU020LNb0L5eHX2S" />
-        <Link Id="QogFZRjwfjHLx1M25cqnPD" Ids="N62BlBrBUwLLbqoc5l3Axi,Ixz2iNEa7IjNQORCsQI1RH" />
-        <Link Id="LEWKV6sZoj9O382aI6KAnn" Ids="GrQCrydSP7IOkKdJFiECuY,V7P6zTlx1FZMyL68zDj8Rf" />
-        <Link Id="DqwEopwAHBJO3mWFWLgri1" Ids="KoUSVEK8MCdNFkbk04wBLl,TtPmGRXTqN7M8z0okR12CH" />
+        <Link Id="FCQRJhraDoENd7raoAYVjv" Ids="RUwOVSY9LzvLYXq7Dlcwy4,EDhueFsd00tOzWSzQV0TsZ" />
+        <Link Id="GTjJDkYAP9LPvkvZGKECmF" Ids="FMUPFntDNKOP2kcPkBYFmZ,DR42rj7ViNtNeUPALD3xE7" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="NIQNMSqbhkAPgD0yX1V0ax" Location="VL.ImGui" Version="2025.7.0-0057-g878c1609bc" />
-  <NugetDependency Id="CEprgdzX2plQbnUdnBh7Ps" Location="VL.ImGui.Skia" Version="2025.7.0-0057-g878c1609bc" />
-  <NugetDependency Id="KwMpA6hnxaiNOalu9EX7IH" Location="VL.Skia" Version="2025.7.0-0057-g878c1609bc" />
+  <NugetDependency Id="NIQNMSqbhkAPgD0yX1V0ax" Location="VL.ImGui" Version="2025.7.0-0170-gf0ee7a321e" />
+  <NugetDependency Id="CEprgdzX2plQbnUdnBh7Ps" Location="VL.ImGui.Skia" Version="2025.7.0-0170-gf0ee7a321e" />
+  <NugetDependency Id="KwMpA6hnxaiNOalu9EX7IH" Location="VL.Skia" Version="2025.7.0-0170-gf0ee7a321e" />
   <NugetDependency Id="Bcm4ocqCfbrNQpoIao5zCA" Location="VL.Flex.ImGui" Version="0.0.0" />
   <NugetDependency Id="IcESkYNSAAPNpWZXFKzlao" Location="VL.Flex" Version="0.0.0" />
 </Document>

@@ -1,9 +1,7 @@
 ﻿using YogaSharp;
 
 namespace VL.Flex;
-/// <summary>
-/// WIP
-/// </summary>
+
 public partial class FlexNode
 {
     public YGDirection StyleGetDirection()

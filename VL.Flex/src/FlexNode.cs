@@ -1,4 +1,5 @@
 ﻿using Stride.Core.Mathematics;
+using VL.Core;
 using VL.Flex.Internals;
 using VL.Lib.Collections;
 using YogaSharp;
@@ -87,12 +88,12 @@ namespace VL.Flex
         #endregion
 
         #region Layout
-        protected FlexLayout _layout;
+        protected RectangleF _layout;
 
         /// <summary>
         /// Node calculated Layout
         /// </summary>
-        public virtual FlexLayout Layout
+        public virtual RectangleF Layout
         {
             get => _layout;
             set => _layout = value;
@@ -101,7 +102,7 @@ namespace VL.Flex
         /// <summary>
         /// Arguments used in layout calculation, passed to breakpoints
         /// </summary>
-        public record struct FlexCalculateLayoutArgs(Vector2? OwnerPosition, Vector2? OwnerSize, YGDirection? OwnerDirection) { }
+        public record struct FlexCalculateLayoutArgs(RectangleF? OwnerBounds, YGDirection? OwnerDirection) { }
 
         /// <summary>
         /// Event fired on layout change, used in Breakpoints to conditionally change style.
@@ -109,23 +110,30 @@ namespace VL.Flex
         public virtual event Action<FlexCalculateLayoutArgs>? OnLayoutChanged;
 
         /// <summary>
-        /// Applies parent layout to node layout
+        /// Applies layout to node layout
         /// </summary>
-        public virtual void ApplyLayout(FlexCalculateLayoutArgs args, FlexLayout? ownerLayout = null)
+        public virtual void ApplyLayout(FlexCalculateLayoutArgs args, RectangleF? ownerLayout = null)
         {
-            if (HasNewLayout)
-            {
-                Layout = new FlexLayout(this, ownerLayout ?? new(args.OwnerPosition));
-                Children?.ForEach(child =>
-                {
-                    child?.ApplyLayout(args, Layout);
-                });
+            BuildLayout(ownerLayout ?? args.OwnerBounds);
 
-                OnLayoutChanged?.Invoke(args);
-            }
+            Children?.ForEach(child =>
+            {
+                child?.ApplyLayout(args, Layout);
+            });
+
+            OnLayoutChanged?.Invoke(args);
 
             HasNewLayout = false;
         }
+
+        public unsafe virtual void BuildLayout(RectangleF? ownerLayout) => Layout = new RectangleF
+            (
+                _handle->GetComputedLeft() + ownerLayout?.Left ?? .0f,
+                _handle->GetComputedTop() + ownerLayout?.Top ?? .0f,
+                _handle->GetComputedWidth(),
+                _handle->GetComputedHeight()
+            );
+
 
         /// <summary>
         /// Node layout should be re-calculated. 
@@ -165,29 +173,18 @@ namespace VL.Flex
         }
 
         /// <summary>
-        /// Calculates layout using this node as a root - upstream. 
+        /// Calculates and applies layout to nodes upstream.
         /// </summary>
-        public virtual void CalculateLayout(float? ownerWidth, float? ownerHeight, YGDirection? ownerDirection)
+        /// <param name="ownerBounds"></param>
+        /// <param name="ownerDirection"></param>
+        public virtual void CalculateLayout(Optional<RectangleF> ownerBounds, Optional<YGDirection> ownerDirection)
         {
             unsafe
             {
-                _handle->CalculateLayout(ownerWidth ?? float.NaN, ownerHeight ?? float.NaN, ownerDirection ?? YGDirection.LTR);
+                _handle->CalculateLayout(ownerBounds.ToNullable()?.Width ?? float.NaN, ownerBounds.ToNullable()?.Height ?? float.NaN, ownerDirection.ToNullable() ?? YGDirection.Inherit);
             }
 
-            ApplyLayout(new FlexCalculateLayoutArgs(Vector2.Zero, new Vector2(ownerWidth ?? .0f, ownerHeight ?? .0f), ownerDirection));
-        }
-
-        /// <summary>
-        /// Calculates layout and sets root node position, for case where flex starts not from 0.
-        /// </summary>
-        public virtual void CalculateLayout(Vector2? ownerPosition, Vector2? ownerSize, YGDirection? ownerDirection)
-        {
-            unsafe
-            {
-                _handle->CalculateLayout(ownerSize?.X ?? float.NaN, ownerSize?.Y ?? float.NaN, ownerDirection ?? YGDirection.Inherit);
-            }
-
-            ApplyLayout(new FlexCalculateLayoutArgs(ownerPosition, ownerSize, ownerDirection));
+            ApplyLayout(new FlexCalculateLayoutArgs(ownerBounds.ToNullable(), ownerDirection.ToNullable()));
         }
 
         #endregion

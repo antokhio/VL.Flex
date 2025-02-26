@@ -11,9 +11,9 @@ namespace VL.Flex
         public unsafe YGConfig* Handle { get => _handle; }
 
         /// <summary>
-        /// Sets rounding to vvvv one pixel 0.01
+        /// Default rounding for DiP vvvv should be 100 e.g. 1/100 = 0.01 DiP one pixel
         /// </summary>
-        private float _pointScaleFactor = 0.01f;
+        private float _pointScaleFactor = 100.0f;
 
         /// <summary>
         /// Yoga will by default round final layout positions and dimensions to the nearest point.<br/>

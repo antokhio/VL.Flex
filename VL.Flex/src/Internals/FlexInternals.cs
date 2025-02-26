@@ -13,6 +13,12 @@ namespace VL.Flex.Internals
         /// </summary>
         public unsafe YGNode* BulkNode { get => _bulkNode; }
 
+        private FlexConfigGlobal _configGlobal = new FlexConfigGlobal();
+        /// <summary>
+        /// Initializes FlexConfig so we can apply defaults without adding node
+        /// </summary>
+        public FlexConfigGlobal FlexConfigGlobal { get => _configGlobal; }
+
         /// <summary>
         /// Holds a json serializer used in debug nodes
         /// </summary>
@@ -39,6 +45,11 @@ namespace VL.Flex.Internals
                 if (_bulkNode != null)
                 {
                     _bulkNode->FinalizeNode();
+                }
+
+                if (_configGlobal != null)
+                {
+                    _configGlobal.Dispose();
                 }
             }
 
