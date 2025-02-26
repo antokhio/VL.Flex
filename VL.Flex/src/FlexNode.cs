@@ -112,6 +112,8 @@ namespace VL.Flex
         /// <summary>
         /// Applies layout to node layout
         /// </summary>
+        /// <param name="args"></param>
+        /// <param name="ownerLayout"></param>
         public virtual void ApplyLayout(FlexCalculateLayoutArgs args, RectangleF? ownerLayout = null)
         {
             BuildLayout(ownerLayout ?? args.OwnerBounds);
@@ -126,6 +128,10 @@ namespace VL.Flex
             HasNewLayout = false;
         }
 
+        /// <summary>
+        /// Builds Rectangle
+        /// </summary>
+        /// <param name="ownerLayout"></param>
         public unsafe virtual void BuildLayout(RectangleF? ownerLayout) => Layout = new RectangleF
             (
                 _handle->GetComputedLeft() + ownerLayout?.Left ?? .0f,
