@@ -8,7 +8,7 @@ namespace VL.Flex.Internals
     internal unsafe class NodeRegistry
     {
         protected Dictionary<nint, WeakReference> _nodes = new();
-        public void RegisterNode(FlexNode node)
+        public void RegisterNode<TNode, TStyle>(FlexNodeBase<TNode, TStyle> node)
         {
             _nodes.Add((nint)node.Handle, new WeakReference(node, false));
         }
