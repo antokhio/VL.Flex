@@ -27,7 +27,7 @@ namespace VL.Flex
         /// </summary>
         public virtual Spread<FlexNode?>? Children
         {
-            internal get => _children;
+            get => _children;
             set
             {
                 if (value != _children)
@@ -70,7 +70,7 @@ namespace VL.Flex
         /// </summary>
         public virtual IFlexStyle? Style
         {
-            internal get => _style;
+            get => _style;
             set
             {
                 if (value != _style)
@@ -212,7 +212,7 @@ namespace VL.Flex
         /// <inheritdoc cref="Internals.Delegates.MeasureFunc"/>
         public virtual MeasureFunc? MeasureFunc
         {
-            internal get => _measureFunc;
+            get => _measureFunc;
             set
             {
                 if (_measureFunc != value)
@@ -244,7 +244,7 @@ namespace VL.Flex
         protected object? _measureContext;
         public virtual object? MeasureContext
         {
-            internal get => _measureContext;
+            get => _measureContext;
             set => _measureContext = value;
         }
 
@@ -271,7 +271,7 @@ namespace VL.Flex
         /// <inheritdoc cref="Internals.Delegates.BaselineFunc"/>
         public virtual BaselineFunc? BaselineFunc
         {
-            internal get => _baselineFunc;
+            get => _baselineFunc;
             set
             {
 
@@ -303,7 +303,7 @@ namespace VL.Flex
         protected object? _baselineContext;
         public virtual object? BaselineContext
         {
-            internal get => _baselineContext;
+            get => _baselineContext;
             set => _baselineContext = value;
         }
 
@@ -328,7 +328,7 @@ namespace VL.Flex
         /// </summary>
         public virtual bool? IsReferenceBaseline
         {
-            internal get
+            get
             {
                 unsafe
                 {
@@ -359,7 +359,7 @@ namespace VL.Flex
         /// </summary>
         public virtual YGNodeType? NodeType
         {
-            internal get
+            get
             {
                 unsafe
                 {
@@ -390,7 +390,7 @@ namespace VL.Flex
         /// </summary>
         public virtual bool? AlwaysFormsContainingBlock
         {
-            internal get
+            get
             {
                 unsafe
                 {
