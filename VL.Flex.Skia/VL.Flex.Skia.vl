@@ -978,28 +978,16 @@
                 <Choice Kind="TypeFlag" Name="IFlexSkia" />
               </p:TypeAnnotation>
             </Pad>
-            <ControlPoint Id="NWqLQxnGpMbQT8aPpF9wQE" Bounds="544,355" />
-            <Node Bounds="462,430,80,80" Id="NVExvwcBBJiPQk5g5Qt8J8">
-              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <CategoryReference Kind="Category" Name="Primitive" />
-                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+            <ControlPoint Id="NWqLQxnGpMbQT8aPpF9wQE" Bounds="526,351" />
+            <Node Bounds="475,390,54,26" Id="Ff5YxxiCGUuNtHnqhUoEA6">
+              <p:NodeReference LastCategoryFullName="Flex.Skia.IFlexSkia" LastDependency="VL.Flex.Skia.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <FullNameCategoryReference ID="Flex.Skia.IFlexSkia" />
+                <Choice Kind="OperationCallFlag" Name="SetLayer" />
               </p:NodeReference>
-              <Pin Id="GayBLldWkMLNGK7LSJVr4P" Name="Condition" Kind="InputPin" />
-              <Patch Id="Oysrkyr57h8QHOcStHdsfb" ManuallySortedPins="true">
-                <Patch Id="EY6fy1FsgrLN5gb8kWPv8h" Name="Create" ManuallySortedPins="true" />
-                <Patch Id="QgWPRMfZypmQS1PDfRr6P3" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="475,459,54,26" Id="Ff5YxxiCGUuNtHnqhUoEA6">
-                  <p:NodeReference LastCategoryFullName="Flex.Skia.IFlexSkia" LastDependency="VL.Flex.Skia.vl">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <FullNameCategoryReference ID="Flex.Skia.IFlexSkia" />
-                    <Choice Kind="OperationCallFlag" Name="SetLayer" />
-                  </p:NodeReference>
-                  <Pin Id="GVj5e9ObmyqN4gyJQatMMX" Name="State Input" Kind="StateInputPin" />
-                  <Pin Id="GahsyVGU2svNGX9L1IHQR0" Name="Input" Kind="InputPin" />
-                  <Pin Id="HbZgq2zHKaXL924VjTP5IV" Name="Output" Kind="StateOutputPin" />
-                </Node>
-              </Patch>
+              <Pin Id="GVj5e9ObmyqN4gyJQatMMX" Name="State Input" Kind="StateInputPin" />
+              <Pin Id="GahsyVGU2svNGX9L1IHQR0" Name="Input" Kind="InputPin" />
+              <Pin Id="HbZgq2zHKaXL924VjTP5IV" Name="Output" Kind="StateOutputPin" />
             </Node>
           </Canvas>
           <Patch Id="Ji4yEVNCANBOwUUDIVYyFO" Name="Create" />
