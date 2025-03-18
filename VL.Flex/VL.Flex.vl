@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0170-gf0ee7a321e" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0170-gf0ee7a321e" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0253-g169ec5ff92" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0253-g169ec5ff92" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -2810,5 +2810,4 @@
   </Patch>
   <NugetDependency Id="NPC6Ov7t3vaOvAThlINOHL" Location="antokhio.YogaSharp" Version="1.1.3" />
   <PlatformDependency Id="QrvK5sLb70yMGuwHQp7l1m" Location="./lib/x64/Debug/net8.0/VL.Flex.dll" />
-  <NugetDependency Id="C5ZqfR5gMceO0jI47E8gQ9" Location="VL.Flex" Version="0.0.4" />
 </Document>
