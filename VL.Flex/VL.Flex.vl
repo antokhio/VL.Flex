@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0253-g169ec5ff92" Version="0.128">
-  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0253-g169ec5ff92" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G3zQWdrPyBiONPXuJ7qAzW" Authors="antokhio" Credits="bj-rn, berkut0, Haselnussbomber" ProjectUrl="https://github.com/antokhio/VL.Flex" LanguageVersion="2025.7.0-0277-g17318dcda9" Version="0.128">
+  <NugetDependency Id="O0u2mHMIT1HNzT2XEDxHNI" Location="VL.CoreLib" Version="2025.7.0-0277-g17318dcda9" />
   <Patch Id="Dp6xrJlZJSeNZkvToq4PXf">
     <Canvas Id="F3R8JuOCDxRNGOqzM1tKvS" DefaultCategory="Flex" CanvasType="FullCategory">
       <!--
@@ -168,7 +168,7 @@
           <Patch Id="SQDeMqFqI7ePebcz6lQr4T" Name="Create" ParticipatingElements="EJkxlVC9rVmQGpR6XNWoN8" />
           <Slot Id="MmbH9n3wAWcOogGaaTjeq2" Name="Node" />
           <Patch Id="Cmgz4btdJEoP5Lr6koVWqI" Name="SetChildren">
-            <Pin Id="ETVnaB8wyzGQSsm6MVnBz9" MergeId="732" Name="Children" Kind="InputPin" PinGroupDefaultCount="1" />
+            <Pin Id="ETVnaB8wyzGQSsm6MVnBz9" MergeId="732" Name="Children" Kind="InputPin" />
           </Patch>
           <Link Id="G7qxQyqz2E1QDRpL49R615" Ids="ETVnaB8wyzGQSsm6MVnBz9,LTM92PbUyV5NKqlC7FoMmr" IsHidden="true" />
           <Patch Id="OtNlu7ldFqBMZBtd5Ct5iz" Name="SetStyle">
