@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>VL.Flex.Touchy</id>
+    <version>{{ VERSION }}</version>
+    <title>VL.Flex.Touchy</title>
+    <authors>antokhio</authors>
+    <owners>antokhio</owners>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/antokhio/VL.Flex</projectUrl>
+    <summary>https://github.com/facebook/yoga port to https://visualprogramming.net/</summary>
+    <description>Set of nodes to create flex layouts</description>
+    <copyright>Copyright © 2024 antokhio</copyright>
+    <tags>VL, vvvv, yoga, flex, skia, touchy</tags>
+    <dependencies>
+    </dependencies>
+  </metadata> 
+   <files>
+    <file src="..\VL.Flex.Touchy\*.vl" target=""/>
+    <file src="..\VL.Flex.Touchy\help\*.vl" target="help"/>
+    <file src="..\README.md" />
+    <file src="..\LICENSE" />
+  </files>
+</package>
