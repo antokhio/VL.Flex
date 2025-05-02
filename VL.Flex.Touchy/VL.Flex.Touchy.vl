@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="AQeuibNUGo2OmK8MuFCVMW" LanguageVersion="2025.7.0-0277-g17318dcda9" Version="0.128">
-  <NugetDependency Id="IljbK1mzvN5PKnOphlWK5g" Location="VL.CoreLib" Version="2025.7.0-0277-g17318dcda9" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="AQeuibNUGo2OmK8MuFCVMW" LanguageVersion="2025.7.0-0335-g7f2489e528" Version="0.128">
+  <NugetDependency Id="IljbK1mzvN5PKnOphlWK5g" Location="VL.CoreLib" Version="2025.7.0-0335-g7f2489e528" />
   <Patch Id="Me7wnieo6ZsQUrbUxDJmLW">
     <Canvas Id="EmIfGBX0ntPM4kmE7cN621" DefaultCategory="Flex.Touchy" CanvasType="FullCategory">
       <!--
@@ -8,7 +8,7 @@
     ************************ IFlexTouchy ************************
 
 -->
-      <Node Name="IFlexTouchy" Bounds="180,101" Id="MHqWXbMhv7mLPbVLXl1efD">
+      <Node Name="IFlexTouchy" Category="Flex.Touchy" Bounds="180,101" Id="MHqWXbMhv7mLPbVLXl1efD">
         <p:NodeReference>
           <Choice Kind="InterfaceDefinition" />
         </p:NodeReference>
@@ -182,10 +182,10 @@
       </Node>
       <!--
 
-    ************************ FlexCanvas (Spectral Touchy) ************************
+    ************************ FlexRegion (Spectral) ************************
 
 -->
-      <Node Name="FlexCanvas (Spectral Touchy)" Bounds="174,200" Id="O4y5TRClAE9LAIxMmvB9cR">
+      <Node Name="FlexRegion (Spectral)" Category="Flex.Touchy" Bounds="30,190" Id="O4y5TRClAE9LAIxMmvB9cR" Tags="canvas,region,flex">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
@@ -1174,13 +1174,12 @@
                         </Node>
                         <Pad Id="AePdBESztsmLiKGN3UWTdC" Bounds="1821,-453">
                           <p:TypeAnnotation LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
-                            <Choice Kind="TypeFlag" Name="FlexCanvas (Spectral Touchy)" />
+                            <Choice Kind="TypeFlag" Name="FlexRegion (Spectral)" />
                           </p:TypeAnnotation>
                         </Pad>
                         <Node Bounds="1819,-441,120,26" Id="HmK2kkSIUr1NwTIBWcZ0pt">
-                          <p:NodeReference LastCategoryFullName="Flex.Touchy.FlexCanvas (Spectral Touchy)" LastDependency="VL.Flex.Touchy.vl">
+                          <p:NodeReference LastCategoryFullName="Flex.Touchy.Components.FlexCanvas (Spectral)" LastDependency="VL.Flex.Touchy.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <FullNameCategoryReference ID="Flex.Touchy.FlexCanvas (Spectral Touchy)" />
                             <Choice Kind="OperationCallFlag" Name="SetEnableRendering" />
                           </p:NodeReference>
                           <Pin Id="TkI7LceaO67NZkCCvRpTpN" Name="Input" Kind="StateInputPin" />
@@ -1275,10 +1274,9 @@
                       <Pin Id="GVfKe8t7vvqQVnXZHYqptM" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="M1GZRRH0kV0N9WKDUEUlox" Name="Value" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="1344,-368,120,26" Id="TVdoP6HCNZmL5eqeQz1ga7">
-                      <p:NodeReference LastCategoryFullName="Flex.Touchy.FlexCanvas (Spectral Touchy)" LastDependency="VL.Flex.Touchy.vl">
+                    <Node Bounds="1344,-368,120,19" Id="TVdoP6HCNZmL5eqeQz1ga7">
+                      <p:NodeReference LastCategoryFullName="Flex.Touchy.Components.FlexCanvas (Spectral)" LastDependency="VL.Flex.Touchy.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <FullNameCategoryReference ID="Flex.Touchy.FlexCanvas (Spectral Touchy)" />
                         <Choice Kind="OperationCallFlag" Name="SetEnableRendering" />
                       </p:NodeReference>
                       <Pin Id="EUlDdKtLegYLbVxehTi7s8" Name="Input" Kind="StateInputPin" />
@@ -1740,10 +1738,10 @@
       </Node>
       <!--
 
-    ************************ FlexScroll (Spectral Touchy) ************************
+    ************************ FlexScroll (Spectral) ************************
 
 -->
-      <Node Name="FlexScroll (Spectral Touchy)" Bounds="179,290" Id="BfOzdrLsSqoOuNvHBpXhFM">
+      <Node Name="FlexScroll (Spectral)" Category="Flex.Touchy" Bounds="30,280" Id="BfOzdrLsSqoOuNvHBpXhFM">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -1753,7 +1751,7 @@
             <Node Bounds="329,377,285,272" Id="T9jHA7LiddSL9kBTt2Odlh">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexCanvas (Spectral Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexRegion (Spectral)" />
               </p:NodeReference>
               <Pin Id="GA0q5517MrdOD3V4qekxFA" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="AuveEmATOvEQSGPsH79VwO" Name="Children" Kind="InputPin" />
@@ -1770,7 +1768,7 @@
                 <Node Bounds="341,400,62,19" Id="C1E5eECsBhLNVvY2lZRayu">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="GetLayout (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="GetLayout" />
                   </p:NodeReference>
                   <Pin Id="EuIo2Axnx2RN3U5ZDOb0Zg" Name="Output" Kind="OutputPin" />
                   <Pin Id="VMqmtHRrDdbLw91CL3CJej" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -1790,7 +1788,7 @@
                 <Node Bounds="341,610,54,19" Id="M0Ax3ORX6voMsrAmjjuldl">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="SetLayer (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="SetLayer" />
                   </p:NodeReference>
                   <Pin Id="ITRHaXKbhonMlXDzvXYgJ3" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="AIxPrBHmsmHQbbdvO2UUJp" Name="Input" Kind="InputPin" />
@@ -1914,10 +1912,10 @@
             </Node>
             <Pad Id="TR2kVDRRvM6MRd1BapUgCh" Comment="Vec" Bounds="1023,150,35,28" ShowValueBox="true" isIOBox="true" />
             <Pad Id="BZs3E6Aa8o5LRZUvzLbJYX" SlotId="OqASCwedeiaNB86Pf6lqWf" Bounds="516,80" />
-            <Node Bounds="389,681,120,26" Id="E2XdG6NK3ZWO2ufdajCtDC">
-              <p:NodeReference LastCategoryFullName="Flex.Touchy.FlexCanvas (Spectral Touchy)" LastDependency="VL.Flex.Touchy.vl">
+            <Node Bounds="389,681,120,19" Id="E2XdG6NK3ZWO2ufdajCtDC">
+              <p:NodeReference LastCategoryFullName="Flex.Touchy.Components.FlexCanvas (Spectral)" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="Flex.Touchy.FlexCanvas (Spectral Touchy)" />
+                <CategoryReference Kind="ClassType" Name="FlexRegion (Spectral)" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="GetNode" />
               </p:NodeReference>
               <Pin Id="ULWjqXlkXbSPfWFV4hzNSM" Name="Input" Kind="StateInputPin" />
@@ -2170,10 +2168,10 @@
       </Node>
       <!--
 
-    ************************ ButtonBehaviour (Flex) ************************
+    ************************ ButtonBehaviour ************************
 
 -->
-      <Node Name="ButtonBehaviour (Flex)" Bounds="560,330" Id="FVGswjmyPKtQcjcBqwe4v9">
+      <Node Name="ButtonBehaviour" Category="Flex.Touchy.Behaviours" Bounds="542,320" Id="FVGswjmyPKtQcjcBqwe4v9">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" />
         </p:NodeReference>
@@ -2563,115 +2561,10 @@
       </Node>
       <!--
 
-    ************************ FlexLayout (Touchy) ************************
+    ************************ SwipeBehaviour ************************
 
 -->
-      <Node Name="FlexLayout (Touchy)" Bounds="553,490" Id="Mi1hE3DVWTzPlmdr9pNgMq">
-        <p:NodeReference>
-          <Choice Kind="ContainerDefinition" />
-        </p:NodeReference>
-        <Patch Id="PLuPQnAL0A2LfP92wqEsGo">
-          <Canvas Id="BmXZL34C0G1PUtGPLX9Urk" CanvasType="Group">
-            <Node Bounds="470,630,307,19" AutoConnect="true" Id="RWNBgq3fyDVPpfzOVmi9KT">
-              <p:NodeReference LastCategoryFullName="Flex" LastDependency="VL.Flex.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="Category" Name="Flex" NeedsToBeDirectParent="true">
-                  <p:OuterCategoryReference Kind="Category" NeedsToBeDirectParent="true" />
-                </CategoryReference>
-                <Choice Kind="ProcessAppFlag" Name="FlexLayout" />
-              </p:NodeReference>
-              <Pin Id="R5Sc8CeokaFQNfap9XFiUN" Name="Node Context" Kind="InputPin" IsHidden="true" />
-              <Pin Id="G8lqGNWqoHMPAoMCi2fhrl" Name="Input" Kind="InputPin" />
-              <Pin Id="MauLyAiO0kWNiwEyfNT858" Name="Owner Bounds" Kind="InputPin" />
-              <Pin Id="J52Bz9wiZ25LCnva3EjNgr" Name="Owner Direction" Kind="InputPin" />
-            </Node>
-            <Node Bounds="404,420,58,26" Id="EsFUndQCXLvPfFbiqVPSLh">
-              <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="4026531840" Name="Optional" NeedsToBeDirectParent="true" />
-                <Choice Kind="OperationCallFlag" Name="HasValue" />
-              </p:NodeReference>
-              <Pin Id="ILK2LP22oQ3PLZttZX0brr" Name="Input" Kind="StateInputPin" />
-              <Pin Id="Jfb0ml8RNg4NKKf0uF3yQ7" Name="Output" Kind="OutputPin" IsHidden="true" />
-              <Pin Id="EWqPfYX1Vk7M2doG7UejF1" Name="Has Value" Kind="OutputPin" />
-            </Node>
-            <Node Bounds="404,467,85,129" Id="O6Pe1WApyJaO8AkC4EFuTv">
-              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <CategoryReference Kind="Category" Name="Primitive" />
-                <Choice Kind="ApplicationStatefulRegion" Name="If" />
-              </p:NodeReference>
-              <Pin Id="GF9Fj42VNVAOMC8pZxKNWH" Name="Condition" Kind="InputPin" />
-              <Patch Id="NCMAo5kvz5GMmqkSrFVm9d" ManuallySortedPins="true">
-                <Patch Id="Man9bGkyOUHMYXKVzG1UpG" Name="Create" ManuallySortedPins="true" />
-                <Patch Id="C1OL2uiLjXnP6kdJzmaCYe" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="416,490,47,26" Id="KbpovDZvCwrNTK3TBwFOga">
-                  <p:NodeReference LastCategoryFullName="Primitive.Optional" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="4026531840" Name="Optional" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="Value" />
-                  </p:NodeReference>
-                  <Pin Id="J8T7phlAH2hP3VUQg74Nuw" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="AZJG6n2jkoZP5GW1YcIlHi" Name="Output" Kind="OutputPin" IsHidden="true" />
-                  <Pin Id="MhPirTjtsvLOJ0sRMq22st" Name="Value" Kind="OutputPin" />
-                </Node>
-                <Node Bounds="416,536,56,26" Id="I3DLX2d5d2wPri0YXnGh9E">
-                  <p:NodeReference LastCategoryFullName="Flex.Touchy.IFlexTouchy" LastDependency="VL.Flex.Touchy.vl">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="InterfaceTypeFlag" Name="IFlexTouchy" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="GetNode" />
-                  </p:NodeReference>
-                  <Pin Id="DtPviomDsNrO2XMMzLc28N" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="NACfHpjBkzVOUeskGeyqea" Name="State Output" Kind="StateOutputPin" />
-                  <Pin Id="IWzG6qOtahkM7Nb4wSIvSj" Name="Output" Kind="OutputPin" />
-                </Node>
-              </Patch>
-              <ControlPoint Id="Dj4yr9PcPcYPYMRs6NxEg9" Bounds="472,590" Alignment="Bottom" />
-              <ControlPoint Id="Q6fQ97d3EBBOC03AyLvpeA" Bounds="470,473" Alignment="Top" />
-            </Node>
-            <ControlPoint Id="UQiI4kJJu85QWlgAafCAu0" Bounds="418,341" />
-            <ControlPoint Id="NEyzDVpo0GbMUfnTmjActI" Bounds="623,560" />
-            <ControlPoint Id="DgZMIA6LToGOcqga1kdBfD" Bounds="774,560" />
-          </Canvas>
-          <Patch Id="V11w80GEqo3Mf9zdHEEVcv" Name="Create" />
-          <Patch Id="AKQxVNCOnQAPj0iPp4Prxz" Name="Update">
-            <Pin Id="G9RclQFxPpXNXfcOZcirug" Name="Input" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                <Choice Kind="TypeFlag" Name="Optional" />
-                <p:TypeArguments>
-                  <TypeReference>
-                    <Choice Kind="TypeFlag" Name="IFlexTouchy" />
-                  </TypeReference>
-                </p:TypeArguments>
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Tr4Loz8sxQrOoXiYbW5w4L" Name="Owner Bounds" Kind="InputPin" />
-            <Pin Id="VL4lXpz8dWQL0vSu4ZsO4w" Name="Owner Direction" Kind="InputPin" />
-          </Patch>
-          <ProcessDefinition Id="DgSR5OyZ0EgPMdUK6hwHID">
-            <Fragment Id="Olm5IIxIAIFNoCQtVhx7nE" Patch="V11w80GEqo3Mf9zdHEEVcv" Enabled="true" />
-            <Fragment Id="VBsLyz7pkwVOMxQ71jbsGz" Patch="AKQxVNCOnQAPj0iPp4Prxz" Enabled="true" />
-          </ProcessDefinition>
-          <Link Id="Gv5KaKWE6kuLsKVn5bmwhH" Ids="EWqPfYX1Vk7M2doG7UejF1,GF9Fj42VNVAOMC8pZxKNWH" />
-          <Link Id="CFgQKVDwfFEL7xjnfrbYr9" Ids="Q6fQ97d3EBBOC03AyLvpeA,Dj4yr9PcPcYPYMRs6NxEg9" IsFeedback="true" />
-          <Link Id="PAkKO6rAIhyPNUv4NgocQy" Ids="MhPirTjtsvLOJ0sRMq22st,DtPviomDsNrO2XMMzLc28N" />
-          <Link Id="TotiU311fc1Ohc7auf4bvO" Ids="IWzG6qOtahkM7Nb4wSIvSj,Dj4yr9PcPcYPYMRs6NxEg9" />
-          <Link Id="BM4dxbReluWLUoi0BSmt3Z" Ids="Dj4yr9PcPcYPYMRs6NxEg9,G8lqGNWqoHMPAoMCi2fhrl" />
-          <Link Id="FDrCYinyYqaPSyCp8OhdzM" Ids="UQiI4kJJu85QWlgAafCAu0,ILK2LP22oQ3PLZttZX0brr" />
-          <Link Id="Eeuoif0nHGULbzspsVNSmW" Ids="G9RclQFxPpXNXfcOZcirug,UQiI4kJJu85QWlgAafCAu0" IsHidden="true" />
-          <Link Id="NkUGXj0sqidL5xN1bvvC4W" Ids="NEyzDVpo0GbMUfnTmjActI,MauLyAiO0kWNiwEyfNT858" />
-          <Link Id="MfXRJJfH0EiOpMmBiqAkZW" Ids="Tr4Loz8sxQrOoXiYbW5w4L,NEyzDVpo0GbMUfnTmjActI" IsHidden="true" />
-          <Link Id="E1UTKju9uYlQIUGjeXK4iT" Ids="DgZMIA6LToGOcqga1kdBfD,J52Bz9wiZ25LCnva3EjNgr" />
-          <Link Id="OupxBS6wPWQO6ap873HdTm" Ids="VL4lXpz8dWQL0vSu4ZsO4w,DgZMIA6LToGOcqga1kdBfD" IsHidden="true" />
-          <Link Id="R5zReRuVIlVMlD8CVeisB7" Ids="UQiI4kJJu85QWlgAafCAu0,J8T7phlAH2hP3VUQg74Nuw" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ SwipeBehaviour (Flex) ************************
-
--->
-      <Node Name="SwipeBehaviour (Flex)" Bounds="542,371" Id="QJ9qCAyJV4KO1NXXgAIBHz">
+      <Node Name="SwipeBehaviour" Category="Flex.Touchy.Behaviours" Bounds="542,371" Id="QJ9qCAyJV4KO1NXXgAIBHz">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -2780,10 +2673,10 @@
       </Node>
       <!--
 
-    ************************ FlexRectangle (Spectral Touchy) ************************
+    ************************ FlexRectangle (Spectral) ************************
 
 -->
-      <Node Name="FlexRectangle (Spectral Touchy)" Bounds="182,400" Id="HlgrRPTWMXhP1FCMXqmVt2">
+      <Node Name="FlexRectangle (Spectral)" Category="Flex.Touchy" Bounds="30,390" Id="HlgrRPTWMXhP1FCMXqmVt2">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -2792,7 +2685,7 @@
             <Node Bounds="447,267,196,122" AutoConnect="true" Id="OXvuRMh8b5ePq8kzgztSNW">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexCanvas (Spectral Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexRegion (Spectral)" />
               </p:NodeReference>
               <Pin Id="OYvPtAPsZO1LE0hf95mm8u" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="FOvehu7dCMXLSjIzrNMmpZ" Name="Children" Kind="InputPin" />
@@ -2809,7 +2702,7 @@
                 <Node Bounds="459,290,62,19" Id="OVqBPBYg9XhPdDtnGF1tug">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="GetLayout (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="GetLayout" />
                   </p:NodeReference>
                   <Pin Id="EtOTB8I2zrFM0msgstOEbL" Name="Output" Kind="OutputPin" />
                   <Pin Id="DDJGIzeMfjtMsQsOfXUAnq" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -2830,7 +2723,7 @@
                 <Node Bounds="459,350,54,19" Id="LT4Lfvr9zNuN1ikZxFEXxX">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="SetLayer (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="SetLayer" />
                   </p:NodeReference>
                   <Pin Id="UyaAlhaJKXXOsF7PTnvsZh" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="C4201yWvs4jP74bsxwfd7v" Name="Input" Kind="InputPin" />
@@ -2881,10 +2774,10 @@
       </Node>
       <!--
 
-    ************************ FlexRectangle (Touchy) ************************
+    ************************ FlexRectangle ************************
 
 -->
-      <Node Name="FlexRectangle (Touchy)" Bounds="182,440" Id="VyT5C0fJ6qMOasQKl6py43">
+      <Node Name="FlexRectangle" Category="Flex.Touchy" Bounds="30,430" Id="VyT5C0fJ6qMOasQKl6py43">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -2893,7 +2786,7 @@
             <Node Bounds="733,491,125,19" AutoConnect="true" Id="GmNp0prtlMhLbPZZ2A2GGn">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexRectangle (Spectral Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexRectangle (Spectral)" />
               </p:NodeReference>
               <Pin Id="CLWNdGcvwugNOjyJKWN6Fo" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="EoHkSBGCC8MMdp95o0Mv8i" Name="Children" Kind="InputPin" />
@@ -2942,10 +2835,10 @@
       </Node>
       <!--
 
-    ************************ FlexCanvas (Touchy) ************************
+    ************************ FlexRegion ************************
 
 -->
-      <Node Name="FlexCanvas (Touchy)" Bounds="174,240" Id="LaHC1HedbjGO9xviNSMIlK">
+      <Node Name="FlexRegion" Category="Flex.Touchy" Bounds="30,230" Id="LaHC1HedbjGO9xviNSMIlK">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -2955,7 +2848,7 @@
             <Node Bounds="628,401,105,19" AutoConnect="true" Id="CbZGxf9gHUlNllQJzecCeL">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexCanvas (Spectral Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexRegion (Spectral)" />
               </p:NodeReference>
               <Pin Id="QjtQyXBWCqUQPCX4zlx59k" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="VbX5XeKncMMLLPy1oB7W1s" Name="Children" Kind="InputPin" />
@@ -3011,10 +2904,10 @@
       </Node>
       <!--
 
-    ************************ FlexScroll (Touchy) ************************
+    ************************ FlexScroll ************************
 
 -->
-      <Node Name="FlexScroll (Touchy)" Bounds="179,330" Id="Nl3NDUfoRzzM4PAV102KvS">
+      <Node Name="FlexScroll" Category="Flex.Touchy" Bounds="30,320" Id="Nl3NDUfoRzzM4PAV102KvS">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -3023,7 +2916,7 @@
             <Node Bounds="597,441,60,19" AutoConnect="true" Id="GdXzFkiRbMgLI9pMxs6K2L">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexScroll (Spectral Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexScroll (Spectral)" />
               </p:NodeReference>
               <Pin Id="HNjXQ34qmYSOYJtS3ypqZp" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="RsdXeLs7bu3LQZqgxljmJ4" Name="Children" Kind="InputPin" />
@@ -3075,10 +2968,10 @@
       </Node>
       <!--
 
-    ************************ FlexText (Touchy) ************************
+    ************************ FlexText ************************
 
 -->
-      <Node Name="FlexText (Touchy)" Bounds="188,510" Id="LlXipCv6zq1NKDMi9391tM">
+      <Node Name="FlexText" Category="Flex.Touchy" Bounds="30,490" Id="LlXipCv6zq1NKDMi9391tM">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -3179,7 +3072,7 @@
             <Node Bounds="362,537,619,382" Id="JHdTyLOYXNLLIkGc5UPtCz">
               <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="FlexCanvas (Touchy)" />
+                <Choice Kind="ProcessAppFlag" Name="FlexRegion" />
               </p:NodeReference>
               <Pin Id="NSFsOyehxJ3MtjGcUTn6zO" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="BGWsM0h4OufL4HDdGgpdmO" Name="Children" Kind="InputPin" />
@@ -3196,7 +3089,7 @@
                 <Node Bounds="374,560,96,19" Id="Dn3DNUyoePLMhnwqHeP2Td">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="GetLayout (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="GetLayout" />
                   </p:NodeReference>
                   <Pin Id="HccrU7RNhpHNO9pVZfWvAT" Name="Output" Kind="OutputPin" />
                   <Pin Id="Az6mBJs8sS7LXeWYOEu0JX" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -3246,7 +3139,7 @@
                 <Node Bounds="375,870,90,19" Id="L2xO3y8Ys6RPNfEJInPZa0">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="SetLayer (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="SetLayer" />
                   </p:NodeReference>
                   <Pin Id="SLlkJ94kp8bNLKWjTYA6tS" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="QvvqlUILYITQPY9JaOmC5E" Name="Input" Kind="InputPin" />
@@ -3272,7 +3165,7 @@
                 <Node Bounds="629,880,104,19" Id="GiWLjPnkchvL1Y2fX6OTOU">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="SetMeasureContext (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="SetMeasureContext" />
                   </p:NodeReference>
                   <Pin Id="C1RTKZjinXdLR6MHgeeJ9x" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="R68TUXC2KphOTQVHysn0Bx" Name="Input" Kind="InputPin" />
@@ -3300,7 +3193,7 @@
                 <Node Bounds="869,602,90,19" Id="JERRBByIWvJOQrmPbUvu1x">
                   <p:NodeReference LastCategoryFullName="Flex.Touchy" LastDependency="VL.Flex.Touchy.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="GetNode (Flex Touchy)" />
+                    <Choice Kind="ProcessAppFlag" Name="GetNode" />
                   </p:NodeReference>
                   <Pin Id="NmWR23id4xsOHnRXwqoRIG" Name="Output" Kind="OutputPin" />
                   <Pin Id="RW6HmvJ8Ae6O3QPg3KGwQe" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -3483,10 +3376,10 @@
       </Node>
       <!--
 
-    ************************ TransformLayer (FlexCanvas Touchy) ************************
+    ************************ TransformLayer ************************
 
 -->
-      <Node Name="TransformLayer (FlexCanvas Touchy)" Bounds="397,570" Id="L08YnOyv1gHNuW1cIQ5tiY">
+      <Node Name="TransformLayer" Category="Flex.Touchy.Helpers" Bounds="397,570" Id="L08YnOyv1gHNuW1cIQ5tiY">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -3624,7 +3517,7 @@
     ************************ FlexTouchyLayout ************************
 
 -->
-      <Node Name="FlexTouchyLayout" Bounds="217,611" Id="ADygdssHJxDOY4Cr9MGEdt">
+      <Node Name="FlexTouchyLayout" Category="Flex.Touchy" Bounds="116,570" Id="ADygdssHJxDOY4Cr9MGEdt" Summary="Calculates layout and touchy behaviours" Tags="layout">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <CategoryReference Kind="Category" Name="Primitive" />
@@ -3802,7 +3695,6 @@
             <ControlPoint Id="S9a9GM8bfOAMzwYhlxbMac" Bounds="267,170" />
             <Pad Id="PrmgKphGBIVO4Ksb3ugihM" SlotId="M5mwVcrh3xfQJdmYZXYsP9" Bounds="234,301" />
             <Pad Id="S6PePuVhwNVQQHvTljlyuQ" SlotId="M5mwVcrh3xfQJdmYZXYsP9" Bounds="431,363" />
-            <Pad Id="PMqzAlcCUirQdGQDXZTQ7A" Comment="Owner Bounds" Bounds="454,220,218,90" ShowValueBox="true" isIOBox="true" />
             <Pad Id="Mdi0CVbd1TrQSyAEyEyHmi" SlotId="M5mwVcrh3xfQJdmYZXYsP9" Bounds="75,410" />
             <Node Bounds="171,520,65,19" Id="C2XNPuNvwLFP6tJYDkYdbe">
               <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
@@ -3908,7 +3800,6 @@
           <Link Id="OZgNHySSW7QPd4ZKhCIv41" Ids="PrmgKphGBIVO4Ksb3ugihM,Jd2VUiPkWcbLHpj3xQsDSH" />
           <Link Id="StKlZYCOxIfPGbTAKGCpl2" Ids="S6PePuVhwNVQQHvTljlyuQ,PrcGxD7AUBlNqzlmUxFAbk" />
           <Link Id="MYtE10GrctwP4Fx16xXLL4" Ids="S6PePuVhwNVQQHvTljlyuQ,TwJU3f6GkOKLzkanuh3S68" />
-          <Link Id="AuYrRa5vC0SMVGe36JwaBM" Ids="DYNrGj6LosRP6jeYFWijnb,PMqzAlcCUirQdGQDXZTQ7A" />
           <Link Id="PtQVXI1UHVlMNE9cyL9nRx" Ids="JWrfVr1N1NGO2Msdd75xVG,IgzrHzytKCTNQZLWZiAPhp" />
           <Link Id="TaBc1sruwOpMgQrBkPzKZp" Ids="Eels4mGPQceOlygUIwSNbB,JzPU1V1ymBVLq6CIaVSyRc" />
           <Link Id="BmjnQmhE8K4MZRQEzXobbJ" Ids="Uq4kqw3GKeVMWuJoAZ4xWA,JTtucZN9COQPavp7YXaY2M" />
@@ -3930,10 +3821,10 @@
       </Node>
       <!--
 
-    ************************ GetLayout (Flex Touchy) ************************
+    ************************ GetLayout ************************
 
 -->
-      <Node Name="GetLayout (Flex Touchy)" Bounds="253,710" Id="KfPEYsyCJ8GMyM2rjJvcck">
+      <Node Name="GetLayout" Category="Flex.Touchy.Region" Bounds="253,710" Id="KfPEYsyCJ8GMyM2rjJvcck">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -4014,10 +3905,10 @@
       </Node>
       <!--
 
-    ************************ SetLayer (Flex Touchy) ************************
+    ************************ SetLayer ************************
 
 -->
-      <Node Name="SetLayer (Flex Touchy)" Bounds="253,751" Id="PIkYUayApwkMa28bOTYJD6">
+      <Node Name="SetLayer" Category="Flex.Components.Region" Bounds="253,751" Id="PIkYUayApwkMa28bOTYJD6">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -4072,10 +3963,10 @@
       </Node>
       <!--
 
-    ************************ GetNode (Flex Touchy) ************************
+    ************************ GetNode ************************
 
 -->
-      <Node Name="GetNode (Flex Touchy)" Bounds="470,710" Id="DF348B0vHa8LwV0Gq3GsyH">
+      <Node Name="GetNode" Category="Flex.Touchy.Region" Bounds="594,710" Id="DF348B0vHa8LwV0Gq3GsyH">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -4117,10 +4008,10 @@
       </Node>
       <!--
 
-    ************************ SetMeasureContext (Flex Touchy) ************************
+    ************************ SetMeasureContext ************************
 
 -->
-      <Node Name="SetMeasureContext (Flex Touchy)" Bounds="470,750" Id="LY9315jrXesNuGe7SCs2Am">
+      <Node Name="SetMeasureContext" Category="Flex.Touchy.Region" Bounds="594,750" Id="LY9315jrXesNuGe7SCs2Am">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" />
         </p:NodeReference>
@@ -4323,6 +4214,6 @@
   </Patch>
   <NugetDependency Id="O4mMOtW65MGLYxDhVrtZv1" Location="VL.Flex" IsForward="true" Version="0.0.0" />
   <NugetDependency Id="Kwc0ESnC4aCPY4jybs8GVC" Location="VL.Touchy" Version="1.1.0" />
-  <NugetDependency Id="Hjpq5bU8tFfNVOAEe7inDx" Location="VL.Skia" Version="2025.7.0-0277-g17318dcda9" />
+  <NugetDependency Id="Hjpq5bU8tFfNVOAEe7inDx" Location="VL.Skia" Version="2025.7.0-0335-g7f2489e528" />
   <NugetDependency Id="IXk7gTszb39LxD3ScbT6cF" Location="VL.Flex.Touchy" Version="0.0.0" />
 </Document>
