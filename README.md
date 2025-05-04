@@ -6,10 +6,18 @@
 ### Installation
 
 ```sh
+# Only VL.Flex
 nuget install VL.Flex
-```
 
-Will install VL.Flex and VL.Flex.Skia packages
+# VL.Flex and VL.Flex.Skia
+nuget install VL.Flex.Skia
+
+# VL.Flex and VL.Flex.ImGui (non-maintained/depricated)
+nuget install VL.Flex.ImGui
+
+# VL.Flex, VL.Flex.Touchy, VL.Touchy
+nuget install VL.Flex.Touchy
+```
 
 ### Credits
 
