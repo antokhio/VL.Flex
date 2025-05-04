@@ -15,9 +15,7 @@
     <copyright>Copyright © 2024 antokhio</copyright>
     <tags>VL, vvvv, yoga, flex</tags>
     <dependencies>
-      <dependency id="antokhio.YogaSharp" version="1.1.2" />
-      <dependency id="VL.Flex.Skia" version="{{ VERSION }}" />
-      <dependency id="VL.Flex.ImGui" version="{{ VERSION }}" />
+      <dependency id="VL.Flex" version="{{ VERSION }}" />
     </dependencies>
   </metadata>
    <files>
