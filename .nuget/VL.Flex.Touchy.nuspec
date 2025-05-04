@@ -21,7 +21,7 @@
   </metadata> 
    <files>
     <file src="..\VL.Flex.Touchy\*.vl" target=""/>
-    <file src="..\VL.Flex.Touchy\help\*.vl" target="help"/>
+    <file src="..\VL.Flex.Touchy\help\**" target="help"/>
     <file src="..\README.md" />
     <file src="..\LICENSE" />
   </files>
