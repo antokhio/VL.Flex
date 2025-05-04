@@ -12,10 +12,10 @@ nuget install VL.Flex
 # VL.Flex and VL.Flex.Skia
 nuget install VL.Flex.Skia
 
-# VL.Flex and VL.ImGui (non-maintained/depricated)
+# VL.Flex and VL.Flex.ImGui (non-maintained/depricated)
 nuget install VL.Flex.ImGui
 
-# VL.Flex and VL.Touchy
+# VL.Flex, VL.Flex.Touchy, VL.Touchy
 nuget install VL.Flex.Touchy
 ```
 
