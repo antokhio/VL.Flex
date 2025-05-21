@@ -99,6 +99,33 @@ namespace VL.Flex
             set => _layout = value;
         }
 
+        private Vector2? _offsetLayout;
+        public virtual Vector2? OffsetLayout
+        {
+            get => _offsetLayout;
+            set
+            {
+                if (value != _offsetLayout)
+                {
+                    _offsetLayout = value;
+
+                    var ownerLayout = GetOwnerLayout();
+                    BuildLayout(ownerLayout, _offsetLayout);
+
+                    var args = new FlexCalculateLayoutArgs();
+
+                    Children?.ForEach(child =>
+                    {
+                        child?.ApplyLayout(args, Layout);
+                    });
+
+                    OnLayoutChanged?.Invoke(args);
+
+                    HasNewLayout = false;
+                }
+            }
+        }
+
         /// <summary>
         /// Arguments used in layout calculation, passed to breakpoints
         /// </summary>
@@ -116,7 +143,7 @@ namespace VL.Flex
         /// <param name="ownerLayout"></param>
         public virtual void ApplyLayout(FlexCalculateLayoutArgs args, RectangleF? ownerLayout = null)
         {
-            BuildLayout(ownerLayout ?? args.OwnerBounds);
+            BuildLayout(ownerLayout ?? args.OwnerBounds, _offsetLayout);
 
             Children?.ForEach(child =>
             {
@@ -132,13 +159,23 @@ namespace VL.Flex
         /// Builds Rectangle
         /// </summary>
         /// <param name="ownerLayout"></param>
-        public unsafe virtual void BuildLayout(RectangleF? ownerLayout) => Layout = new RectangleF
+        public unsafe virtual void BuildLayout(RectangleF? ownerLayout, Vector2? offsetLayout)
+        {
+            var rect = new RectangleF
             (
                 _handle->GetComputedLeft() + ownerLayout?.Left ?? .0f,
                 _handle->GetComputedTop() + ownerLayout?.Top ?? .0f,
                 _handle->GetComputedWidth(),
                 _handle->GetComputedHeight()
             );
+
+            rect.Offset(offsetLayout ?? Vector2.Zero);
+
+            Layout = rect;
+        }
+
+        public unsafe virtual RectangleF? GetOwnerLayout() => Store.GetRegistry().GetNode(_handle->GetOwner())?.Layout;
+
 
 
         /// <summary>

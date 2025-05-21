@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="ALTqoT5bUGkNB4wyruUd98" LanguageVersion="2025.7.0-0335-g7f2489e528" Version="0.128">
-  <NugetDependency Id="LLQDTumpbFLLuJ5DWHvUek" Location="VL.CoreLib" Version="2025.7.0-0335-g7f2489e528" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="ALTqoT5bUGkNB4wyruUd98" LanguageVersion="2025.7.0-0351-gb3f6445d75" Version="0.128">
+  <NugetDependency Id="LLQDTumpbFLLuJ5DWHvUek" Location="VL.CoreLib" Version="2025.7.0-0351-gb3f6445d75" />
   <Patch Id="C7xgt3CzzfXMl8ney3uCI7">
     <Canvas Id="LDPBeX77U1sLlzQv9GwSoP" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -61,7 +61,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Eabgf8TcOWxPrgX7pQJ5Q8" Name="Bounds" Kind="InputPin" DefaultValue="1514, 116, 416, 869" IsHidden="true" />
+            <Pin Id="Eabgf8TcOWxPrgX7pQJ5Q8" Name="Bounds" Kind="InputPin" DefaultValue="-2168, 162, 372, 879" IsHidden="true" />
             <Pin Id="Ub1S4vSe4x0NcVrsvALcmC" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="Gnh62I1OTGiMY64gkqAOF1" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="GIYIUZv0qaqO5rHuEJYu5Z" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -1409,6 +1409,42 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="432,410,59,26" Id="IdDogEisxd7Pb556YBtVAJ">
+            <p:NodeReference LastCategoryFullName="Flex.Touchy.IFlexTouchy" LastDependency="VL.Flex.Touchy.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Flex.Touchy.IFlexTouchy" />
+              <Choice Kind="OperationCallFlag" Name="GetNode" />
+            </p:NodeReference>
+            <Pin Id="K7ht7QgMyr9QTYpV5sSBlR" Name="Input" Kind="StateInputPin" />
+            <Pin Id="PHGahaPG9GfPXDs6hw57n6" Name="State Output" Kind="StateOutputPin" />
+            <Pin Id="I6A9FYTS0Q5Pwv7PPXpxmK" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="450,470,88,26" Id="DTqnY37Tr1NOAzzoxFHMYu">
+            <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Flex.FlexNode" />
+              <Choice Kind="OperationCallFlag" Name="SetOffsetLayout" />
+            </p:NodeReference>
+            <Pin Id="S6O5bGW7KtyNNIuMFJ5cap" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EKwsichVQ8eNB2eQ5jNlKs" Name="Value" Kind="InputPin" />
+            <Pin Id="TPhg4ViNJAPMABEuykkT3y" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="IXVD5AtaXAqOPz4b3YqWBV" Comment="" Bounds="518,431,35,28" ShowValueBox="true" isIOBox="true" Value="-0.9, 0.04">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Vector2" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="266,490,50,26" Id="HkCABelrKPCQQsPYerxwPa">
+            <p:NodeReference LastCategoryFullName="Flex.FlexNode" LastDependency="VL.Flex.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Flex.FlexNode" />
+              <Choice Kind="OperationCallFlag" Name="Layout" />
+            </p:NodeReference>
+            <Pin Id="CSZKD5xGzIRLO3738BJIQL" Name="Input" Kind="StateInputPin" />
+            <Pin Id="HdV3D275sdjLSoS9KNg3Lo" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="PIoJ9ihuODzNGSSUfJPgsE" Name="Layout" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Rq9A6kqQ0SDQHMI2s2V6Vz" Comment="Layout" Bounds="258,540,180,55" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="OTV5mvDybAeOgsjvbQeioC" Name="Create" />
         <Patch Id="E0oBy8gee66LZhvBkJhTg7" Name="Update" />
@@ -1450,11 +1486,16 @@
         <Link Id="AWegoQsf78GLrxqWKPyVB6" Ids="NqXlRWtXHVFNK3LEuEiKkv,HU9W2BK6m3wNzHSkBi81PP" />
         <Link Id="PT9T5LcaqeIOVF8hPd4aVs" Ids="DPAe25fXOalMb62AtyawuY,UQWFF1Xs4NSPPeCClHrSvT" />
         <Link Id="Ih1icVBb0L1PAqeMGBU4yq" Ids="IiZVApkIPC3N2S3WgvExzZ,I9sPMHeR8qyLcDTQxwls2Y" />
+        <Link Id="DYmMOcyEdkeQK3KCBtoM1N" Ids="RtbmECU5XXiLkNcMWN14je,K7ht7QgMyr9QTYpV5sSBlR" />
+        <Link Id="BXCvAglt2McNQXn1Aj8Sf5" Ids="I6A9FYTS0Q5Pwv7PPXpxmK,S6O5bGW7KtyNNIuMFJ5cap" />
+        <Link Id="HC4Tw3DGtpIO5j5bVOURDX" Ids="IXVD5AtaXAqOPz4b3YqWBV,EKwsichVQ8eNB2eQ5jNlKs" />
+        <Link Id="Dxvgq2DcZssLVftThTVPJb" Ids="TPhg4ViNJAPMABEuykkT3y,CSZKD5xGzIRLO3738BJIQL" />
+        <Link Id="GliojUF0t0OQTTdEooF5IP" Ids="PIoJ9ihuODzNGSSUfJPgsE,Rq9A6kqQ0SDQHMI2s2V6Vz" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="LQAZKNcWiVzQUObxZ4dejq" Location="VL.Flex" Version="0.0.0" />
   <NugetDependency Id="DQnXR1G8UieOMuucWQZtUo" Location="VL.Flex.Touchy" Version="0.0.0" />
   <NugetDependency Id="BmG9rnuCvWJQOE5DjW4CMN" Location="VL.Touchy" Version="1.1.0" />
-  <NugetDependency Id="ESQgq4Y42l8Pl0P9wIGNdl" Location="VL.Skia" Version="2025.7.0-0335-g7f2489e528" />
+  <NugetDependency Id="ESQgq4Y42l8Pl0P9wIGNdl" Location="VL.Skia" Version="2025.7.0-0351-gb3f6445d75" />
 </Document>
